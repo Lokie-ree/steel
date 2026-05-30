@@ -14,9 +14,10 @@ Orients every session from the shared hub state. Run before touching any spoke r
    - Read `C:\Users\rplap\OneDrive\Desktop\steel\sprint\2026-iste-40d.md`
    - Extract: priority stack, per-repo status, blockers, and "this week's suggested focus"
 
-2. **Run drift check**
-   - Execute: `pwsh C:\Users\rplap\OneDrive\Desktop\steel\ops\drift-check.ps1`
-   - Note pass/fail counts
+2. **Check live repo state + drift**
+   - Execute: `pwsh C:\Users\rplap\OneDrive\Desktop\steel\ops\drift-check.ps1` (runs the git preflight first, then both drift stages)
+   - From the preflight table, note each spoke's branch / ahead / behind / dirty (this is **live** state — trust it over the hand-typed sprint status)
+   - Note the dynamic pass/fail counts and the verdict line
 
 3. **Output briefing** — exactly this format, no more:
 
@@ -30,7 +31,8 @@ PRIORITY STACK
   P3 creative-lab  <one-line status from sprint doc>
   P4 creative-lab-demos  <one-line status from sprint doc>
 
-DRIFT  <X>/27 passing  <"— all clear" if 27/27, else list each FAIL>
+GIT    <repo:branch ±ahead/behind dirty?> for any spoke needing attention, else "all clean & current"
+DRIFT  <pass> pass / <fail> fail  <"— all clear" if 0 fail and verdict is a pass; if UNVERIFIED, say so and name the behind/dirty spoke; else list each FAIL>
 
 FOCUS TODAY
   <copy "This week's suggested focus" items verbatim, numbered>

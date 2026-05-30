@@ -10,29 +10,23 @@ Runs the Tier 1 scan across all four spoke repos and surfaces any mismatches.
 
 ## Steps
 
-1. **Run the script**
+1. **Run the script** (it runs the git preflight first, then two stages)
    ```
    pwsh C:\Users\rplap\OneDrive\Desktop\steel\ops\drift-check.ps1
    ```
 
-2. **If all 27 checks pass**
-   - Output: `Drift check: 27/27 passing — all Tier 1 fields aligned.`
-   - No further action needed
+2. **Read the verdict line** (the script computes pass/fail dynamically — there is no fixed total)
+   - `all Tier 1 fields aligned` (exit 0) → no action needed
+   - `UNVERIFIED` (exit 2) → a spoke is **behind origin or dirty**. The reading is not trustworthy. Tell the user which spoke (from the preflight table) and that they must pull/commit before a clean verdict is possible. Do not report a pass.
+   - non-zero fail count (exit 1) → real drift; go to step 3
 
-3. **If any check fails**
-   - List each failing check with its file path and expected pattern
-   - For each failure, identify the canonical value from `C:\Users\rplap\OneDrive\Desktop\steel\wiki\module-facts.md`
-   - State which other spokes in `sync-registry.md` also need the same fix
-   - Ask the user: "Fix all failing spokes now, or note for later?"
+3. **For each FAIL**
+   - **Stage 1 (bundle freshness):** the spoke's `.hub/module-facts.json` is stale → run `ops/build-context.ps1` and commit the regenerated `.hub/` in that spoke
+   - **Stage 2 (code conformance):** identify the canonical value from `C:\Users\rplap\OneDrive\Desktop\steel\wiki\module-facts.md`, state which other spokes in `sync-registry.md` share it, then ask: "Fix all failing spokes now, or note for later?"
 
-## Scope
+## What the two stages cover
 
-This script covers Tier 1 only (user-facing fields that must be identical):
-- Module display names across creative-lab, iste-26, portfolio
-- Standards strings in iste-26 and portfolio
-- ISTE event string in all three lab guides
-- Deploy URLs and hash route hrefs in iste-26 and portfolio
-- Hash route definitions in iste-26 App.tsx
+- **Stage 1 — freshness:** each spoke's `.hub/module-facts.json` hash matches the vault's canonical `wiki/module-facts.md` (detects "forgot to regenerate the bundle").
+- **Stage 2 — conformance:** module display names, standards strings, iste-26 hash routes, the ISTE event name, and **cross-referenced** deploy URLs (a repo's own URL is not checked — a site doesn't hardcode its own origin).
 
-Tier 2 (narrative copy) and Tier 3 (intentionally different) are out of scope.
-See `C:\Users\rplap\OneDrive\Desktop\steel\sync-registry.md` for the full tier breakdown.
+Triangle coordinates are carried in the `.hub` bundle (covered by Stage 1), not substring-matched in source. Tier 2 (narrative) and Tier 3 (intentionally different) are out of scope — see `sync-registry.md`.
