@@ -76,6 +76,19 @@ Describe "ConvertFrom-ModuleFacts" {
     It "event.string contains Orlando and en-dash (preserved)" {
         $script:facts.event.string | Should -Be 'Orlando · June 28 – July 1, 2026'
     }
+
+    # Fix 2 — demo block
+    It "demo.id is 'CSE'" {
+        $script:facts.demo.id | Should -Be 'CSE'
+    }
+
+    It "demo.name is 'Cross-Section Explorer'" {
+        $script:facts.demo.name | Should -Be 'Cross-Section Explorer'
+    }
+
+    It "demo.url is clean (no trailing paren) — also covers Fix 1 URL regex" {
+        $script:facts.demo.url | Should -Be 'https://creative-lab-demos.vercel.app'
+    }
 }
 
 # ---------------------------------------------------------------------------
@@ -135,6 +148,15 @@ Describe "Format-ModuleFactsJson" {
 
     It "modules has 3 entries" {
         $script:parsed.modules.Count | Should -Be 3
+    }
+
+    # Fix 2 — demo round-trips through JSON
+    It "demo.id round-trips through JSON" {
+        $script:parsed.demo.id | Should -Be 'CSE'
+    }
+
+    It "demo.url round-trips through JSON with no trailing paren" {
+        $script:parsed.demo.url | Should -Be 'https://creative-lab-demos.vercel.app'
     }
 }
 
@@ -223,5 +245,38 @@ Describe "Get-SpokePaths" {
         $p.Keys | Should -Contain 'creative-lab'
         $p.Keys | Should -Contain 'iste-26'
         $p.'portfolio' | Should -Match 'personal/portfolio$'
+    }
+}
+
+# ---------------------------------------------------------------------------
+# Group 6 — Fix 3: fail-closed triangle parse
+# ---------------------------------------------------------------------------
+Describe "ConvertFrom-ModuleFacts triangle validation" {
+    BeforeAll {
+        $script:tmpDir = "$PSScriptRoot/.tmp"
+        if (-not (Test-Path $script:tmpDir)) { New-Item -ItemType Directory -Path $script:tmpDir | Out-Null }
+        $script:badTrianglePath = "$script:tmpDir/bad-triangle.md"
+        Set-Content -LiteralPath $script:badTrianglePath -Value @'
+## Event
+
+| Field | Value |
+|-------|-------|
+| Name | Test Event |
+| Full string | City – Date |
+
+## Grade 8 Geometry arc (M1 → M2 → M3)
+
+| ID | Display name | Standards | Triangle | creative-lab | iste-26 hash |
+|----|--------------|-----------|----------|--------------|--------------|
+| M1 | Bad Module | 8.G.A.1 | NOTVALID | module `bad` | `#bad` |
+'@
+    }
+
+    AfterAll {
+        if (Test-Path $script:badTrianglePath) { Remove-Item -LiteralPath $script:badTrianglePath }
+    }
+
+    It "throws when a module triangle does not parse exactly 3 points" {
+        { ConvertFrom-ModuleFacts -Path $script:badTrianglePath } | Should -Throw
     }
 }

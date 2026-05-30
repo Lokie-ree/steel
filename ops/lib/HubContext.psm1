@@ -15,7 +15,8 @@ function Get-MarkdownTableRows {
     foreach ($line in $Lines) {
         if ($line -match "^#+\s") {
             if ($inSection) { break }
-            $inSection = ($line -match [regex]::Escape($AfterHeading))
+            # Fix 4: anchor the heading match so 'Event' does not match '## Event Notes'
+            $inSection = ($line -match ('^#+\s+' + [regex]::Escape($AfterHeading) + '\b'))
             $seenHeader = $false
             continue
         }
@@ -26,7 +27,10 @@ function Get-MarkdownTableRows {
         $cells = ($line.Trim().Trim('|') -split '\|') | ForEach-Object { $_.Trim() }
         $rows += , $cells
     }
-    return $rows
+    # Use Write-Output -NoEnumerate so a single-row result is not unrolled:
+    # without this, foreach ($r in (Get-MarkdownTableRows ...)) would iterate
+    # the cells of the one row rather than iterating the rows themselves.
+    Write-Output -NoEnumerate $rows
 }
 
 function Parse-Triangle {
@@ -47,25 +51,42 @@ function ConvertFrom-ModuleFacts {
         if ($r[0] -notmatch '^M\d') { continue }
         $slug = if ($r[4] -match '`([^`]+)`') { $Matches[1] } else { $null }
         $hash = if ($r[5] -match '`([^`]+)`') { $Matches[1] } else { $r[5] }
+        $tri = Parse-Triangle $r[3]
+        # Fix 3: fail-closed — require exactly 3 triangle points (A, B, C)
+        if ($tri.Count -ne 3 -or -not ($tri.Contains('A') -and $tri.Contains('B') -and $tri.Contains('C'))) {
+            throw "Triangle parse failed for $($r[0]): $($r[3])"
+        }
         $modules += [ordered]@{
             id             = $r[0]
             displayName    = $r[1]
             standards      = (ConvertTo-AsciiDashes $r[2])
-            triangle       = (Parse-Triangle $r[3])
+            triangle       = $tri
             creativeLabModule = $slug
             iste26Hash     = $hash
         }
     }
     $deploy = [ordered]@{}
     foreach ($r in (Get-MarkdownTableRows -Lines $lines -AfterHeading 'Deploy URLs')) {
-        if ($r[1] -match 'https?://\S+') { $deploy[$r[0]] = $Matches[0] }
+        # Fix 1: exclude trailing ')' from URL match (handles markdown-link cells)
+        if ($r[1] -match 'https?://[^\s)]+') { $deploy[$r[0]] = $Matches[0] }
+    }
+    # Fix 2: parse the 'Standalone demo' table
+    $demo = [ordered]@{}
+    foreach ($r in (Get-MarkdownTableRows -Lines $lines -AfterHeading 'Standalone demo')) {
+        # columns: ID | Name | Standards (adjacent) | Repo | URL
+        # Fix 1: exclude trailing ')' from URL match (handles markdown-link cells)
+        $url = if ($r[4] -match 'https?://[^\s)]+') { $Matches[0] } else { $r[4] }
+        $demo = [ordered]@{ id = $r[0]; name = $r[1]; url = $url }
+        break  # only one demo row expected
     }
     $event = [ordered]@{}
     foreach ($r in (Get-MarkdownTableRows -Lines $lines -AfterHeading 'Event')) {
         if ($r[0] -eq 'Name')        { $event.name   = $r[1] }
+        # Fix 5: event.string intentionally KEEPS its en-dash — it is a human display string
+        # used verbatim in drift-check comparisons. Do NOT normalize it to ASCII hyphen.
         if ($r[0] -eq 'Full string') { $event.string = $r[1] }
     }
-    return [ordered]@{ modules = $modules; deployUrls = $deploy; event = $event }
+    return [ordered]@{ modules = $modules; demo = $demo; deployUrls = $deploy; event = $event }
 }
 
 function Get-SourceHash {
@@ -81,6 +102,7 @@ function Format-ModuleFactsJson {
         [Parameter(Mandatory)][string]$SourceHash,
         [string]$GeneratedOn = (Get-Date -Format 'yyyy-MM-dd')
     )
+    # Fix 2: output order: _generated, event, modules, demo, deployUrls (matches spec)
     $out = [ordered]@{
         _generated = [ordered]@{
             from       = 'steel/wiki/module-facts.md'
@@ -89,6 +111,7 @@ function Format-ModuleFactsJson {
         }
         event      = $Facts.event
         modules    = $Facts.modules
+        demo       = $Facts.demo
         deployUrls = $Facts.deployUrls
     }
     return ($out | ConvertTo-Json -Depth 6)
