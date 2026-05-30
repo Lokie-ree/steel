@@ -1,0 +1,7 @@
+# Obsidian workspace state (churns constantly, not meaningful to track)
+.obsidian/workspace*.json
+.obsidian/cache
+
+# Test scratch
+ops/tests/.tmp/
+*.log

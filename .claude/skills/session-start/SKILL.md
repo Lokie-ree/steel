@@ -1,0 +1,47 @@
+---
+name: session-start
+description: Use at the start of any work session in this vault or any spoke repo. Activates when the user says "start session", "session start", "what's the status", "brief me", "where did we leave off", or opens a new work session. Surfaces today's sprint priorities and runs the Tier 1 drift check.
+version: 1.0.0
+---
+
+# Session Start
+
+Orients every session from the shared hub state. Run before touching any spoke repo.
+
+## Steps
+
+1. **Read sprint status**
+   - Read `C:\Users\rplap\OneDrive\Desktop\steel\sprint\2026-iste-40d.md`
+   - Extract: priority stack, per-repo status, blockers, and "this week's suggested focus"
+
+2. **Run drift check**
+   - Execute: `pwsh C:\Users\rplap\OneDrive\Desktop\steel\ops\drift-check.ps1`
+   - Note pass/fail counts
+
+3. **Output briefing** — exactly this format, no more:
+
+```
+SESSION BRIEF — <today's date>
+Days to ISTE: <days remaining until 2026-06-28>
+
+PRIORITY STACK
+  P1 iste-26     <one-line status from sprint doc>
+  P2 portfolio   <one-line status from sprint doc>
+  P3 creative-lab  <one-line status from sprint doc>
+  P4 creative-lab-demos  <one-line status from sprint doc>
+
+DRIFT  <X>/27 passing  <"— all clear" if 27/27, else list each FAIL>
+
+FOCUS TODAY
+  <copy "This week's suggested focus" items verbatim, numbered>
+```
+
+4. **Update the session log** in `sprint/2026-iste-40d.md`
+   - Add a row to the Session log table: `| <date> | <repo or "steel"> | Session started |`
+   - Only add the row — do not change anything else in the sprint doc
+
+## Notes
+
+- If drift check has failures, flag them before the Focus section and do not proceed to spoke work until the user acknowledges
+- Days to ISTE: subtract today's date from 2026-06-28
+- Do not summarize or paraphrase sprint content — copy status lines verbatim

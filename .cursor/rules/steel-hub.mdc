@@ -1,0 +1,19 @@
+---
+description: Steel hub rules — read when this vault is open alongside a spoke repo
+globs:
+alwaysApply: true
+---
+
+# Steel hub
+
+This workspace is the **coordination vault**, not a product repo.
+
+Before implementing:
+
+1. Read `index.md` and `sprint/2026-iste-40d.md`
+2. If editing cross-repo facts, read `sync-registry.md` and `wiki/module-facts.md`
+3. Implement in `C:/Users/rplap/OneDrive/Desktop/personal/<spoke>/` using that repo's `CLAUDE.md`
+
+`iste-narrative.md` and `iste-alignment-findings.md` are research-only — do not treat as canonical for code changes.
+
+Through June 28: freeze repo structure; fix Tier 1 user-facing drift only (see `sync-registry.md`).
