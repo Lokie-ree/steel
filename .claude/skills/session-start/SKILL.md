@@ -30,6 +30,7 @@ PRIORITY STACK
   P2 portfolio   <one-line status from sprint doc>
   P3 creative-lab  <one-line status from sprint doc>
   P4 creative-lab-demos  <one-line status from sprint doc>
+  P5 course-lab  <one-line status from sprint doc, or "not in sprint doc yet" if absent>
 
 GIT    <repo:branch ±ahead/behind dirty?> for any spoke needing attention, else "all clean & current"
 DRIFT  <pass> pass / <fail> fail  <"— all clear" if 0 fail and verdict is a pass; if UNVERIFIED, say so and name the behind/dirty spoke; else list each FAIL>

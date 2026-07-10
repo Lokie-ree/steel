@@ -1,6 +1,6 @@
 # Ecosystem Map
 
-Four repos, one pedagogical arc, two visual languages.
+Five repos: the four in the ISTE arc below, plus [[../projects/course-lab|course-lab]] — one pedagogical arc, two visual languages, two rendering stacks.
 
 ```
                     ┌─────────────────────────────────┐
@@ -47,6 +47,10 @@ Repos don't know about each other. Steel holds:
 - Which repo to open for a given task
 - What must stay aligned ([[../sync-registry]])
 - What's in flight ([[../sprint/2026-iste-40d]])
+
+## course-lab (not in diagram)
+
+Fifth spoke, outside the ISTE arc: production module library for the 2026–27 six-course room (PTR / Bind-and-Justify / Assume-Fit-Reflect + two remediation suites, plain JSX/SVG). Same pedagogy layer as creative-lab, deliberately different rendering stack — the repo boundary IS the stack boundary. See [[../projects/course-lab]] and its founding spec.
 
 ## Research layer (not in diagram)
 

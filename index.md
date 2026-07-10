@@ -1,6 +1,6 @@
 # Steel — Agentic OS Hub
 
-**Purpose:** Shared brain for four Creative Lab repos. Read this file first in any agent session where `steel` is in the workspace.
+**Purpose:** Shared brain for five Creative Lab repos. Read this file first in any agent session where `steel` is in the workspace.
 
 **Operator:** Randall LaPoint, Jr. — solo developer.
 
@@ -44,6 +44,7 @@ Research docs (`iste-narrative.md`, `iste-alignment-findings.md`) are **research
 | iste-26 | `C:/Users/rplap/OneDrive/Desktop/personal/iste-26` |
 | portfolio | `C:/Users/rplap/OneDrive/Desktop/personal/portfolio` |
 | creative-lab-demos | `C:/Users/rplap/OneDrive/Desktop/personal/creative-lab-demos` |
+| course-lab | `C:/Users/rplap/OneDrive/Desktop/personal/course-lab` |
 
 ---
 
