@@ -1,12 +1,12 @@
 ---
 name: drift-check
-description: Use when the user asks to "check drift", "run drift check", "verify sync", "check Tier 1", "are the repos in sync", or before any ISTE deploy. Scans all four spoke repos for Tier 1 field alignment against sync-registry.md.
+description: Use when the user asks to "check drift", "run drift check", "verify sync", "check Tier 1", "are the repos in sync", or before any ISTE deploy. Scans every spoke registered in index.md's Local paths table for Tier 1 field alignment against sync-registry.md.
 version: 1.0.0
 ---
 
 # Drift Check
 
-Runs the Tier 1 scan across all four spoke repos and surfaces any mismatches.
+Runs the Tier 1 scan across every registered spoke (from `index.md` → Local paths; git preflight covers all five, Stage 2 conformance targets the three curriculum spokes) and surfaces any mismatches.
 
 ## Steps
 

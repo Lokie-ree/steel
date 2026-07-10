@@ -4,7 +4,8 @@ Distilled facts for agents. Full architecture lives in spoke repos — link, don
 
 | Doc | Purpose |
 |-----|---------|
-| [[ecosystem-map]] | How the four repos relate |
+| [[ecosystem-map]] | How the five repos relate |
 | [[module-facts]] | Names, standards, coords, URLs |
+| [[decisions]] | Append-only architecture decision log |
 
 For cross-repo edits, also read [[../sync-registry]].
