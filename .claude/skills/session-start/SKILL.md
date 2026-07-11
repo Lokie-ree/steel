@@ -10,6 +10,8 @@ Orients every session from the shared hub state. Run before touching any spoke r
 
 ## Steps
 
+0. **Anchor the spoke** — if today's focus is a spoke repo, add its directory to the session workspace (`/add-dir C:/Users/rplap/OneDrive/Desktop/personal/<spoke>`) before any other command. Paths: `index.md` → Local paths. Skipping this costs a `cd` on every shell call and blinds file search to the spoke.
+
 1. **Read sprint status**
    - Read `C:\Users\rplap\OneDrive\Desktop\steel\sprint\2026-iste-40d.md`
    - Extract: priority stack, per-repo status, blockers, and "this week's suggested focus"
