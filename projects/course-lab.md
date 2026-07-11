@@ -35,7 +35,8 @@ npm run build
 
 None in Tier 1 — course-lab is not an ISTE surface and shares no synced fields. The spine's `LabEvent` schema is shared **by contract** with creative-lab instrumentation (founding spec §4); change it in the spec first.
 
-## Status (2026-07-09)
+## Status (2026-07-11)
 
-- Session 1 migration merged (PR #1): artifacts in `src/modules/`, `MODULE_VERSION` per file, Vite scaffold, `telemetry.ts` landed **unwired** — tests 6/6, build clean
-- Next: Session 2 = emit wiring + `studentCode` UX, gated on founding spec §8 (suite grain, reveal_earned per module, CSV shape)
+- Session 1 migration merged (PR #1): artifacts in `src/modules/`, `MODULE_VERSION` per file, Vite scaffold, `telemetry.ts` landed unwired
+- **Session 2 merged 2026-07-10** (PRs #5–#9): telemetry provider + StartGate `studentCode` prompt + roster validation + CSV export, then emit wiring across all 12 files / 29 pedagogical units at internal grain (7 PTR modules, 3 non-PTR standalones, algebra suite, geometry suite) — tests 10/10, build clean
+- **Open, not code:** (1) in-browser smoke verification of the wired spine has not been run — see `docs/superpowers/plans/PLAN-course-lab-smoke-verify.md`; (2) roster codes in `src/lib/roster.ts` are placeholders (`TEST01`/`TEST02`) — Randall must swap in real codes before student use; (3) deployment surface decided before August (operator decision, not blocking)
