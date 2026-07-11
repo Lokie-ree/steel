@@ -67,4 +67,19 @@ The pipeline: `wiki/module-facts.md` is canonical → `build-context` generates 
   - Solo PRs are self-merged, with a merge commit titled `Merge: …`
   - New repos start **private**; public is a deliberate later choice
 
+### Git state is derived, never transcribed
+
+Never write git state (branch, ahead/behind, dirty, "needs pull") into
+the sprint doc, session logs, or project cards as prose. State those
+facts only as output of `ops/repo-state.ps1`, run at read time. If a doc
+contains hand-typed git state, treat it as unverified and re-derive.
+
+## Documentation
+
+Extend, don't create. Before generating any new doc or guide, audit
+ARCHITECTURE.md, the iste-26 guides, and the vault wiki for overlap. If
+existing coverage is even partial, extend the existing file or recommend
+deferral. A new file must state, in one sentence, the gap no existing
+doc covers.
+
 > **Audit note (2026-07-07):** the friction-rule audit (`docs/superpowers/specs/2026-07-07-friction-rules-design.md`) used transcripts that all predate course-lab — it hardened the old 4-spoke workflow; the course-lab migration still needs its own review.
