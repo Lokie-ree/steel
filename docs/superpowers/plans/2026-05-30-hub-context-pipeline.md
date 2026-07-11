@@ -822,3 +822,9 @@ gh repo create steel --private --source . --remote origin --push
 | Unicode minus / en-dash normalized | 2 (tests) |
 | M2 ≡ M3 triangle treated as intentional | 2 (tests) |
 | Event string sourced from module-facts.md, not hardcoded | 1, 3 (tests) |
+
+## Implementation deviations (recorded during execution)
+
+- **`demo` block added** to the parser + JSON (reconciles plan with the spec's artifact shape, which includes CSE). JSON key order: `_generated, event, modules, demo, deployUrls`.
+- **URL regex hardened** to `https?://[^\s)]+` — the original `\S+` captured a trailing `)` from markdown-link cells (the `## Standalone demo` row uses link form). Latent Stage-2 bug, fixed in the module.
+- **Fail-closed triangle parse** + **anchored heading match** added as cheap guards against silent bad data. HubContext suite: 43/43.
