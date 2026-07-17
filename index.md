@@ -1,6 +1,6 @@
 # Steel — Agentic OS Hub
 
-**Purpose:** Shared brain for five Creative Lab repos. Read this file first in any agent session where `steel` is in the workspace.
+**Purpose:** Workflow-governance hub for six registered repos — git conventions, session briefs, drift/state visibility (ruling 2026-07-17, [[wiki/decisions]]). Read this file first in any agent session where `steel` is in the workspace.
 
 **Operator:** Randall LaPoint, Jr. — solo developer.
 
@@ -45,6 +45,7 @@ Research docs (`iste-narrative.md`, `iste-alignment-findings.md`) are **research
 | portfolio | `C:/Users/rplap/OneDrive/Desktop/personal/portfolio` |
 | creative-lab-demos | `C:/Users/rplap/OneDrive/Desktop/personal/creative-lab-demos` |
 | course-lab | `C:/Users/rplap/OneDrive/Desktop/personal/course-lab` |
+| project-studio-coach | `C:/Users/rplap/OneDrive/Desktop/personal/project-studio-coach` |
 
 ---
 

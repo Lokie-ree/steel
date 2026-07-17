@@ -6,7 +6,7 @@ version: 1.0.0
 
 # Drift Check
 
-Runs the Tier 1 scan across every registered spoke (from `index.md` → Local paths; git preflight covers all five, Stage 2 conformance targets the three curriculum spokes) and surfaces any mismatches.
+Runs the Tier 1 scan across every registered spoke (from `index.md` → Local paths; git preflight covers all six, Stage 2 conformance targets the three curriculum spokes) and surfaces any mismatches.
 
 ## Steps
 
