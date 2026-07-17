@@ -29,6 +29,6 @@ None — not an ISTE surface, no Tier 1 fields.
 
 ## Status (2026-07-17)
 
-- Admitted to STEEL as sixth spoke; 13 pre-admission commits (1 bootstrap + 12 build) grandfathered (conventions apply from admission forward)
+- Admitted to STEEL as sixth spoke; 13 pre-admission commits (1 bootstrap + 12 build) grandfathered (conventions apply from admission forward). The merged branch carried 15 commits total: the 13 above plus 2 admission-day commits (README key-status fix, `.gitattributes`) made under convention — so `git rev-list --count` on PR #1's merged branch reads 15, not 13.
 - Prototype complete on `main`; coach behavior playtested via 4-persona CLI harness
 - **No authentication** — identity is "pick your name"; teacher screen is an unauthenticated route. Hard stop on deploying beyond the trusted club.
