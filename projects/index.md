@@ -1,6 +1,6 @@
 # Projects — Spoke Registry
 
-Five repos. One ecosystem. Each card is the agent entry point when that repo is the active spoke.
+Six repos. One ecosystem. Each card is the agent entry point when that repo is the active spoke.
 
 | Repo | Card | Live | Canonical for |
 |------|------|------|---------------|
@@ -9,7 +9,8 @@ Five repos. One ecosystem. Each card is the agent entry point when that repo is 
 | portfolio | [[portfolio]] | [randalllapointjr.dev](https://randalllapointjr.dev) | Professional door, R3F preview cards, System grid |
 | creative-lab-demos | [[creative-lab-demos]] | [creative-lab-demos.vercel.app](https://creative-lab-demos.vercel.app) | Standalone interactives (CSE only) |
 | course-lab | [[course-lab]] | — (not deployed) | Six-course room module library (PTR / Bind-and-Justify / Assume-Fit-Reflect suites), measurement spine |
+| project-studio-coach | [[project-studio-coach]] | — (not deployed) | AI scoping coach (Convex + React), club prototype, archetype library |
 
-**Not in the curriculum grid:** creative-lab-demos — featured on portfolio as Live Demo, not in M1–M3 System rows. course-lab — production for the 2026–27 six-course room, not an ISTE surface; no Tier 1 sync fields.
+**Not in the curriculum grid:** creative-lab-demos — featured on portfolio as Live Demo, not in M1–M3 System rows. course-lab — production for the 2026–27 six-course room, not an ISTE surface; no Tier 1 sync fields. project-studio-coach — club platform outside the ISTE arc entirely; workflow-governance spoke, no Tier 1 sync fields.
 
 **Dependency direction:** creative-lab → iste-26 / portfolio (derivative surfaces). demos → portfolio (embed only).
