@@ -8,7 +8,7 @@
 
 Bring `project-studio-coach` (AI scoping coach for Mr. L's high-school club; Convex + Vite/React/TS; local path `C:/Users/rplap/OneDrive/Desktop/personal/project-studio-coach`) under STEEL governance as the **sixth spoke**. Two ordered concerns: publish the repo to GitHub, then register it in the hub. Deploy is explicitly out of scope.
 
-**Current repo state (verified 2026-07-17):** already a local git repo — `main` holds one docs-only bootstrap commit (satisfies the bootstrap-on-main founding exception); `feature/studio-coach-build` (current branch, clean tree) holds 13 commits of app work; **no remote**. Founding-clause gaps: missing `.gitattributes`; not yet on GitHub.
+**Current repo state (verified 2026-07-17):** already a local git repo — `main` holds one docs-only bootstrap commit (satisfies the bootstrap-on-main founding exception); `feature/studio-coach-build` (current branch, clean tree) holds 12 commits of app work on top of that baseline — 13 commits total; **no remote**. Founding-clause gaps: missing `.gitattributes`; not yet on GitHub.
 
 **Scope ruling (Randall, 2026-07-17):** GitHub publish + hub registration only. Repo name `project-studio-coach`, private. Hub identity framing: **workflow-governance hub** (see §3, decisions.md append).
 
@@ -20,7 +20,7 @@ All work on the existing `feature/studio-coach-build` branch. Steps, in order:
 2. **README accuracy fix.** The "Honest limitations" bullet claiming the deployment's OpenAI key is dead is stale — an active key is stored in the Convex dashboard environment (Randall, 2026-07-17). Correct the bullet (and the Setup section's "currently-set one is expired" line) in one small commit.
 3. **`.gitattributes`** (`* text=auto`) committed on the feature branch — patches the founding-clause gap (the clause puts it in the root commit; the root commit predates the clause, so it lands here instead).
 4. **Publish:** `gh repo create Lokie-ree/project-studio-coach --private`; push `main`; push `feature/studio-coach-build`.
-5. **Integrate:** PR `feature/studio-coach-build` → `main`; self-merge with a `Merge: …` title; pull `main` locally; delete the merged branch. All 14 pre-admission commits are grandfathered (the 13-commit branch merges as one PR; the baseline is already on `main`) — conventions apply from admission forward, not retroactively.
+5. **Integrate:** PR `feature/studio-coach-build` → `main`; self-merge with a `Merge: …` title; pull `main` locally; delete the merged branch. All 13 pre-admission commits (1 bootstrap + 12 build; verified via `git rev-list --count`) are grandfathered; the branch merges as one PR — conventions apply from admission forward, not retroactively.
 
 **Exit state (gates Concern 2):** clean tree, local `main` == `origin/main`, private remote exists, PR shows merged.
 
