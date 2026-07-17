@@ -1,6 +1,6 @@
 # Ecosystem Map
 
-Five repos: the four in the ISTE arc below, plus [[../projects/course-lab|course-lab]] — one pedagogical arc, two visual languages, two rendering stacks.
+Six repos: the four in the ISTE arc below, plus two workflow-governance spokes outside the arc — [[../projects/course-lab|course-lab]] and [[../projects/project-studio-coach|project-studio-coach]]. One hub, two clusters, plural rendering stacks.
 
 ```
                     ┌─────────────────────────────────┐
