@@ -269,6 +269,261 @@ There are two ways to position this honestly:
 The second positioning is the more honest one. The first one requires
 constructing a bridge the work doesn't yet earn.
 
+### Per-module framework mapping
+
+The alignments above run framework → work. This subsection runs the other
+direction: one entry per shipped piece, naming which TLP sub-principles and
+which AI-Ready-Graduate roles that specific module demonstrates, with the
+mechanism — code-level or documented design constraint — that supports each
+claim. Where a category has no honest evidence in the current build, the
+entry says so instead of stretching.
+
+Evidence sources: each module's `ARCHITECTURE.md` and copy/state files in
+`creative-lab` (`rigid-motions/`, `dilations/`, `pythagorean-theorem/` under
+`src/components/modules/`), and CSE source in `creative-lab-demos/app/`
+(`useDemoReducer.ts`, `JoystickGizmo.tsx`, `ShapeLabel.tsx`,
+`classifyShape.ts`, `routes/home.tsx`).
+
+#### M1 — Rigid Motions
+
+**TLPs demonstrated:**
+
+- **Spark Curiosity.** `RotationArcs` renders arc sweeps fixed at the
+  *origin* while the ghost rotates about its own *centroid* — the arcs only
+  align with the ghost's vertices at the one mathematically correct
+  position. The architecture doc names this the module's "Level 5
+  pedagogical moment": the alignment is a designed anomaly the student has
+  to explain. `synthesis-reveal` and `coordinate-reveal` are dedicated pause
+  states (`successesRequired: 0` in `GUIDE_STATE_SEQUENCE`) — wonder beats
+  reserved in the state machine itself.
+- **Develop Expertise.** Intentional practice is encoded as data, not
+  habit: every predict stage in `GUIDE_STATE_SEQUENCE` carries
+  `successesRequired: 2`, and the nine-state sequence (spatial predict →
+  coordinate-reveal → predict-with-coordinates → synthesis → capstone) is a
+  concrete-to-symbolic ladder. In Phase 3, `FormulaReadout` shows the
+  coordinate rule with *live ghost vertices while the student drags* —
+  spatial and symbolic modes presented simultaneously, not sequentially.
+- **Elevate Reflection.** The earned-reveal copy is written as a mirror,
+  not as instruction: "Same distances. Same angles. Sliding the shape
+  preserves everything" describes what the student *just did* (12
+  beat-indexed entries in `EARNED_REVEALS`, keyed
+  `${guideState}-${stageSuccessCount}`). The React 18 batching fix —
+  recording the reveal key in `handleNext`, not `handleCheck` — exists
+  solely to guarantee the reflective beat actually displays. Debugging to
+  protect a reflection moment is what "reflection as system commitment"
+  looks like in code.
+- **Prioritize Authentic Experiences.** FLIP and ROTATION are deliberately
+  *local* transforms (about the ghost's own centroid) precisely so a button
+  press cannot solve the task — the documented rationale is that a global
+  reflection "would jump the ghost directly to the correct answer,
+  eliminating the prediction task." The design forecloses the shortcut and
+  keeps the student in the constructor role. Capstone scoring is
+  result-only (`applySequence` output vs. target): any sequence that
+  produces the target is accepted, which is how real problem-solving is
+  judged.
+- **Ignite Agency.** `capstone-3` is constructed so the reversed order
+  produces distinct vertices — non-commutativity is surfaced by the
+  student's own failed attempt, and the prompt copy invites the risk ("If
+  your first attempt misses, try reversing the order"). Ghost movement is
+  free-drag, clamped but never snapped — the planned `snapToGrid` was
+  removed when the design settled on free drag.
+
+**Partial / indirect:** *Connect Learning to the Learner* — reveal copy
+varies by beat index, and `shownReveals` means a repeat match gets "Match."
+instead of re-shown reveal copy (the system doesn't re-explain to a student
+who already got it), but the five rounds are deterministic ("no random
+generation") — there is no per-learner adaptation. *Cultivate Belonging* —
+the retry-forever loop with gap-line feedback (and no `close` state for
+reflect) keeps stakes low, but nothing in the build addresses relationships
+or community. *Ensure Opportunity* — the interaction-before-vocabulary
+entry point applies, but M1 has no module-specific accessibility surface
+comparable to M3's (no screen-reader announcements, no keyboard alternative
+to drag).
+
+**AI-Ready Graduate roles:** none as Culatta defines them — no AI tool in
+the loop. The closest cognitive *precursor* is Synthesizer:
+`SYNTHESIS_REVEAL` ("Three different moves — one result … Every rigid
+motion preserves distances and angles") names the unification of three
+operations under congruence, and the capstone requires that synthesis to be
+operational, not just witnessed. Precursor claim only, subject to the scope
+note in Section 2.
+
+#### M2 — Dilations & Similarity
+
+**TLPs demonstrated:**
+
+- **Develop Expertise.** 14 rounds across four phases walk scale-factor →
+  coordinate rule → similarity-by-construction → AA criterion. The
+  `kLocked` prop pins the dilation factor in Phase 3 and the capstone so
+  attention stays on sequence structure. `AA_DISCOVER_SUB_PAIRS` sub-pair 2
+  deliberately colors only 2 of 3 matching angle pairs "to demonstrate AA
+  sufficiency" — the sufficiency argument is encoded in the task data
+  itself.
+- **Elevate Reflection.** `aa-discover` enforces a 2.5-second dwell timer
+  between REVEAL MATCHES and the appearance of CONTINUE — reflection time
+  is literally scheduled in the controller. `dilate-summary` is an
+  observe-only round showing all three dilated images together, a designed
+  look-back. Per-round `EARNED_REVEALS` with `shownReveals` persistence
+  mirror M1's mechanic.
+- **Ignite Agency.** The SequenceBuilder has *no drag-to-reorder* by
+  explicit design constraint: "Students clear and rebuild —
+  non-commutativity is discovered by trying different orderings." The NOT
+  SIMILAR button is disabled until `anglesRevealed && !hasAngleMatches`
+  (computed via `computeMatchColors`) — the student is allowed to assert a
+  negative claim, but must earn it with evidence first.
+- **Prioritize Authentic Experiences.** Similarity rounds require
+  *constructing* the rigid-motion + dilation sequence that proves
+  similarity — CHECK validates the composed sequence against the target
+  triangle. Capstone pair 2 is a NOT-similar pair: the task set includes a
+  problem whose correct answer is "no," which recognition-style exercises
+  never do.
+
+**Partial / indirect:** *Spark Curiosity* — `dilate-k-half` (k < 1 shrinks
+toward the origin) subverts the "dilation makes bigger" expectation, but M2
+has no engineered anomaly on the level of M1's arcs or CSE's hexagon.
+*Connect Learning to the Learner* — the one-way `coordinatesVisible` /
+`angleLabelsVisible` flags accrete with progress and never reset, so the
+interface's symbolic density tracks what the learner has unlocked; still
+system-level, not per-learner. *Ensure Opportunity* — keyboard nudge
+(arrows 0.5-unit, Shift+arrow 0.25-unit) is a real non-drag input path, but
+it is the only module-specific barrier-reduction mechanism. *Cultivate
+Belonging* — low-stakes retry (a missed sequence stays in `active`), same
+caveat as M1.
+
+**AI-Ready Graduate roles:** none as defined. Synthesizer precursor:
+similarity is taught as *decomposable* — the student proves two figures
+similar by building the rigid-motion + dilation sequence that connects
+them, which is "bring separate pieces together into one structure"
+performed in geometric form. Precursor claim only.
+
+#### M3 — Pythagorean Theorem
+
+**TLPs demonstrated:**
+
+- **Spark Curiosity.** The formula is withheld *in state*: `formulaVisible`
+  starts false and stays false while the student numerically predicts c²
+  for two triangles (`proof-345`, `proof-51213`); only `proof-properties`
+  flips it, permanently. The theorem arrives as the pattern behind two
+  predictions the student has already made, not as the premise.
+- **Develop Expertise.** One theorem is walked through four
+  representations: visual proof (areas), converse (classification), unknown
+  sides (algebra), coordinate distance. `converse-569` is a designed
+  counterexample — a non-right 5-6-9 triangle whose area check visibly
+  fails (25 + 36 ≠ 81) — so the concept is bounded, not just instantiated.
+- **Elevate Reflection.** `proof-properties` is a dedicated
+  `properties-pause` round type — CONTINUE-only, "a passive observation
+  moment" per the architecture doc — sitting between the predictions and
+  the formal claim. Earned reveals exist on 10 of 13 rounds; correct
+  answers fire a screen-reader announcement (assertive) plus an 80 ms
+  haptic — feedback is timely and multimodal.
+- **Prioritize Authentic Experiences.** Phase 4's two-step gate: CONFIRM
+  CONSTRUCTION must be pressed — triggering the ghost→accent crossfade of
+  the constructed right triangle — before CHECK becomes available. The
+  construction is a required act, not an illustration. The triangle itself
+  is *hidden* in the coordinate rounds ("hidden 3-4-5"); the student
+  imposes the right-triangle structure on two bare points.
+- **Ensure Opportunity.** M3 has the portfolio's strongest documented
+  accessibility surface: `role="radiogroup"` / `aria-checked` on the
+  converse toggle, `announce()` on every phase transition, `aria-label`
+  round announcements on the progress dots, `aria-hidden` on the formula
+  strip while locked.
+
+**Partial / indirect:** *Ignite Agency* — the converse YES/NO judgment
+lets the student classify triangles rather than compute, but M3's
+interaction vocabulary (numeric input + toggle + one construction button)
+is the most directed of the three modules; the risk-taking claim is
+thinner here and should not be oversold. *Connect Learning to the Learner*
+/ *Cultivate Belonging* — same system-level mechanics as M1/M2 (one-way
+flags, `shownReveals`, incorrect-clears-and-retries), nothing
+module-specific.
+
+**AI-Ready Graduate roles:** none as defined. Synthesizer precursor: Phase
+4 hides the triangle, asks for the distance between two points, and the
+earned reveal is the distance formula `d = √((x₂−x₁)²+(y₂−y₁)²)` — the
+theorem and the formula are collapsed into one object by the student's own
+construction. Precursor claim only.
+
+#### CSE — Cross-Section Explorer
+
+**TLPs demonstrated:**
+
+- **Spark Curiosity.** Completion is gated on *surprise*: the reducer's
+  `REVEAL_LABEL` case only marks cross-section mode complete when
+  `distinctShapes.size >= 2` — the system withholds completion until the
+  student has found a second, *different* shape from the same solid. The
+  classifier's cube path admits triangle through hexagon
+  (`classifyShape.ts` invariant table), which is what makes the
+  hexagon-from-a-cube discovery reachable by honest manipulation rather
+  than scripted.
+- **Elevate Reflection.** The connection sentence is gated on
+  `completedModes` containing both `${solidId}-crossSection` and
+  `${solidId}-rotation` for the *same* solid, auto-hides after 4 seconds,
+  and never re-shows once dismissed (`connectionDismissed`). The reflection
+  copy is path-aware: `ShapeLabel.tsx` chooses retrospective wording
+  ("That cross section — it's the shape you started with") when arriving
+  from cross-section mode and prospective wording ("Slice this solid —
+  you'll find the shape you swept from") when arriving from rotation mode.
+- **Prioritize Authentic Experiences.** The `JoystickGizmo` puts the
+  cutting plane in the student's hand: the CSG re-cuts on every
+  `pointermove` (`csgRef.current.update()` inside the drag handler), so
+  the consequence of the gesture is continuous, not evaluated at submit
+  time. Pointer capture on the canvas keeps the drag alive off-handle —
+  the tool behaves like a physical instrument, not a form control.
+- **Ignite Agency.** The affordance pulse is killed on the first
+  interaction (`hasInteracted` ref → `gsap.killTweensOf`) — the system
+  signals once, then trusts the student. Rotation mode is student-started
+  and student-reset (ROTATE → / RESET). Physics mode is opt-in play,
+  deliberately decoupled from the pedagogy (`physicsMode` resets on every
+  navigation action).
+- **Ensure Opportunity.** `prefersReducedMotion` is honored in three
+  separate animation systems (`JoystickGizmo`, `ShapeLabel`,
+  `useSolidRotation`), and the demo requires zero text instructions to
+  begin — interaction is the entry point.
+
+**Partial / indirect:** *Develop Expertise* — the `classifyShape`
+geometric-invariant gate (a cone cannot produce a quadrilateral; per-solid
+reachable-label sets) protects the *correctness of the feedback* the
+student learns from, but CSE has no rounds, no mastery sequence, and no
+practice loop. It is a single-session exhibit demo; the Develop Expertise
+claim stops at "feedback integrity."
+
+**No honest evidence:** *Cultivate Belonging* and *Connect Learning to the
+Learner* — CSE is one fixed experience with no learner model, no pacing
+adaptation, and no relational mechanism.
+
+**AI-Ready Graduate roles:** none as defined — and CSE is where the
+temptation to stretch is strongest, so it deserves the explicit non-claim.
+What CSE does have is the portfolio's strongest Synthesizer *precursor*:
+the `completedModes` gate plus the dual path-aware sentences (mechanisms
+above) make the student build the structural identity between cutting and
+revolving from their own two hands. That is cognitive synthesis, performed
+without an AI tool anywhere in the loop.
+
+#### Summary matrix
+
+● demonstrated with a named mechanism · ◐ partial or system-level · — no
+honest evidence in the current build.
+
+| TLP sub-principle | M1 | M2 | M3 | CSE |
+|---|---|---|---|---|
+| Cultivate Belonging | ◐ | ◐ | ◐ | — |
+| Connect Learning to the Learner | ◐ | ◐ | ◐ | — |
+| Ensure Opportunity | ◐ | ◐ | ● | ● |
+| Spark Curiosity | ● | ◐ | ● | ● |
+| Develop Expertise | ● | ● | ● | ◐ |
+| Elevate Reflection | ● | ● | ● | ● |
+| Prioritize Authentic Experiences | ● | ● | ● | ● |
+| Ignite Agency | ● | ● | ◐ | ● |
+
+For the Profile of an AI-Ready Graduate: no module demonstrates any of the
+six roles as Culatta defines them, because no module puts an AI tool in the
+student's hands. All four contain a Synthesizer *precursor* mechanism
+(M1 `SYNTHESIS_REVEAL`; M2 similarity-by-decomposition; M3 distance-formula
+collapse; CSE connection moment), with CSE's the strongest. Whether the
+precursor framing is ever used publicly is a strategy question — Section 3's
+"honest version" above and Section 7's process note both counsel against
+building on it.
+
 ---
 
 ## Section 4 — Cross-Module Pedagogical Pattern
