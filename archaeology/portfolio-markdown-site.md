@@ -8,4 +8,4 @@
 - Frontmatter-as-config — posts table with ~30 optional fields driving layout without code changes (`convex/schema.ts`).
 - AEO/LLM discovery surface — `/raw`, `/api/posts`, `/llms.txt`, `/openapi.yaml`, HTTP MCP server at `/mcp` (README:132-161).
 **Dead ends & lessons:** Six `convex/*.ts.disabled` files (newsletter, aiChat, contact, aiImageGeneration) — upstream's heavier features switched off, not deleted; README is still upstream's marketing.
-**Verdict candidate:** **revive** — newest, furthest-along portfolio with clean sync architecture; finish the transformation, delete `.disabled` cruft, write its own README. (Tension to resolve at verdict time: overlaps the `portfolio` spoke's role.)
+**Verdict candidate:** ~~revive~~ → **absorb then close (ratified 2026-07-18)** — the `portfolio` spoke stays the door: it is the operator's own ground-up vision and the business-card URL, and a fork of another creator's framework can't be the professional identity however recent or clean. Harvest the sync pipeline, analytics, and AEO surface into [[../wiki/patterns]].

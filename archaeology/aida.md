@@ -17,4 +17,4 @@
 - Alignment scorecard built then removed for beta simplicity — morph #2; the "What We Are NOT" README section is the scar tissue turned into clarity.
 - The meta-lesson the README states outright: the product converged on *coaching the teacher's use of AI* rather than replacing tools — same philosophy course-lab now applies to students.
 
-**Verdict candidate:** **revive-or-absorb (operator call)** — the RAG corpus + ingestion architecture and the Louisiana alignment moat are genuinely valuable and unique in the portfolio; the question is whether Pelican AI resumes as a product or its RAG/agent spine gets absorbed into the teacher-facing side of the 2026 stack (e.g., project-studio-coach).
+**Verdict candidate:** ~~revive-or-absorb~~ → **absorb the spine (ratified 2026-07-18)** — Pelican-as-product closes for now; the RAG/ingestion/agent architecture becomes the canonical teacher-facing AI pattern and the Louisiana corpus stays revivable. See [[../wiki/decisions]].
