@@ -37,8 +37,8 @@ Update this file at the **start and end** of each work session.
 
 ### steel — P3
 
-- **Done recently:** `wiki/edge-ex-courses.md` distilled from the six EdgeEx PDFs (2026-07-17)
-- **Next:** journey doc (June 2024 → now: React/Next beginnings, EdCoachAi, Pelican AI, SpedSync, 2026 builds — GitHub archaeology); sweep index/wiki for stale ISTE-sprint framing
+- **Done recently:** `wiki/edge-ex-courses.md` distilled from the six EdgeEx PDFs (2026-07-17); **journey doc done 2026-07-18** (`wiki/journey.md`, from the full 17-repo consolidation — plus `archaeology/`, `wiki/patterns.md`, `initiatives/`, and ratified verdicts in `wiki/decisions.md`)
+- **Next:** sweep index/wiki for stale ISTE-sprint framing (index.md still links [[../sprint/2026-iste-40d]] and carries the ISTE deadline as current)
 
 ### portfolio — P4
 
@@ -69,6 +69,8 @@ Update this file at the **start and end** of each work session.
 | 2026-07-17 | steel | Session started |
 | 2026-07-17 | iste-26 | Voice docs (`iste-narrative.md`, `lab-guide-rubric.md`) committed + merged via PR #7; drift check now a clean PASS |
 | 2026-07-17 | course-lab | `feat/sink-hardening` landed (PR #10): 13/13 tests, build clean, plan step-8 manual pass replayed via scripted Playwright; merged local branches pruned |
+| 2026-07-18 | steel | Session started |
+| 2026-07-18 | steel | Portfolio consolidation: 17-repo archaeology (`archaeology/`), verdicts ratified (Pelican spine absorbed; portfolio stays the door; nine bulk rulings), `wiki/journey.md` + `wiki/patterns.md` written, five initiative docs opened (`initiatives/`) |
 
 ---
 

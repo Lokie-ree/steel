@@ -29,6 +29,8 @@ Research docs (`iste-narrative.md`, `iste-alignment-findings.md`) are **research
 | [[sync-registry]] | Cross-repo fields that must stay aligned |
 | [[sprint/index]] | Sprint docs — current window and session log |
 | [[wiki/index]] | Distilled facts (module names, coords, URLs, ecosystem map) |
+| [[archaeology/index]] | One dossier per repo — the 2026-07-18 portfolio dig (evidence layer) |
+| [[initiatives/index]] | Forward initiative docs — future sprints get cut from these |
 | [[ops/index]] | Agent rules, scripts, vault config |
 | [[agentic-os/index]] | Three-layer framework reference (background only) |
 | `iste-narrative.md` | ISTE narrative research (not canonical) |
