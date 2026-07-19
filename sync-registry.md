@@ -2,7 +2,7 @@
 
 Fields that **must stay aligned** across spokes. If you change one, update every spoke in the same session.
 
-**Policy through June 28:** fix user-facing drift only. Do not unify code or design systems.
+**Policy:** fix user-facing drift only. Do not unify code or design systems (monorepo/shared packages remain out of sprint scope).
 
 ---
 

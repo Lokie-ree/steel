@@ -4,7 +4,7 @@
 
 **Operator:** Randall LaPoint, Jr. — solo developer.
 
-**Hard deadline:** ISTE LIVE 2026 · Orlando · June 28 – July 1, 2026.
+**North star:** the 2026–27 classroom — course-lab in production for the six-course room, EdgeEx-aligned builds (Algebra II/III) as the agile layer on top. ISTE LIVE 2026 concluded; the arc is archived ([[archive/2026-iste-40d]], [[wiki/journey]]).
 
 ---
 
@@ -12,7 +12,7 @@
 
 You work in **both** Obsidian (`steel`) and Cursor (one spoke repo). At session start:
 
-1. Read [[sprint/2026-iste-40d]] — what gets attention today
+1. Read [[sprint/index]] → the current sprint doc — what gets attention today
 2. Skim [[sync-registry]] — if your edit touches a synced field, update all spokes listed
 3. Open the spoke's [[projects/index|project card]] for paths, branch, and agent entry point
 4. Implement in the **spoke repo** (`personal/<repo>/`), not in `steel`
@@ -51,8 +51,6 @@ Research docs (`iste-narrative.md`, `iste-alignment-findings.md`) are **research
 
 ---
 
-## Drift policy (through June 28)
+## Drift policy
 
-**Freeze code structure; document sync points.** Do not extract shared packages or merge repos before ISTE. When user-facing strings drift (names, standards, URLs, triangle coords), fix all spokes listed in [[sync-registry]] in the same session.
-
-Post-ISTE: revisit whether shared packages are worth the migration cost.
+**Document sync points; derive state.** When user-facing strings drift (names, standards, URLs, triangle coords), fix all spokes listed in [[sync-registry]] in the same session. Monorepo / shared-package extraction stays out of scope (sprint ruling; revisit only if a sprint puts it in scope). Harvested cross-repo patterns live in [[wiki/patterns]]; forward direction lives in [[initiatives/index]].

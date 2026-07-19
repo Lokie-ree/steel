@@ -9,7 +9,7 @@ Instructions for AI agents when `steel` is in the workspace (Obsidian or Cursor 
 ## Session protocol
 
 1. Read `index.md` at vault root
-2. Read `sprint/2026-iste-40d.md` for current priorities
+2. Read `sprint/index.md` → the current sprint doc for priorities
 3. If the task touches cross-repo facts, read `sync-registry.md` and `wiki/module-facts.md`
 4. Switch context to the correct spoke repo before editing TS/TSX/CSS
 
@@ -38,7 +38,7 @@ Before reading many files, check folder `index.md` files:
 
 Do not recursively list the vault. Snake through indices.
 
-## Drift policy (through ISTE)
+## Drift policy
 
 - **Do not** propose monorepos, shared npm packages, or token unification unless the user asks
 - **Do** flag when an edit changes a field in `sync-registry.md`
@@ -46,7 +46,7 @@ Do not recursively list the vault. Snake through indices.
 
 ## Skills
 
-Two skills live in `.claude/skills/` and are available in any Claude Code session with `steel` in the workspace:
+These skills live in `.claude/skills/` and are available in any Claude Code session with `steel` in the workspace:
 
 - **session-start** — reads sprint status, runs drift check, outputs a structured briefing, logs the session
 - **drift-check** — runs `ops/drift-check.ps1`: git preflight, then Stage 1 (bundle freshness) + Stage 2 (code conformance), with fix guidance

@@ -38,7 +38,7 @@ Update this file at the **start and end** of each work session.
 ### steel — P3
 
 - **Done recently:** `wiki/edge-ex-courses.md` distilled from the six EdgeEx PDFs (2026-07-17); **journey doc done 2026-07-18** (`wiki/journey.md`, from the full 17-repo consolidation — plus `archaeology/`, `wiki/patterns.md`, `initiatives/`, and ratified verdicts in `wiki/decisions.md`)
-- **Next:** sweep index/wiki for stale ISTE-sprint framing (index.md still links [[../sprint/2026-iste-40d]] and carries the ISTE deadline as current)
+- **Stale-framing sweep done 2026-07-19:** index.md (north-star line, sprint link, drift policy), ops/claude.md (session protocol, drift heading), sync-registry.md (policy line) — historical docs (archive/, old specs/plans) deliberately untouched. **Steel P3 fully complete.**
 
 ### portfolio — P4
 
@@ -77,6 +77,7 @@ Update this file at the **start and end** of each work session.
 | 2026-07-18 | course-lab | PLAN-course-lab-registry-guard executed: 14 wiring-contract tests, fail-first + guard-bite proven, 30/30 green, merged (PR #14) |
 | 2026-07-19 | course-lab | PLAN-course-lab-family-coverage executed: 29-unit inventory + six-course grid merged (PR #15) — pre-August plan set COMPLETE; operator judgment cells open |
 | 2026-07-19 | steel | Transformation explorer brainstormed to spec + plan (2 reviewer passes); home ruled course-lab; P2 planning item closed |
+| 2026-07-19 | steel | Wrap-up: stale ISTE framing swept from live docs (P3 complete); vault shipped current for mentor review 2026-07-20 |
 
 ---
 
