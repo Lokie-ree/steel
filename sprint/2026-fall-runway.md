@@ -69,6 +69,7 @@ Update this file at the **start and end** of each work session.
 | 2026-07-17 | steel | Session started |
 | 2026-07-17 | iste-26 | Voice docs (`iste-narrative.md`, `lab-guide-rubric.md`) committed + merged via PR #7; drift check now a clean PASS |
 | 2026-07-17 | course-lab | `feat/sink-hardening` landed (PR #10): 13/13 tests, build clean, plan step-8 manual pass replayed via scripted Playwright; merged local branches pruned |
+| 2026-07-18 | steel | Session started |
 
 ---
 

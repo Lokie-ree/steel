@@ -34,11 +34,13 @@ Vault `index.md` map gains rows for `archaeology/` and `initiatives/`.
 - **Explore agent B:** ts-google-automation, coding-playground-vanilla, iste-outreach-tracker.
 - **From vault docs only:** creative-lab, iste-26, portfolio, creative-lab-demos.
 
+This 17-repo list is the canonical inventory; "every repo has a dossier" is checked against it.
+
 **Dossier format (fixed):** Identity (what it was, when, final state) → Stack → Patterns worth keeping (with file refs) → Dead ends & lessons → Verdict candidate + evidence. One page maximum per repo; dossiers are written to disk immediately after each read so context churn cannot lose them.
 
 ## Verdict process
 
-After all dossiers exist: the agent proposes absorb/revive/close per lineage with evidence; the operator ratifies via question rounds. Ratified verdicts are appended to `wiki/decisions.md` with date and evidence links. Initiative docs are cut only from surviving verdicts.
+After all dossiers exist: the agent proposes absorb/revive/close per lineage with evidence; the operator ratifies via question rounds. Standalone repos that belong to no lineage (e.g., stoic-scholar, ts-google-automation, coding-playground-vanilla, iste-outreach-tracker, github-readme) get their own ruling row unless the operator folds them into a lineage — none escape `wiki/decisions.md`. Ratified verdicts are appended with date and evidence links. Initiative docs are cut only from surviving verdicts.
 
 ## Synthesis rules
 
