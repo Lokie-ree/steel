@@ -27,8 +27,8 @@ Update this file at the **start and end** of each work session.
 ### course-lab — P1
 
 - **Live git state:** `pwsh ops/repo-state.ps1`
-- **Done recently:** sink-hardening merged (PR #10, 2026-07-17) — never-throwing sink, memory fallback for cookie-blocked Chrome, two-step clear control; verified 13/13 tests + scripted browser pass
-- **Next:** run PLAN-course-lab-smoke-verify; roster codes are still placeholders (`TEST01`/`TEST02`) — real codes before student use; deploy surface decision before August
+- **Done recently:** sink-hardening merged (PR #10, 2026-07-17); **smoke-verify PASS (PR #11)**; **real roster codes merged (PR #12, 2026-07-18)** — guard tests prevent placeholder regression
+- **Next:** deploy surface decision (next plan in the set); Randall assigns codes→names offline before student use
 
 ### creative-lab — P2
 
@@ -57,7 +57,7 @@ Update this file at the **start and end** of each work session.
 1. ~~**Clear the drift verdict**~~ — done 2026-07-17: iste-26 docs homed (PR #7), drift check PASS
 2. ~~**course-lab: land sink-hardening**~~ — done 2026-07-17 (PR #10); next is smoke-verify per plan
 3. **Ship the baseline branch** — `docs/edge-ex-baseline` (edge-ex reference + this sprint doc) to PR
-4. **Transformation explorer brainstorm** — one session, output is a scoped plan, not code
+4. ~~**Transformation explorer brainstorm**~~ — done 2026-07-19: spec + PLAN-course-lab-transformations-ptr shipped; home ruled course-lab (decisions log)
 
 ---
 
@@ -71,6 +71,12 @@ Update this file at the **start and end** of each work session.
 | 2026-07-17 | course-lab | `feat/sink-hardening` landed (PR #10): 13/13 tests, build clean, plan step-8 manual pass replayed via scripted Playwright; merged local branches pruned |
 | 2026-07-18 | steel | Session started |
 | 2026-07-18 | steel | Portfolio consolidation: 17-repo archaeology (`archaeology/`), verdicts ratified (Pelican spine absorbed; portfolio stays the door; nine bulk rulings), `wiki/journey.md` + `wiki/patterns.md` written, five initiative docs opened (`initiatives/`) |
+| 2026-07-18 | course-lab | PLAN-course-lab-smoke-verify executed via scripted Playwright (Chrome extension down — fallback recipe): PASS, zero defects, report merged (PR #11) |
+| 2026-07-18 | course-lab | PLAN-course-lab-roster-swap executed: 40 real codes + DEMO01, guard tests red→green, browser-verified, merged (PR #12) |
+| 2026-07-18 | course-lab | PLAN-course-lab-deploy executed: live at course-lab-two.vercel.app (Vercel CLI, git-connected for auto-deploy), production loop verified with DEMO01, README URL merged (PR #13) |
+| 2026-07-18 | course-lab | PLAN-course-lab-registry-guard executed: 14 wiring-contract tests, fail-first + guard-bite proven, 30/30 green, merged (PR #14) |
+| 2026-07-19 | course-lab | PLAN-course-lab-family-coverage executed: 29-unit inventory + six-course grid merged (PR #15) — pre-August plan set COMPLETE; operator judgment cells open |
+| 2026-07-19 | steel | Transformation explorer brainstormed to spec + plan (2 reviewer passes); home ruled course-lab; P2 planning item closed |
 
 ---
 

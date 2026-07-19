@@ -2,7 +2,7 @@
 
 **GitHub:** [Lokie-ree/course-lab](https://github.com/Lokie-ree/course-lab) (private)
 **Local:** `C:/Users/rplap/OneDrive/Desktop/personal/course-lab`
-**Live:** — (not deployed; production surface decided before August)
+**Live:** <https://course-lab-two.vercel.app> (Vercel; deployed 2026-07-18, auto-deploys from `main`)
 **Branch:** `main` (default; feature-branch only, never commit to main)
 **Agent entry:** `README.md` → `docs/course-lab-founding-spec.md`
 
@@ -39,4 +39,7 @@ None in Tier 1 — course-lab is not an ISTE surface and shares no synced fields
 
 - Session 1 migration merged (PR #1): artifacts in `src/modules/`, `MODULE_VERSION` per file, Vite scaffold, `telemetry.ts` landed unwired
 - **Session 2 merged 2026-07-10** (PRs #5–#9): telemetry provider + StartGate `studentCode` prompt + roster validation + CSV export, then emit wiring across all 12 files / 29 pedagogical units at internal grain (7 PTR modules, 3 non-PTR standalones, algebra suite, geometry suite) — tests 10/10, build clean
-- **Open, not code:** (1) in-browser smoke verification of the wired spine has not been run — see `docs/superpowers/plans/PLAN-course-lab-smoke-verify.md`; (2) roster codes in `src/lib/roster.ts` are placeholders (`TEST01`/`TEST02`) — Randall must swap in real codes before student use; (3) deployment surface decided before August (operator decision, not blocking)
+- **Smoke-verify PASS 2026-07-18** (PR #11, `docs/smoke-test-2026-07.md`); **real roster codes landed 2026-07-18** (PR #12: 40 codes + DEMO01, placeholder guard tests) — Randall assigns codes→names offline
+- **Deployed to Vercel 2026-07-18** (PR #13 recorded the URL; git-connected, auto-deploys from `main`); production loop verified end-to-end with DEMO01
+- **Registry guard merged 2026-07-18** (PR #14: 14 wiring-contract tests); **family-coverage scaffold landed 2026-07-19** (PR #15, `docs/family-coverage.md`) — judgment cells open
+- **Open, operator-only:** school-network check of the URL from a school device before August (district filters may block `*.vercel.app` — fix is a custom domain, surface it, don't improvise); family-coverage ☐ cells + COURSE-5/6 names
