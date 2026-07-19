@@ -1,0 +1,9 @@
+# pelican-ai-strategy
+
+**Identity:** CrewAI-based "Strategic AI Co-Founder System" for Pelican AI — multi-agent crews meant to run weekly strategic reviews grounded in Louisiana educator needs (LEADS rubric), the "We're Not Waiting for LDOE" community ethos, and the *actual* aida Convex codebase via MCP. Built ~Nov 27 2025 (single-day file timestamps), **never git-initialized**. One crew scaffolded (`product_decision_crew`), MCP tool stubbed (`tools/convex_mcp_tool.py`, marked "not fully implemented"), flows empty. Abandoned at skeleton stage.
+**Stack:** Python 3.12 + uv, CrewAI (+ optional crewai-tools[mcp]), YAML agent/task configs, hatchling.
+**Patterns worth keeping:**
+- **Domain-grounded agent role definitions** — `src/pelican_ai_strategy/config/agents.yaml`: CPO / community strategist / technical PM / feature architect / educator-experience validator, each with a backstory anchored in real constraints ("Would I use this during my planning period?"). Better persona engineering than most agent configs; direct successor to edcoachai's `docs/agents/`.
+- **The core idea** — strategy agents that read the real codebase state before advising, "prevent strategic plans from diverging from implementation reality" (`agents.yaml:26-36`). This is exactly what steel's hub + drift-check later became, minus CrewAI.
+**Dead ends & lessons:** Framework-first approach — a Python multi-agent stack bolted beside a TypeScript product added a second toolchain for zero shipped output. The need was real (strategy grounded in code reality) but the answer turned out to be markdown governance + drift scripts (steel), not a crew runtime. Never even committed.
+**Verdict candidate:** **close** — the idea already lives, better, in steel; harvest the agents.yaml persona style for future agent definitions, delete or archive the folder.
