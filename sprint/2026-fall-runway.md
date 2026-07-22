@@ -78,6 +78,10 @@ Update this file at the **start and end** of each work session.
 | 2026-07-19 | course-lab | PLAN-course-lab-family-coverage executed: 29-unit inventory + six-course grid merged (PR #15) — pre-August plan set COMPLETE; operator judgment cells open |
 | 2026-07-19 | steel | Transformation explorer brainstormed to spec + plan (2 reviewer passes); home ruled course-lab; P2 planning item closed |
 | 2026-07-19 | steel | Wrap-up: stale ISTE framing swept from live docs (P3 complete); vault shipped current for mentor review 2026-07-20 |
+| 2026-07-22 | steel | Session started |
+| 2026-07-22 | github-readme | Profile README rewritten for a builder audience around the Steel hub architecture (PR #1): three-facet frame replaces the ISTE two-arc framing, six-spoke diagram, course-lab + studio-coach added, lineage/patterns from the consolidation |
+| 2026-07-22 | github-readme | Design layer shipped (PRs #2 → #3): bespoke header SVG from portfolio `tokens.ts` (light/dark via `<picture>`, mark = the A(1,1) B(4,2) C(2,4) fixture), two-design-systems panel making the Tier 3 never-unify rule visible, amber-themed mermaid. PR #2 was mis-based on the content branch and never reached `main` — #3 carried it across |
+| 2026-07-22 | steel | Registry drift swept (PR #14): course-lab live URL in `projects/index`, two stale "(private)" labels. None are Tier 1 fields, so `drift-check.ps1` never saw them — the gap is that spoke-card metadata has no mechanical check |
 
 ---
 
