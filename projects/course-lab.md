@@ -1,6 +1,6 @@
 # course-lab
 
-**GitHub:** [Lokie-ree/course-lab](https://github.com/Lokie-ree/course-lab) (private)
+**GitHub:** [Lokie-ree/course-lab](https://github.com/Lokie-ree/course-lab) (public)
 **Local:** `C:/Users/rplap/OneDrive/Desktop/personal/course-lab`
 **Live:** <https://course-lab-two.vercel.app> (Vercel; deployed 2026-07-18, auto-deploys from `main`)
 **Branch:** `main` (default; feature-branch only, never commit to main)

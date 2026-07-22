@@ -1,6 +1,6 @@
 # project-studio-coach
 
-**GitHub:** [Lokie-ree/project-studio-coach](https://github.com/Lokie-ree/project-studio-coach) (private)
+**GitHub:** [Lokie-ree/project-studio-coach](https://github.com/Lokie-ree/project-studio-coach) (public — source only; the standing no-auth warning below is about deployment, not visibility)
 **Local:** `C:/Users/rplap/OneDrive/Desktop/personal/project-studio-coach`
 **Live:** — (not deployed; **standing warning:** no auth — do not deploy beyond the trusted club)
 **Branch:** `main` (default; feature-branch only, never commit to main)
