@@ -16,7 +16,7 @@ Update this file at the **start and end** of each work session.
 | P | Repo | Why |
 |---|------|-----|
 | 1 | **course-lab** | ~~Execute `PLAN-course-lab-transformations-ptr`~~ — **shipped 2026-07-24 (PR #16)**, as specced: four rounds, two families, earned sandbox, live in production. What's left is not code: run it with real students. Pre-August plan set complete (PRs #10–#15). |
-| 2 | **steel** | Depth criteria doc (one page, `wiki/`) — after the transformations-ptr PR lands, before the first class period. Round-2 miss-rate band, reconcile quality, commit-before-reveal comparison, producer retry/ghost-path counts, plus the two thresholds: greenlight build two vs. send build one back. |
+| 2 | **steel** | ~~Depth criteria doc~~ — **written 2026-07-24** ([[../wiki/depth-criteria]]): four signals off existing telemetry, two thresholds. The gate is now waiting on students, not on writing. |
 | 3 | **portfolio** | Parked branch `docs/dilations-card-copy` — finish or delete it, five minutes either way. Otherwise dormant. |
 | — | **creative-lab** | **Live spoke, no fall build** — by ruling, not neglect ([[../wiki/decisions]] 2026-07-22). R3F/CSG stays a shipping capability; neither EdgeEx course has spatial content to aim it at. |
 | — | **iste-26** | Dormant. Voice docs homed via PR #7 (2026-07-17); drift check clean. Touch only if something breaks. |
@@ -42,7 +42,7 @@ Update this file at the **start and end** of each work session.
 ### steel — P2
 
 - **Complete this sprint:** `wiki/edge-ex-courses.md` (2026-07-17); `wiki/journey.md` + `archaeology/` + `wiki/patterns.md` + `initiatives/` + ratified verdicts (2026-07-18); stale ISTE-40d framing swept from live docs (2026-07-19); registry drift swept (PR #14, 2026-07-22); two-course rulings landed (2026-07-24)
-- **Next:** the depth criteria doc, after the transformations-ptr PR lands
+- **Next:** nothing until the first class period — the gate is written and the vault is current
 - **Not doing:** the Fable standards-mapping audit as originally scoped (29 units × 6 courses — dead with the shrink). Useful residue is one narrow question: do `systems-ptr` and `predict-test-reconcile` actually earn their standards citations? Shrink to that or leave it closed; don't run the original prompt out of momentum.
 
 ### portfolio — P3
@@ -64,7 +64,7 @@ Update this file at the **start and end** of each work session.
 3. ~~**Transformation explorer brainstorm**~~ — done 2026-07-19: spec + PLAN-course-lab-transformations-ptr shipped; home ruled course-lab (decisions log)
 4. ~~**Land the two-course rulings in vault truth**~~ — done 2026-07-24: decisions log, initiative doc, this sprint doc
 5. ~~**Execute `PLAN-course-lab-transformations-ptr`**~~ — done 2026-07-24 (PR #16), live in production
-6. **Depth criteria doc** — before the first class period
+6. ~~**Depth criteria doc**~~ — done 2026-07-24 ([[../wiki/depth-criteria]]); read it once on the first real run's CSV
 7. **portfolio `docs/dilations-card-copy`** — finish or delete
 
 ---
@@ -92,6 +92,7 @@ Update this file at the **start and end** of each work session.
 | 2026-07-22 | steel | Registry drift swept (PR #14): course-lab live URL in `projects/index`, two stale "(private)" labels. None are Tier 1 fields, so `drift-check.ps1` never saw them — the gap is that spoke-card metadata has no mechanical check |
 | 2026-07-24 | steel | Session started |
 | 2026-07-24 | course-lab | PLAN-course-lab-transformations-ptr executed (PR #16): `transformations-ptr` — three PTR rounds + trap-round reconcile, producer round, earned sandbox. Registry row failed the guard first; 31/31 + clean build; scripted-browser pass (Playwright fallback, extension down) on the exact 11-event sequence with silent sliders; live in production. Screenshots caught one real defect — the Plane clamped out-of-range y and drew a flat line along the frame — fixed to clipping in the same PR |
+| 2026-07-24 | steel | Depth criteria written ([[../wiki/depth-criteria]]) before any student data exists, so the thresholds are judgment rather than post-hoc fitting: round-2 miss band 40–75%, a third of reconciles naming the mechanism, rounds 1/3 ≥ 70% against a low round 2, producer median 2–4 retries with ≤ 25% ghost path. Any one of four failure shapes sends build one back instead of starting build two |
 | 2026-07-24 | steel | Two-course rulings landed in vault truth: `wiki/decisions.md` (R3F has no fall surface / creative-lab stays live; fewer-deeper + first-student-data-is-a-gate), `initiatives/edgeex-build-family.md` refreshed to the gated two-build slate, this sprint doc's goal line + priority stack + focus list de-staled |
 
 ---
