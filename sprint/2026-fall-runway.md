@@ -15,7 +15,7 @@ Update this file at the **start and end** of each work session.
 
 | P | Repo | Why |
 |---|------|-----|
-| 1 | **course-lab** | Execute `PLAN-course-lab-transformations-ptr` — the first EdgeEx-aligned build (`F-BF.B.3`, cited by ~10 lessons across both preps). Eight tasks, fail-first registry row, branch `feat/transformations-ptr`. Ships as specced: four rounds, two families, earned sandbox. Pre-August plan set is **complete** (PRs #10–#15). |
+| 1 | **course-lab** | ~~Execute `PLAN-course-lab-transformations-ptr`~~ — **shipped 2026-07-24 (PR #16)**, as specced: four rounds, two families, earned sandbox, live in production. What's left is not code: run it with real students. Pre-August plan set complete (PRs #10–#15). |
 | 2 | **steel** | Depth criteria doc (one page, `wiki/`) — after the transformations-ptr PR lands, before the first class period. Round-2 miss-rate band, reconcile quality, commit-before-reveal comparison, producer retry/ghost-path counts, plus the two thresholds: greenlight build two vs. send build one back. |
 | 3 | **portfolio** | Parked branch `docs/dilations-card-copy` — finish or delete it, five minutes either way. Otherwise dormant. |
 | — | **creative-lab** | **Live spoke, no fall build** — by ruling, not neglect ([[../wiki/decisions]] 2026-07-22). R3F/CSG stays a shipping capability; neither EdgeEx course has spatial content to aim it at. |
@@ -63,8 +63,8 @@ Update this file at the **start and end** of each work session.
 2. ~~**course-lab: pre-August plan set**~~ — done 2026-07-19, all six PRs (#10–#15)
 3. ~~**Transformation explorer brainstorm**~~ — done 2026-07-19: spec + PLAN-course-lab-transformations-ptr shipped; home ruled course-lab (decisions log)
 4. ~~**Land the two-course rulings in vault truth**~~ — done 2026-07-24: decisions log, initiative doc, this sprint doc
-5. **Execute `PLAN-course-lab-transformations-ptr`** — the work of the rest of the sprint
-6. **Depth criteria doc** — after the PR lands, before the first class period
+5. ~~**Execute `PLAN-course-lab-transformations-ptr`**~~ — done 2026-07-24 (PR #16), live in production
+6. **Depth criteria doc** — before the first class period
 7. **portfolio `docs/dilations-card-copy`** — finish or delete
 
 ---
@@ -91,6 +91,7 @@ Update this file at the **start and end** of each work session.
 | 2026-07-22 | github-readme | Design layer shipped (PRs #2 → #3): bespoke header SVG from portfolio `tokens.ts` (light/dark via `<picture>`, mark = the A(1,1) B(4,2) C(2,4) fixture), two-design-systems panel making the Tier 3 never-unify rule visible, amber-themed mermaid. PR #2 was mis-based on the content branch and never reached `main` — #3 carried it across |
 | 2026-07-22 | steel | Registry drift swept (PR #14): course-lab live URL in `projects/index`, two stale "(private)" labels. None are Tier 1 fields, so `drift-check.ps1` never saw them — the gap is that spoke-card metadata has no mechanical check |
 | 2026-07-24 | steel | Session started |
+| 2026-07-24 | course-lab | PLAN-course-lab-transformations-ptr executed (PR #16): `transformations-ptr` — three PTR rounds + trap-round reconcile, producer round, earned sandbox. Registry row failed the guard first; 31/31 + clean build; scripted-browser pass (Playwright fallback, extension down) on the exact 11-event sequence with silent sliders; live in production. Screenshots caught one real defect — the Plane clamped out-of-range y and drew a flat line along the frame — fixed to clipping in the same PR |
 | 2026-07-24 | steel | Two-course rulings landed in vault truth: `wiki/decisions.md` (R3F has no fall surface / creative-lab stays live; fewer-deeper + first-student-data-is-a-gate), `initiatives/edgeex-build-family.md` refreshed to the gated two-build slate, this sprint doc's goal line + priority stack + focus list de-staled |
 
 ---
