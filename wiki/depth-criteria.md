@@ -80,6 +80,38 @@ Revision means a `MODULE_VERSION` bump on `transformations-ptr` and a second run
 
 ---
 
+## OPEN — the collection path (gate-blocking)
+
+**Status 2026-07-24: unresolved. This blocks the gate regardless of what the module does.**
+
+All four signals above are read *across a class*. The events are not. Every event lands in
+`localStorage` under `course-lab:events`, **per browser** — which means per Chromebook, and on a
+shared cart, per student-session on that Chromebook. The teacher CSV export in the module picker
+exports one device's store. There is no written protocol for getting ~40 devices' worth of events
+into one file that any of these signals can be computed from.
+
+Until that protocol exists, the gate cannot open: not because the thresholds are wrong, but because
+nothing can be measured against them.
+
+**Named risk — the failure is silent.** On shared or wiped school profiles, Chrome can block
+`localStorage` outright (the sink already handles this: it falls back to an in-memory store rather
+than throwing, [[patterns]] §6). That fallback keeps the *student* working, which is correct. But
+in-memory events do not survive the tab closing. A student can complete the whole module, see their
+recap, hand in their answers — and leave behind no events at all, with no error anywhere. The one
+dataset that authorizes build two is the most exposed thing in the stack, and its failure mode
+produces silence rather than an alarm.
+
+**Closeout requires both:**
+
+1. A written collection protocol — where the CSVs land, who triggers the export, what happens on a
+   device that was storage-blocked, and how a class's files become one file.
+2. One `DEMO01` dry run of that protocol end to end, on a real school device if the network check
+   is happening anyway.
+
+**Not this session.** The protocol is not designed here — recording that it is missing is the whole
+job of this section. Designing it under time pressure, on a dev machine, without having seen the
+school profile behaviour, is how a protocol gets written that only works on this laptop.
+
 ## What this doc deliberately does not measure
 
 - **Score.** There is no score. Every `check` is match/miss on one committed call, and the reconcile prose is saved unjudged for the teacher (founding spec §4).

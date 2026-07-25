@@ -82,4 +82,18 @@ existing coverage is even partial, extend the existing file or recommend
 deferral. A new file must state, in one sentence, the gap no existing
 doc covers.
 
+### Tooling paths are referenced, never pasted
+
+When a plan or spec needs a local tool path (browser executables, global
+installs, SDK locations), **reference the convention that holds it — do
+not paste the literal path into the plan.** Same failure mode as
+transcribed git state above: the value is live, the document is not, and
+the reader trusts the document. Observed 2026-07-24 —
+`PLAN-course-lab-transformations-ptr` carried a stale Playwright
+executable path while `~/.claude/CLAUDE.md` had the correct one; the
+executing agent followed the plan and hit a missing-binary error.
+
+Executed plan docs stay untouched as historical record; the rule applies
+to plans authored from here on.
+
 > **Audit note (2026-07-07):** the friction-rule audit (`docs/superpowers/specs/2026-07-07-friction-rules-design.md`) used transcripts that all predate course-lab — it hardened the old 4-spoke workflow; the course-lab migration still needs its own review.
