@@ -4,7 +4,7 @@ Forward planning docs — the direction layer between the archaeology ([[../arch
 
 | Initiative | One line | Feeds from |
 |-----------|----------|-----------|
-| [[course-lab-production]] | The six-course room runs on course-lab from day one | course-lab plan set, pattern 6 |
+| [[course-lab-production]] | The Algebra II/III room runs on course-lab from day one | course-lab plan set, pattern 6 |
 | [[edgeex-build-family]] | EdgeEx-aligned build family; ~20 shared Algebra II/III lessons = build once, serve both | [[../wiki/edge-ex-courses]], patterns 5–6 |
 | [[studio-coach-pilot]] | project-studio-coach from prototype to a real club pilot | studio-coach docs, patterns 2–5, 7 |
 | [[teacher-ai-spine]] | The absorbed Pelican spine: canonical teacher-facing AI architecture + revival criteria | aida dossier, patterns 2, 4, 8, 9 |
