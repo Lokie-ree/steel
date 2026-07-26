@@ -46,11 +46,11 @@ Repos don't know about each other. Steel holds:
 
 - Which repo to open for a given task
 - What must stay aligned ([[../sync-registry]])
-- What's in flight ([[../sprint/2026-iste-40d]])
+- What's in flight ([[../sprint/index]] → the current sprint doc)
 
 ## course-lab (not in diagram)
 
-Fifth spoke, outside the ISTE arc: production module library for the 2026–27 six-course room (PTR / Bind-and-Justify / Assume-Fit-Reflect + two remediation suites, plain JSX/SVG). Same pedagogy layer as creative-lab, deliberately different rendering stack — the repo boundary IS the stack boundary. See [[../projects/course-lab]] and its founding spec.
+Outside the ISTE arc: production module library for the 2026–27 room — **Algebra II / Algebra III on EdgeEx** ([[decisions]] 2026-07-22; the six-course framing is historical) — (PTR / Bind-and-Justify / Assume-Fit-Reflect + two remediation suites, plain JSX/SVG). Same pedagogy layer as creative-lab, deliberately different rendering stack — the repo boundary IS the stack boundary. See [[../projects/course-lab]] and its founding spec.
 
 ## Research layer (not in diagram)
 

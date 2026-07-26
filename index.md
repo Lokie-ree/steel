@@ -4,7 +4,7 @@
 
 **Operator:** Randall LaPoint, Jr. — solo developer.
 
-**North star:** the 2026–27 classroom — course-lab in production for the six-course room, EdgeEx-aligned builds (Algebra II/III) as the agile layer on top. ISTE LIVE 2026 concluded; the arc is archived ([[archive/2026-iste-40d]], [[wiki/journey]]).
+**North star:** the 2026–27 classroom — **two preps, Algebra II and Algebra III on EdgeEx** ([[wiki/decisions]] 2026-07-22; the six-course framing is historical). course-lab in production for that room, EdgeEx-aligned builds as the agile layer on top, gated on real student data ([[wiki/depth-criteria]]). ISTE LIVE 2026 concluded; the arc is archived ([[archive/2026-iste-40d]], [[wiki/journey]]).
 
 ---
 
