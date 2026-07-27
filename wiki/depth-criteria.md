@@ -36,6 +36,11 @@ Sort each into one of three, by hand, no rubric:
 
 **Threshold:** at least a third of reconciles name the mechanism. Below that, the reveal Coach text is doing the explaining instead of the student.
 
+**Sort against [[reconcile-calibration]]** — 15 worked samples with the boundary calls
+made before any student data existed, plus three rulings that decide most sorts (the big
+one: a memorized rule like *"a plus inside does the opposite"* is **not** a mechanism).
+Sort those 15 first, blind, and reconcile any disagreement there rather than mid-read.
+
 ### 3. Commit-before-reveal — did locking in matter
 
 Compare round 1 and round 3 match rates against round 2's.
