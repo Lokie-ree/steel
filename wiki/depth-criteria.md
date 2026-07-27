@@ -80,37 +80,35 @@ Revision means a `MODULE_VERSION` bump on `transformations-ptr` and a second run
 
 ---
 
-## OPEN — the collection path (gate-blocking)
+## The collection path — resolved 2026-07-26
 
-**Status 2026-07-24: unresolved. This blocks the gate regardless of what the module does.**
+**Status: protocol written ([[collection-protocol]]). Dry run outstanding.**
 
-All four signals above are read *across a class*. The events are not. Every event lands in
-`localStorage` under `course-lab:events`, **per browser** — which means per Chromebook, and on a
-shared cart, per student-session on that Chromebook. The teacher CSV export in the module picker
-exports one device's store. There is no written protocol for getting ~40 devices' worth of events
-into one file that any of these signals can be computed from.
+The four signals above are read *across a class*. The events are not — every event lands in
+`localStorage` under `course-lab:events`, **per browser**, and the teacher CSV export reads one
+device's store. Getting ~40 devices into one file is the collection problem this section opened.
 
-Until that protocol exists, the gate cannot open: not because the thresholds are wrong, but because
-nothing can be measured against them.
+Two things resolved it, and one remains:
 
-**Named risk — the failure is silent.** On shared or wiped school profiles, Chrome can block
-`localStorage` outright (the sink already handles this: it falls back to an in-memory store rather
-than throwing, [[patterns]] §6). That fallback keeps the *student* working, which is correct. But
-in-memory events do not survive the tab closing. A student can complete the whole module, see their
-recap, hand in their answers — and leave behind no events at all, with no error anywhere. The one
-dataset that authorizes build two is the most exposed thing in the stack, and its failure mode
-produces silence rather than an alarm.
+**1. The failure is no longer silent.** The original risk recorded here was that Chrome blocks
+`localStorage` on wiped school profiles, the sink falls back to memory ([[patterns]] §6), and
+in-memory events die at tab close — so a student could complete the module, hand in their answers,
+and leave behind nothing, with no error anywhere. course-lab PR #18 closed that: the sink probes
+whether it can actually round-trip a write, and the picker and start gate render the answer. A
+blocked device is now visible **before the student starts**, not after the data is gone.
 
-**Closeout requires both:**
+**2. The signals split across two independent paths.** This section assumed one collection problem;
+there are two, and they fail independently ([[collection-protocol]] §The two paths). Signal 2 — the
+reconcile prose, the only signal requiring human reading — travels by clipboard from React state and
+**never touches storage at all**. It survives a fully storage-blocked device. Signals 1, 3, and 4
+want the CSV, and also arrive in prose form on the same paste, hand-tallyable if the CSV is lost.
 
-1. A written collection protocol — where the CSVs land, who triggers the export, what happens on a
-   device that was storage-blocked, and how a class's files become one file.
-2. One `DEMO01` dry run of that protocol end to end, on a real school device if the network check
-   is happening anyway.
+That makes the clipboard path a floor the gate can stand on even if every device blocks storage.
 
-**Not this session.** The protocol is not designed here — recording that it is missing is the whole
-job of this section. Designing it under time pressure, on a dev machine, without having seen the
-school profile behaviour, is how a protocol gets written that only works on this laptop.
+**3. Still outstanding: one `DEMO01` dry run** on a real school device, per
+[[collection-protocol]] §The DEMO01 dry run. Everything above is reasoned from the code and from
+the 2026-07-26 network check; none of it has been executed in the building. **The gate does not
+open on a protocol that has only ever run on this laptop.**
 
 ## What this doc deliberately does not measure
 
