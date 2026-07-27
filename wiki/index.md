@@ -12,5 +12,6 @@ Distilled facts for agents. Full architecture lives in spoke repos — link, don
 | [[patterns]] | Harvested architecture patterns (≥2 uses or named forward use) |
 | [[depth-criteria]] | The student-data gate between EdgeEx build one and build two |
 | [[collection-protocol]] | Class-period runbook — how a period's data reaches a desk |
+| [[reconcile-calibration]] | 15 pre-sorted samples for depth-criteria Signal 2 |
 
 For cross-repo edits, also read [[../sync-registry]].
