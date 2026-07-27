@@ -17,9 +17,12 @@ Orients every session from the shared hub state. Run before touching any spoke r
    - **Between sprints** (the doc carries a "Window closed" banner, its window end date has passed, or the index lists none): do not resurrect the dead priority stack or countdown. The briefing must say the hub is between sprints and what the closed doc says comes next.
 
 2. **Check live repo state + drift**
-   - Execute: `pwsh C:\Users\rplap\OneDrive\Desktop\steel\ops\drift-check.ps1` (runs the git preflight first, then both drift stages)
+   - Execute: `pwsh C:\Users\rplap\OneDrive\Desktop\steel\ops\drift-check.ps1` (runs the git preflight first, then the conformance scan)
    - From the preflight table, note each spoke's branch / ahead / behind / dirty — this is **live** state; trust it over any hand-typed sprint status
    - Note the dynamic pass/fail counts and the verdict line
+   - **The preflight is the useful half.** The conformance scan covers only the three
+     dormant geometry spokes; a green verdict is a regression tripwire on frozen code and
+     says nothing about course-lab. Report it in one line and do not lead with it.
 
 3. **Output briefing** — exactly one of these two formats, no more:
 

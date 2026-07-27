@@ -6,6 +6,12 @@ Gap this doc fills: the wiki holds facts (names, URLs, coords) but no architectu
 
 Author in markdown under git; a sync step publishes to the serving layer; the DB/bundle is derived, never hand-edited. Emerged **three times independently** before being recognized: portfolio-markdown-site's `scripts/sync-posts.ts` (gray-matter → Convex → static `/raw/*.md`), project-studio-coach's `scripts/sync-knowledge.mjs` (docs/ → convex/knowledge → RAG), steel's `build-context` (wiki/module-facts.md → `.hub/` bundles). Cousin: ts-google-automation's markdown-template DSL (`src/parsers/survey-parser.ts:6-80`) parsing `**Type:**`/`**Options:**` markdown into typed Google Forms.
 **Forward use:** every initiative; this is the house style. New corpora and content surfaces start as markdown + sync script, never as DB-first.
+**Correction 2026-07-26:** steel's `build-context` was deleted — it was the one instance
+of this pattern with **no consumer**, generating bundles into six repos that never
+imported them. The pattern survives on its two live implementations. The lesson it leaves
+is a sharpening of the admission rule: a sync pipeline earns its place from the reader
+downstream, not from the canonical source upstream. Markdown-as-canonical is not a reason
+to build a sync step nobody reads.
 
 ## 2. Namespace-per-domain RAG with first-class ingestion
 

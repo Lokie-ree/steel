@@ -1,32 +1,48 @@
 ---
 name: drift-check
-description: Use when the user asks to "check drift", "run drift check", "verify sync", "check Tier 1", "are the repos in sync", or before any ISTE deploy. Scans every spoke registered in index.md's Local paths table for Tier 1 field alignment against sync-registry.md.
-version: 1.0.0
+description: Use when the user asks to "check drift", "run drift check", "verify sync", "check Tier 1", or "are the repos in sync". Runs the git preflight across every spoke in index.md's Local paths table, then checks source conformance across the three dormant geometry spokes against sync-registry.md.
+version: 2.0.0
 ---
 
 # Drift Check
 
-Runs the Tier 1 scan across every registered spoke (from `index.md` → Local paths; git preflight covers all six, Stage 2 conformance targets the three curriculum spokes) and surfaces any mismatches.
+Git preflight across every registered spoke (from `index.md` → Local paths), then a
+source-conformance scan of the three geometry spokes.
 
 ## Steps
 
-1. **Run the script** (it runs the git preflight first, then two stages)
+1. **Run the script** (git preflight first, then conformance)
    ```
    pwsh C:\Users\rplap\OneDrive\Desktop\steel\ops\drift-check.ps1
    ```
 
-2. **Read the verdict line** (the script computes pass/fail dynamically — there is no fixed total)
-   - `all Tier 1 fields aligned` (exit 0) → no action needed
-   - `UNVERIFIED` (exit 2) → a spoke is **behind origin or dirty**. The reading is not trustworthy. Tell the user which spoke (from the preflight table) and that they must pull/commit before a clean verdict is possible. Do not report a pass.
+2. **Read the verdict line** (pass/fail is computed dynamically — there is no fixed total)
+   - `all Tier 1 fields aligned (dormant spokes)` (exit 0) → no action needed
+   - `UNVERIFIED` (exit 2) → a spoke is **behind origin or dirty**. The reading is not
+     trustworthy. Name the spoke (from the preflight table), say they must pull/commit
+     before a clean verdict is possible, and do **not** report a pass.
    - non-zero fail count (exit 1) → real drift; go to step 3
 
-3. **For each FAIL**
-   - **Stage 1 (bundle freshness):** the spoke's `.hub/module-facts.json` is stale → run `ops/build-context.ps1` and commit the regenerated `.hub/` in that spoke
-   - **Stage 2 (code conformance):** identify the canonical value from `C:\Users\rplap\OneDrive\Desktop\steel\wiki\module-facts.md`, state which other spokes in `sync-registry.md` share it, then ask: "Fix all failing spokes now, or note for later?"
+3. **For each FAIL** — find the canonical value in
+   `C:\Users\rplap\OneDrive\Desktop\steel\wiki\module-facts.md`, name which other spokes
+   in `sync-registry.md` share it, then ask: "Fix all failing spokes now, or note for later?"
 
-## What the two stages cover
+## What it covers
 
-- **Stage 1 — freshness:** each spoke's `.hub/module-facts.json` hash matches the vault's canonical `wiki/module-facts.md` (detects "forgot to regenerate the bundle").
-- **Stage 2 — conformance:** module display names, standards strings, iste-26 hash routes, the ISTE event name, and **cross-referenced** deploy URLs (a repo's own URL is not checked — a site doesn't hardcode its own origin).
+Module display names, standards strings, iste-26 hash routes, the ISTE event name, and
+**cross-referenced** deploy URLs (a repo's own URL is not checked — a site doesn't
+hardcode its own origin), across `creative-lab`, `iste-26`, and `portfolio`.
 
-Triangle coordinates are carried in the `.hub` bundle (covered by Stage 1), not substring-matched in source. Tier 2 (narrative) and Tier 3 (intentionally different) are out of scope — see `sync-registry.md`.
+## What it does not cover — say this when reporting a PASS
+
+- **course-lab.** The one live product has no cross-repo surface and is deliberately
+  outside the registry. A PASS is not a statement about it.
+- **Vault-internal metadata** — spoke-card fields, `projects/` URLs, status labels.
+  That is what actually drifted in July (PR #14) and no check sees it.
+- **Triangle coordinates.** They used to ride in the `.hub` bundle; that pipeline was
+  removed 2026-07-26 and coords are now registry-documented but not machine-checked.
+- Tier 2 (narrative) and Tier 3 (intentionally different) — see `sync-registry.md`.
+
+**Frame the result honestly.** All three checked repos are dormant by ruling
+([[../../wiki/decisions]] 2026-07-22). A green verdict is a regression tripwire on frozen
+code — real, cheap, and not a signal about current work. Do not lead a briefing with it.

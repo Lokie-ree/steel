@@ -15,10 +15,9 @@ Instructions for AI agents when `steel` is in the workspace (Obsidian or Cursor 
 
 ## Research boundary
 
-These files are **research-only** — useful for ISTE conversations, not for driving code changes:
-
-- `iste-narrative.md`
-- `iste-alignment-findings.md`
+The ISTE research docs are **archived** (`archive/iste-narrative.md`,
+`archive/iste-alignment-findings.md`) as of 2026-07-26. They are historical: useful if a
+future conference or PD conversation needs the TLP mapping, not canonical for anything.
 
 Do not copy research prose into repo READMEs or user-facing copy without explicit user approval.
 
@@ -49,12 +48,22 @@ Do not recursively list the vault. Snake through indices.
 These skills live in `.claude/skills/` and are available in any Claude Code session with `steel` in the workspace:
 
 - **session-start** — reads sprint status, runs drift check, outputs a structured briefing, logs the session
-- **drift-check** — runs `ops/drift-check.ps1`: git preflight, then Stage 1 (bundle freshness) + Stage 2 (code conformance), with fix guidance
-- **build-context** — runs `ops/build-context.ps1` to regenerate each spoke's `.hub/` bundle from `wiki/module-facts.md` (vault → repos, one direction)
+- **drift-check** — runs `ops/drift-check.ps1`: git preflight, then source conformance across the three dormant geometry spokes, with fix guidance
 
 Invoke via the Skill tool or by name in conversation.
 
-The pipeline: `wiki/module-facts.md` is canonical → `build-context` generates `<spoke>/.hub/module-facts.json` (code imports it) + `.hub/context.md` (agent reads it) → `drift-check` validates every spoke against that one artifact. Pure logic lives in `ops/lib/HubContext.psm1` (Pester-tested in `ops/tests/`). Never hand-edit `.hub/`.
+`wiki/module-facts.md` is canonical; `drift-check` validates that creative-lab, iste-26,
+and portfolio still agree with it and each other. Pure logic lives in
+`ops/lib/HubContext.psm1` (Pester-tested in `ops/tests/`).
+
+**A drift PASS says nothing about course-lab.** Those three repos are dormant by ruling
+([[../wiki/decisions]] 2026-07-22); the check is a regression tripwire on frozen code, not
+a status signal. Do not lead a session briefing with it.
+
+**Removed 2026-07-26:** the `.hub` bundle pipeline (`build-context.ps1`, the
+`build-context` skill, drift-check Stage 1). It was designed for a fan-out — three repos
+presenting the same three modules to a conference — that no longer exists, and it never
+ran in a single spoke. See `ops/index.md`.
 
 ## Git
 
