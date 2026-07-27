@@ -1,7 +1,12 @@
-# ops/drift-check.ps1 — two-stage drift validation against canonical module-facts.
-# Stage 1: each spoke's .hub bundle hash == vault canonical hash (freshness).
-# Stage 2: each spoke's source contains the canonical values (conformance, cross-references only).
+# ops/drift-check.ps1 — conformance check: each spoke's source contains the
+# canonical values from wiki/module-facts.md (cross-references only).
 # Refuses a PASS verdict if any spoke is behind origin (reading stale local code is not trustworthy).
+#
+# SCOPE (2026-07-26): these checks cover the three-module geometry arc across
+# creative-lab / iste-26 / portfolio — all dormant by ruling. They are a
+# regression tripwire on frozen repos, not a signal about current work.
+# course-lab has no cross-repo surface and so has nothing here to check.
+# A bundle-freshness stage was removed with the .hub pipeline; see sync-registry.
 Import-Module "$PSScriptRoot/lib/HubContext.psm1" -Force
 $vault   = Split-Path $PSScriptRoot -Parent
 $factsMd = Join-Path $vault 'wiki/module-facts.md'
@@ -13,9 +18,7 @@ $base    = Split-Path $spokes.'creative-lab' -Parent   # repo-internal file path
 $stale = $LASTEXITCODE -ne 0
 
 # Canonical truth
-$raw     = Get-Content -LiteralPath $factsMd -Raw
-$facts   = ConvertFrom-ModuleFacts -Path $factsMd
-$canHash = Get-SourceHash -Text $raw
+$facts = ConvertFrom-ModuleFacts -Path $factsMd
 
 $pass = 0; $fail = 0; $issues = @()
 function Check($label, $file, $pattern) {
@@ -28,18 +31,8 @@ function Check($label, $file, $pattern) {
     }
 }
 
-# Stage 1 — bundle freshness
-Write-Host "`nStage 1 — bundle freshness" -ForegroundColor Cyan
-foreach ($name in $spokes.Keys) {
-    $jf = Join-Path $spokes[$name] '.hub/module-facts.json'
-    if (-not (Test-Path $jf)) { Write-Host "  SKIP  $name (.hub not installed)" -ForegroundColor DarkYellow; continue }
-    $rh = (Get-Content $jf -Raw | ConvertFrom-Json)._generated.sourceHash
-    if ($rh -eq $canHash) { Write-Host "  PASS  $name bundle current" -ForegroundColor Green; $script:pass++ }
-    else { Write-Host "  FAIL  $name bundle STALE (regenerate)" -ForegroundColor Red; $script:fail++; $script:issues += "  - $name .hub stale: run ops/build-context.ps1 + commit" }
-}
-
-# Stage 2 — code conformance (cross-references only; a site never hardcodes its own origin)
-Write-Host "`nStage 2 — code conformance" -ForegroundColor Cyan
+# Code conformance (cross-references only; a site never hardcodes its own origin)
+Write-Host "`nCode conformance — dormant geometry spokes" -ForegroundColor Cyan
 $clModules = "$base/creative-lab/src/config/modules.ts"
 $portApp   = "$base/portfolio/src/App.tsx"
 $isteApp   = "$base/iste-26/src/App.tsx"
@@ -70,4 +63,7 @@ Write-Host "`n──────────────────────
 Write-Host "  $pass passed | $fail failed" -ForegroundColor $(if ($fail) { 'Red' } else { 'Green' })
 if ($issues) { Write-Host "`nFailures:" -ForegroundColor Red; $issues | ForEach-Object { Write-Host $_ } }
 if ($stale)   { Write-Host "`n  VERDICT: UNVERIFIED — a spoke is behind origin or dirty. Pull, then re-run. Not a PASS." -ForegroundColor Yellow; exit 2 }
-elseif ($fail) { exit 1 } else { Write-Host "`n  VERDICT: all Tier 1 fields aligned." -ForegroundColor Green }
+elseif ($fail) { exit 1 } else {
+    Write-Host "`n  VERDICT: all Tier 1 fields aligned (dormant spokes)." -ForegroundColor Green
+    Write-Host "  Note: says nothing about course-lab — it has no cross-repo surface." -ForegroundColor DarkGray
+}
