@@ -25,6 +25,7 @@ ISTE research is archived ([[archive/iste-narrative]], [[archive/iste-alignment-
 
 | Path | Role |
 |------|------|
+| [[CLAUDE]] | Agent contract — loaded automatically in every session here |
 | [[projects/index]] | Spoke registry — one card per repo |
 | [[sync-registry]] | Cross-repo fields that must stay aligned |
 | [[sprint/index]] | Sprint docs — current window and session log |

@@ -2,6 +2,9 @@
 
 Instructions for AI agents when `steel` is in the workspace (Obsidian or Cursor multi-root).
 
+> Lives at the root so it loads in every session, not only ones that touch `ops/`.
+> Keep it here ([[wiki/decisions]] 2026-07-31).
+
 ## Role
 
 `steel` is the **hub**. Repos under `personal/` are **spokes**. Do not implement product code in `steel` unless explicitly asked to edit hub docs.
@@ -45,12 +48,9 @@ Do not recursively list the vault. Snake through indices.
 
 ## Skills
 
-These skills live in `.claude/skills/` and are available in any Claude Code session with `steel` in the workspace:
-
-- **session-start** — reads sprint status, runs drift check, outputs a structured briefing, logs the session
-- **drift-check** — runs `ops/drift-check.ps1`: git preflight, then source conformance across the three dormant geometry spokes, with fix guidance
-
-Invoke via the Skill tool or by name in conversation.
+`session-start` and `drift-check` live in `.claude/skills/`. Their names and
+descriptions are already in every session's skill listing — not repeated here, so
+there is one place to change them.
 
 `wiki/module-facts.md` is canonical; `drift-check` validates that creative-lab, iste-26,
 and portfolio still agree with it and each other. Pure logic lives in
