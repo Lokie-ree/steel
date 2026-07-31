@@ -15,8 +15,9 @@ Before implementing:
    **Never hardcode a sprint filename here** — sprints rotate and this rule outlives
    them. (This file pointed at an archived sprint for a month; that is the failure
    mode being designed out.)
-2. Read `ops/CLAUDE.md` for the full agent contract — git conventions, the
-   derived-not-transcribed rules, documentation policy.
+2. Read `CLAUDE.md` at the vault root for the full agent contract — git conventions,
+   the derived-not-transcribed rules, documentation policy. (Moved there from
+   `ops/` on 2026-07-31; Claude Code loads it automatically, Cursor needs this line.)
 3. If editing cross-repo facts, read `sync-registry.md` and `wiki/module-facts.md`.
    These cover the dormant geometry spokes only; course-lab has no cross-repo surface.
 4. Implement in `C:/Users/rplap/OneDrive/Desktop/personal/<spoke>/` — paths are in

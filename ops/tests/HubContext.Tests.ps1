@@ -132,7 +132,7 @@ Describe "ConvertFrom-GitStatus" {
 Describe "Get-SpokePaths" {
     # The spoke count is derived from index.md, never asserted as a literal:
     # this test hardcoded 4 and went red the moment a fifth spoke registered.
-    # Same rule as ops/CLAUDE.md's "git state is derived, never transcribed."
+    # Same rule as CLAUDE.md's "git state is derived, never transcribed."
     It "reads every row of index.md's Local paths table" {
         $vault = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent   # steel/ops/tests -> steel/
         $index = Join-Path $vault 'index.md'

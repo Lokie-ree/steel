@@ -2,9 +2,11 @@
 
 Vault-wide system configuration.
 
+Agent rules moved to the vault root ([[../CLAUDE]]) on 2026-07-31 — they govern the
+whole vault, and under `ops/` they only loaded once a session touched a file here.
+
 | Doc | Purpose |
 |-----|---------|
-| [[claude]] | Agent rules when steel is in the workspace |
 | `repo-state.ps1` | Live git state for every registered spoke — the derived-not-transcribed source |
 | `drift-check.ps1` | Conformance check across the three dormant geometry spokes (preflight + source match) |
 | `lib/HubContext.psm1` | Pure parse/compare functions behind both scripts (Pester-tested in `tests/`) |
