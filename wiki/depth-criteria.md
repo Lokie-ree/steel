@@ -2,9 +2,23 @@
 
 **Written:** 2026-07-24, after `transformations-ptr` shipped ([[../projects/course-lab]] PR #16) and before the first class period — deliberately, so the thresholds are set by judgment rather than by whatever the first data happens to look like.
 
-**Binds:** [[decisions]] 2026-07-22 (fewer, deeper; first-student-data-is-a-gate) · [[../initiatives/edgeex-build-family]]
+**Binds:** [[decisions]] 2026-07-22 (fewer, deeper; first-student-data-is-a-gate) · [[decisions]] 2026-08-03 (date-not-label — the CSV and any per-session field key on the calendar date; "A Day" means opposite days in the two cohorts and will merge them silently) · [[../initiatives/edgeex-build-family]]
 
 The question this doc answers is not "did students like it." It is: **did the module teach, and is it worth building a second one before fixing this one.** Read it once, on the telemetry CSV from the first real run (teacher export in the module picker, one row per event).
+
+---
+
+## Evidence status — what is and is not established
+
+*Filed 2026-08-03, from the strategy session. This section exists because the gap it names is exactly the gap this doc is the instrument for; without it, the doc looks like a formality rather than the first real test.*
+
+**Validated: engagement.** Students voluntarily used creative-lab / CSE after finishing tests — no grade attached, no instruction given, rides waiting outside. Some completed all phases anyway. Reactions were strong. This is real and it is not nothing.
+
+**Not validated: learning.** Reconcile has never been observed in the wild. A couple of students made connections with the teacher standing next to them; **that is four data points and a present adult, not a finding.** Signal 2 of this doc has therefore never actually been read on real data — which is the entire reason for the gate.
+
+**The sample caveat, and it is severe.** Post-test volunteers who choose to linger in a math classroom are the friendliest population available anywhere in the building. That population tells you a great deal about the artifact and close to nothing about the compulsory 8:00 block. **Do not carry engagement evidence from the first group into expectations for the second.**
+
+**Do not conflate "challenging" with "confusing."** They produce identical faces across a room, and the difference is the whole design. High achievers struggling is the *expected* result of a discovery-first module and is not evidence of a defect. **Do not tune difficulty on the strength of a room read** — the thresholds above exist precisely so that call gets made on the notebook and the reconcile prose, which can tell the two apart, rather than on the impression of a period that cannot.
 
 ---
 
@@ -83,6 +97,12 @@ Meeting all four means the PTR-plus-earned-sandbox shape demonstrably teaches, a
 
 Revision means a `MODULE_VERSION` bump on `transformations-ptr` and a second run. **Build two does not start in the meantime** — that is the whole point of the gate.
 
+### The denominator is at risk — review before the semester, do not rewrite
+
+*Added 2026-08-03.* Every band above is a rate, and every rate assumes a sample volume this year may not produce. Virtual students take unit tests at unscheduled times; LEAP, ACT, and WorkKeys windows carve the calendar up further. A first run of nine students who happened to be in the room is not a class-level read, however cleanly the percentages come out.
+
+**Review the denominator before the semester starts; do not rewrite the thresholds after seeing the data.** The bands were set on 2026-07-24 by judgment, deliberately in advance, for exactly this reason — moving them once numbers exist converts the gate into a rationalization. What is legitimate is deciding *in advance* what minimum n makes the read meaningful at all, and being willing to say **"not enough data, run it again"** instead of grading a handful of students against bands built for a room.
+
 ---
 
 ## The collection path — resolved 2026-07-26
@@ -114,6 +134,21 @@ That makes the clipboard path a floor the gate can stand on even if every device
 [[collection-protocol]] §The DEMO01 dry run. Everything above is reasoned from the code and from
 the 2026-07-26 network check; none of it has been executed in the building. **The gate does not
 open on a protocol that has only ever run on this laptop.**
+
+## Design constraints on the unit of work
+
+*Filed 2026-08-03. These bind **build two's scoping**, not the CSV read above — they live here because this doc is where build two gets scoped, and because the greenlight branch otherwise hands off to nothing.*
+
+The environment is fluid by design, not by accident: virtual students take unit tests at unscheduled times, and LEAP / ACT / WorkKeys windows fragment the rest. **The unit of work must survive interruption.**
+
+- **The container is the 50-minute block.** P-Tech has math 50 minutes daily; Instrumentation has 105 minutes three days a week. **Design for 50 and extend to 105 — never the reverse.** A PTR arc authored at 105 and compressed into 50 gets amputated at the reveal, which is the one part that cannot be cut.
+- **Self-contained.** A five-day arc missing day three is not a four-day arc, it is a broken one. If a unit only works when every day lands, this schedule will break it.
+- **Resumable, within a session and across sessions.** That is the whole requirement. **Not** offline-first sync, not conflict resolution, not a server — client-side until the [[decisions]] 2026-07-24 triggers actually fire ([[../projects/course-lab]] stays client-side).
+- **Works without the teacher at the front of the room.** Not a nice-to-have: the RTI block, the ECO duty, and the testing calendar all guarantee periods where that adult is unavailable.
+
+**The reframe worth keeping:** chaos is not the obstacle to this product, it is the demand for it. **The student who finishes a unit test with 25 minutes left is the ideal user** — and this schedule generates that student constantly. A module that needs a quiet, intact, fully-attended period is solving for a room that will not exist this year.
+
+---
 
 ## What this doc deliberately does not measure
 

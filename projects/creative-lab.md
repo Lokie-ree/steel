@@ -39,8 +39,11 @@ pnpm vitest run             # tests
 
 If you change module names, standards strings, triangle coordinates, or the live URL → update [[../sync-registry]] spokes: iste-26, portfolio.
 
-## Status (2026-05-19)
+## Status
 
-- M1–M3: all 4 phases complete
+*Newest on top.*
+
+- (2026-08-03) The 2026-07-22 ruling was **reopened on a verbal claim and re-closed by the v2 schedule inside the same session**: live spoke, no fall build. No geometry on the schedule, no spatial content in Algebra II. Second-door routing (a direct-to-sandbox entry point on an existing module) is the only in-scope extension raised — **held**, pending whether M1/M2/M3 sandbox state stands alone or depends on state accumulated in preceding phases ([[../wiki/decisions]] 2026-08-03). A routing PR on a repo with no fall build has no runway consequence; it is not a reason to open one.
+- (2026-05-19) M1–M3: all 4 phases complete
 - Recent: navigation flatten (Hero → ModulePicker → Module, #65)
 - Outstanding polish: see `CLAUDE.md` § Outstanding Work
