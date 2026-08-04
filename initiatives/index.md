@@ -9,3 +9,4 @@ Forward planning docs — the direction layer between the archaeology ([[../arch
 | [[studio-coach-pilot]] | project-studio-coach from prototype to a real club pilot | studio-coach docs, patterns 2–5, 7 |
 | [[teacher-ai-spine]] | The absorbed Pelican spine: canonical teacher-facing AI architecture + revival criteria | aida dossier, patterns 2, 4, 8, 9 |
 | [[public-identity]] | The portfolio door evolves from the operator's own vision, absorbing harvested concepts | portfolio dossier, patterns 1, 10 |
+| [[issue-ledger]] | Real student/teacher issues, counted honestly — the intake the other five start after | `new-teacher-tech` skeleton, [[../wiki/depth-criteria]] |
