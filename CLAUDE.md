@@ -83,6 +83,21 @@ the sprint doc, session logs, or project cards as prose. State those
 facts only as output of `ops/repo-state.ps1`, run at read time. If a doc
 contains hand-typed git state, treat it as unverified and re-derive.
 
+## This repo is public
+
+`steel` is a public GitHub repo. Everything committed here is published under the
+operator's real name and tied to a named employer. That is deliberate — see `README.md` —
+and it sets one hard line:
+
+**No student information, ever, in any form.** No names, no initials, no roster codes, no
+per-student records, no anecdote specific enough to re-identify a kid in a small district.
+Describe needs generically. This extends the IPSB Tech Station's own strictest editorial
+rule to the vault, and it is the one line not to soften.
+
+Employer-referencing project detail (district name, role, service work, delivered
+artifacts) is in scope and already published. Anything that reads as an evaluation of a
+named colleague is not — write it somewhere else or not at all.
+
 ## Documentation
 
 Extend, don't create. Before generating any new doc or guide, audit
