@@ -15,7 +15,9 @@ Different reader, different moment, different genre.
 Two things, and together they shrink the problem a lot.
 
 1. **The school-network check passed** (2026-07-26, district Chromebook, district wifi).
-   No custom domain, no DNS. The URL is the URL.
+   No custom domain, no DNS. The URL is the URL. **⚠ Scoped 2026-08-04 — see
+   §Which network, below. That result is correct for the network it ran on, and the room
+   has since moved into the community college.**
 2. **The silent failure is no longer silent** (course-lab PR #18). The sink now probes
    whether it can actually round-trip a write, and the picker and start gate say so:
    quiet "Saving your work ✓" when healthy, a red `role="alert"` when not. §OPEN's hardest
@@ -103,9 +105,12 @@ confirmed readable. The two-step confirm exists for exactly this.
 These are the only remaining unknowns, and each has a named fallback so none of them
 blocks the gate:
 
-- [ ] **Google Form reachable and submittable** from a student Chromebook on district
-      wifi. *Fallback: Google Classroom assignment with a text response, or paste into a
-      shared Doc.*
+- [ ] **Which network the room actually runs on** — district or community college. Answer
+      this first; it re-scopes the three below and the 2026-07-26 check. *No fallback: this
+      one is a question to a person, not a test.*
+- [ ] **Google Form reachable and submittable** from a student Chromebook on whichever
+      network the room runs on. *Fallback: Google Classroom assignment with a text
+      response, or paste into a shared Doc.*
 - [ ] **Downloads allowed** to the device, and reachable afterward (Files app / Drive).
       *Fallback: Path A alone.*
 - [ ] **Cart or 1:1**, and whether profiles wipe between periods. Determines whether
@@ -115,13 +120,44 @@ blocks the gate:
 
 ---
 
+## Which network — open as of 2026-08-04
+
+The room is moving into the community college, and **it is not yet known whether it runs
+on district wifi or on the college's own network and filtering.** Until that is answered,
+"the district network" is not a single referent in this doc and every network-dependent
+result below is scoped to the network it was observed on.
+
+**This is a question, not a defect.** The 2026-07-26 check was correct for the network it
+ran on. What is no longer safe is the *inference* — that a pass there predicts a pass in
+the room students will sit in.
+
+- **Answer it by asking, not by testing.** Whoever is standing up that room knows. This
+  costs a conversation and does not require a Chromebook, which makes it strictly cheaper
+  than discovering it through a failed dry run.
+- **Do not run the dry run against an unidentified network.** A PASS recorded without
+  naming the network is worse than no result: it reads as settled in six weeks, and the
+  vault has already catalogued what a confidently wrong recorded answer costs
+  ([[../initiatives/issue-ledger]] §the honesty instrument).
+- **If the college network is in play, the custom-domain/DNS branch is not dead** — it was
+  retired on evidence from the other network. Different vendor, different allowlist.
+
+**The rule this earns:** *a network result is only as portable as the network it was
+observed on.* Record the network, or the result decays into folklore.
+
+---
+
 ## The DEMO01 dry run
 
-One student, one device, one period's worth of steps — on a **school** device, on the
-**district** network. Not on the dev laptop; the whole point is the school profile.
+One student, one device, one period's worth of steps — on a **school** device, on **the
+network students will actually be on**. Not on the dev laptop; the whole point is the
+school profile.
 
 Run it end to end and confirm each of these is true at the end:
 
+0. **Name the network before starting** — district wifi, the college's, or a guest SSID —
+   and write it into the sprint-log row with the result. A check that does not say which
+   network it ran on cannot be reused, and this is the step whose absence is being
+   corrected here.
 1. Site loads; the storage line renders (either state — note which).
 2. `DEMO01` passes the gate.
 3. Module completes through the recap.
