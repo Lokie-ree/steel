@@ -48,7 +48,7 @@ Four of the six spokes are dormant by ruling and the rest are clean; a repo-keye
 | 2 | **The room → 8b** | Teaching | **Name the network.** One conversation with whoever stood up the community-college room. No device, no test, no Chromebook. Gates 9b — a dry run on an unnamed network scores a PASS that cannot be reused. |
 | 3 | **course-lab → 9b** | Teaching | `DEMO01` dry run, seven checks, school device, **after 8b**. Record the network name in the result row ([[../wiki/collection-protocol]] §Which network, dry-run step 0). |
 | 4 | **Algebra II Units 2–6** | Teaching | **Nothing — correctly held** until Unit 1 is taught and reportable (≈ 08-28). The three-document format is the thing under test; starting Unit 2 early tests nothing and forecloses the revision. |
-| — | **Civics tool** | Facilitator | Two ratifications pending (source anchor, intake source field). Reconcile ceiling applies ([[../wiki/decisions]] D-2026-08-23): no build without going through [[../initiatives/issue-ledger]]'s gate. |
+| — | **Planning tool** | Facilitator | Two ratifications pending (source anchor, intake source field). Reconcile ceiling applies ([[../wiki/decisions]] D-2026-08-23): no build without going through [[../initiatives/issue-ledger]]'s gate. |
 | — | **Tech Station** | Facilitator | Reading, not building. The supervisor's district-pulse ask runs off incidentIQ, which already logs it. |
 | — | **Six spokes** | — | All clean, 0 ahead / 0 behind. Drift 22/0 is a regression tripwire on frozen code, not a status signal. Touch only if something breaks. |
 

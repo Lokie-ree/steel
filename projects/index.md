@@ -29,5 +29,5 @@ for `drift-check`.
 | Card | What | Canonical doc |
 |------|------|---------------|
 | [[algebra2-course-plan]] | Algebra II Sem A, Fall 2026 — Edmentum, two sections, 4–20 mA anchor | `Fall 2026 Course Plan.md`, in the Claude project |
-| [[civics-planning-tool]] | Lesson-planning tool built with one pilot Civics teacher | The context stack, outside the vault |
+| [[civics-planning-tool]] | Lesson-planning tool built with one pilot teacher | The context stack, outside the vault |
 | [[loop-bench]] | 4–20 mA current-loop bench — the Algebra II applied layer, one face of six | **This card.** Files staged in `~/Downloads`, no repo yet |
