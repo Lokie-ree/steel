@@ -44,5 +44,5 @@ hardcode its own origin), across `creative-lab`, `iste-26`, and `portfolio`.
 - Tier 2 (narrative) and Tier 3 (intentionally different) — see `sync-registry.md`.
 
 **Frame the result honestly.** All three checked repos are dormant by ruling
-([[../../wiki/decisions]] 2026-07-22). A green verdict is a regression tripwire on frozen
+([[../../../wiki/decisions]] 2026-07-22). A green verdict is a regression tripwire on frozen
 code — real, cheap, and not a signal about current work. Do not lead a briefing with it.

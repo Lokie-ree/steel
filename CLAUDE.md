@@ -57,7 +57,7 @@ and portfolio still agree with it and each other. Pure logic lives in
 `ops/lib/HubContext.psm1` (Pester-tested in `ops/tests/`).
 
 **A drift PASS says nothing about course-lab.** Those three repos are dormant by ruling
-([[../wiki/decisions]] 2026-07-22); the check is a regression tripwire on frozen code, not
+([[wiki/decisions]] 2026-07-22); the check is a regression tripwire on frozen code, not
 a status signal. Do not lead a session briefing with it.
 
 **Removed 2026-07-26:** the `.hub` bundle pipeline (`build-context.ps1`, the
