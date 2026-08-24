@@ -1,6 +1,6 @@
 # Initiatives
 
-Forward planning docs — the direction layer between the archaeology ([[../archaeology/index]]) and the single active sprint ([[../sprint/index]]). Future sprints are cut from these; an initiative doc never carries a window or a countdown. Born from the 2026-07-18 portfolio consolidation (spec: `docs/superpowers/specs/2026-07-18-portfolio-consolidation-design.md`).
+Forward planning docs — the direction layer between the archaeology ([[../archaeology/index]]) and the single active sprint ([[../sprint/index]]). Future sprints are cut from these; an initiative doc never carries a window or a countdown. Born from the 2026-07-18 portfolio consolidation (spec: [[../docs/superpowers/specs/2026-07-18-portfolio-consolidation-design]]).
 
 | Initiative | One line | Feeds from |
 |-----------|----------|-----------|

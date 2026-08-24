@@ -120,4 +120,4 @@ executing agent followed the plan and hit a missing-binary error.
 Executed plan docs stay untouched as historical record; the rule applies
 to plans authored from here on.
 
-> **Audit note (2026-07-07):** the friction-rule audit (`docs/superpowers/specs/2026-07-07-friction-rules-design.md`) used transcripts that all predate course-lab — it hardened the old 4-spoke workflow; the course-lab migration still needs its own review.
+> **Audit note (2026-07-07):** the friction-rule audit ([[docs/superpowers/specs/2026-07-07-friction-rules-design]]) used transcripts that all predate course-lab — it hardened the old 4-spoke workflow; the course-lab migration still needs its own review.
