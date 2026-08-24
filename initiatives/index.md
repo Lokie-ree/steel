@@ -10,3 +10,4 @@ Forward planning docs — the direction layer between the archaeology ([[../arch
 | [[teacher-ai-spine]] | The absorbed Pelican spine: canonical teacher-facing AI architecture + revival criteria | aida dossier, patterns 2, 4, 8, 9 |
 | [[public-identity]] | The portfolio door evolves from the operator's own vision, absorbing harvested concepts | portfolio dossier, patterns 1, 10 |
 | [[issue-ledger]] | Real student/teacher issues, counted honestly — the intake the other five start after | `new-teacher-tech` skeleton, [[../wiki/depth-criteria]] |
+| [[reconciliation-layer]] | The shape the fall's non-repo work shares: two maps that don't line up, and the crosswalk that makes them agree | Four fall surfaces across three roles, [[../wiki/patterns]] #1 |
