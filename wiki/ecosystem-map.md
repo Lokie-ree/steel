@@ -50,7 +50,7 @@ Repos don't know about each other. Steel holds:
 
 ## course-lab (not in diagram)
 
-Outside the ISTE arc: production module library for the 2026–27 room — **Algebra II / Algebra III on EdgeEx** ([[decisions]] 2026-07-22; the six-course framing is historical) — (PTR / Bind-and-Justify / Assume-Fit-Reflect + two remediation suites, plain JSX/SVG). Same pedagogy layer as creative-lab, deliberately different rendering stack — the repo boundary IS the stack boundary. See [[../projects/course-lab]] and its founding spec.
+Outside the ISTE arc: production module library for the 2026–27 room — **Algebra II / Algebra III on EdgeEx** ([[decisions]] D-2026-07-22b; the six-course framing is historical) — (PTR / Bind-and-Justify / Assume-Fit-Reflect + two remediation suites, plain JSX/SVG). Same pedagogy layer as creative-lab, deliberately different rendering stack — the repo boundary IS the stack boundary. See [[../projects/course-lab]] and its founding spec.
 
 ## Research layer (not in diagram)
 

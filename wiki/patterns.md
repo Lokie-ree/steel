@@ -16,7 +16,7 @@ to build a sync step nobody reads.
 ## 2. Namespace-per-domain RAG with first-class ingestion
 
 aida's `convex/rag.ts`: corpus split into six semantic namespaces (instruction/planning/environment/professionalism/system/coaching), typed `contentType` filters, a query cookbook in the doc comment, and ingestion as repeatable Convex functions (`ingestStandards.ts`, `ingestRubric.ts`, `ragCleanup.ts`) rather than one-off seeds. studio-coach repeats the shape (docs-as-corpus → knowledge modules → RAG). sped-sync's hand-rolled `documentChunks` table is the "before" picture that shows why the component won.
-**Forward use:** canonical teacher-facing AI spine ([[decisions]] 2026-07-18); any future corpus (EdgeEx lesson bank) uses this shape.
+**Forward use:** canonical teacher-facing AI spine ([[decisions]] D-2026-07-18a); any future corpus (EdgeEx lesson bank) uses this shape.
 
 ## 3. Structural guardrails beat prompt guardrails
 
