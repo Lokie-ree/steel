@@ -9,7 +9,8 @@ whole vault, and under `ops/` they only loaded once a session touched a file her
 |-----|---------|
 | `repo-state.ps1` | Live git state for every registered spoke — the derived-not-transcribed source |
 | `drift-check.ps1` | Conformance check across the three dormant geometry spokes (preflight + source match) |
-| `lib/HubContext.psm1` | Pure parse/compare functions behind both scripts (Pester-tested in `tests/`) |
+| `vault-check.ps1` | Integrity of the vault's own records — links, ruling-ID citations, plan/spec paths. `-SelfTest` runs the resolver's assertions |
+| `lib/HubContext.psm1` | Pure parse/compare functions behind repo-state and drift-check (Pester-tested in `tests/`). `vault-check` does not use it — it reads no spoke |
 
 ## Skills (`.claude/skills/`)
 
