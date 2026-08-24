@@ -1,10 +1,12 @@
 # Steel — Agentic OS Hub
 
-**Purpose:** Workflow-governance hub for six registered repos — git conventions, session briefs, drift/state visibility (ruling 2026-07-17, [[wiki/decisions]]). Read this file first in any agent session where `steel` is in the workspace.
+**Purpose:** Workflow-governance hub for the projects the operator registers — six spoke repos plus three non-spoke surfaces with no repo behind them — covering git conventions, session briefs, and drift/state visibility (ruling 2026-07-17, [[wiki/decisions]]). Read this file first in any agent session where `steel` is in the workspace.
 
 **Operator:** Randall LaPoint, Jr. — solo developer.
 
-**North star:** the 2026–27 classroom — **two preps, Algebra II and Algebra III on EdgeEx** ([[wiki/decisions]] 2026-07-22; the six-course framing is historical). course-lab in production for that room, EdgeEx-aligned builds as the agile layer on top, gated on real student data ([[wiki/depth-criteria]]). ISTE LIVE 2026 concluded; the arc is archived ([[archive/2026-iste-40d]], [[wiki/journey]]).
+**North star:** the 2026–27 classroom — builds serve the room, never the reverse.
+
+**The current build surface is derived, not stated here.** Read [[wiki/decisions]], newest entry first; this line is a convenience copy and goes stale silently. As of **2026-08-23** the log says: **Algebra II for P-Tech / Instrumentation** (2026-08-03), with the **facilitator role admitted at reconcile only** (2026-08-23). course-lab is in production for that room; every build is gated on real student data ([[wiki/depth-criteria]]). ISTE LIVE 2026 concluded; the arc is archived ([[archive/2026-iste-40d]], [[wiki/journey]]).
 
 ---
 
@@ -26,7 +28,7 @@ ISTE research is archived ([[archive/iste-narrative]], [[archive/iste-alignment-
 | Path | Role |
 |------|------|
 | [[CLAUDE]] | Agent contract — loaded automatically in every session here |
-| [[projects/index]] | Spoke registry — one card per repo |
+| [[projects/index]] | Project registry — six spoke cards (one per repo), plus non-spoke work with no repo behind it |
 | [[sync-registry]] | Cross-repo fields that must stay aligned |
 | [[sprint/index]] | Sprint docs — current window and session log |
 | [[wiki/index]] | Distilled facts (module names, coords, URLs, ecosystem map) |
