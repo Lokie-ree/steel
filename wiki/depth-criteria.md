@@ -2,7 +2,7 @@
 
 **Written:** 2026-07-24, after `transformations-ptr` shipped ([[../projects/course-lab]] PR #16) and before the first class period — deliberately, so the thresholds are set by judgment rather than by whatever the first data happens to look like.
 
-**Binds:** [[decisions]] 2026-07-22 (fewer, deeper; first-student-data-is-a-gate) · [[decisions]] 2026-08-03 (date-not-label — the CSV and any per-session field key on the calendar date; "A Day" means opposite days in the two cohorts and will merge them silently) · [[../initiatives/edgeex-build-family]]
+**Binds:** [[decisions]] D-2026-07-22b (fewer, deeper; first-student-data-is-a-gate) · [[decisions]] D-2026-08-03a (date-not-label — the CSV and any per-session field key on the calendar date; "A Day" means opposite days in the two cohorts and will merge them silently) · [[../initiatives/edgeex-build-family]]
 
 The question this doc answers is not "did students like it." It is: **did the module teach, and is it worth building a second one before fixing this one.** Read it once, on the telemetry CSV from the first real run (teacher export in the module picker, one row per event).
 
@@ -143,7 +143,7 @@ The environment is fluid by design, not by accident: virtual students take unit 
 
 - **The container is the 50-minute block.** P-Tech has math 50 minutes daily; Instrumentation has 105 minutes three days a week. **Design for 50 and extend to 105 — never the reverse.** A PTR arc authored at 105 and compressed into 50 gets amputated at the reveal, which is the one part that cannot be cut.
 - **Self-contained.** A five-day arc missing day three is not a four-day arc, it is a broken one. If a unit only works when every day lands, this schedule will break it.
-- **Resumable, within a session and across sessions.** That is the whole requirement. **Not** offline-first sync, not conflict resolution, not a server — client-side until the [[decisions]] 2026-07-24 triggers actually fire ([[../projects/course-lab]] stays client-side).
+- **Resumable, within a session and across sessions.** That is the whole requirement. **Not** offline-first sync, not conflict resolution, not a server — client-side until the [[decisions]] D-2026-07-24 triggers actually fire ([[../projects/course-lab]] stays client-side).
 - **Works without the teacher at the front of the room.** Not a nice-to-have: the RTI block, the ECO duty, and the testing calendar all guarantee periods where that adult is unavailable.
 
 **The reframe worth keeping:** chaos is not the obstacle to this product, it is the demand for it. **The student who finishes a unit test with 25 minutes left is the ideal user** — and this schedule generates that student constantly. A module that needs a quiet, intact, fully-attended period is solving for a room that will not exist this year.

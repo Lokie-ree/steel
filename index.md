@@ -33,6 +33,7 @@ ISTE research is archived ([[archive/iste-narrative]], [[archive/iste-alignment-
 | [[sprint/index]] | Sprint docs — current window and session log |
 | [[wiki/index]] | Distilled facts (module names, coords, URLs, ecosystem map) |
 | [[archaeology/index]] | One dossier per repo — the 2026-07-18 portfolio dig (evidence layer) |
+| [[docs/superpowers/index]] | Executed plans and specs — the build record, frozen |
 | [[initiatives/index]] | Forward initiative docs — future sprints get cut from these |
 | [[ops/index]] | Agent rules, scripts, vault config |
 | [[agentic-os/index]] | Three-layer framework reference (background only) |

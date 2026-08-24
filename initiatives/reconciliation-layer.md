@@ -9,7 +9,7 @@
 
 **Status:** open initiative. Drafted 2026-08-22, **filed 2026-08-23**. Not a spoke.
 Nothing here is a ruling — the one ruling this doc needed lives in
-[[../wiki/decisions]] 2026-08-23.
+[[../wiki/decisions]] D-2026-08-23.
 **Operator surfaces in scope:** classroom (Algebra II), district facilitation, colleague support.
 
 ---
@@ -31,8 +31,8 @@ connecting it to anything else he was doing.
 
 ## Evidence
 
-Admission bar borrowed from [[../wiki/patterns]]: a pattern earns a card at **≥2
-independent instances**. This has four, in three roles, inside four weeks.
+Admission bar **adapted** from [[../wiki/patterns]] — whose own bar is ≥2 *repos* and stays that
+way — to **≥2 independent instances**, which is what a surface with no repo can offer. This has four, in three roles, inside four weeks.
 
 | Surface | Role | The two maps | What got built |
 |---|---|---|---|
@@ -114,7 +114,7 @@ observation about the pattern.
 ## Open questions
 
 1. ~~**This collides with a standing ruling.**~~ **RESOLVED 2026-08-23** ([[../wiki/decisions]]).
-   The question was whether [[../wiki/decisions]] 2026-08-03 — *the fall build surface is
+   The question was whether [[../wiki/decisions]] D-2026-08-03b — *the fall build surface is
    Algebra II; the rest is a support obligation, not a build obligation* — was being quietly
    violated by the non-Algebra-II surfaces above. **It was a gap, not a violation.** The 08-03
    session was about the *math spectrum*; the fall asked *which roles do I build for*, and 08-03

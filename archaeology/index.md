@@ -1,6 +1,6 @@
 # Archaeology
 
-One dossier per repo in the 2026-07-18 portfolio consolidation (spec: `docs/superpowers/specs/2026-07-18-portfolio-consolidation-design.md`). Fixed format: Identity → Stack → Patterns worth keeping → Dead ends & lessons → Verdict candidate. Ratified verdicts live in [[../wiki/decisions]]; this folder is evidence.
+One dossier per repo in the 2026-07-18 portfolio consolidation (spec: [[../docs/superpowers/specs/2026-07-18-portfolio-consolidation-design]]). Fixed format: Identity → Stack → Patterns worth keeping → Dead ends & lessons → Verdict candidate. Ratified verdicts live in [[../wiki/decisions]]; this folder is evidence.
 
 | Repo | Era / lineage | Window | Verdict candidate |
 |------|---------------|--------|-------------------|

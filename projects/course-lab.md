@@ -8,7 +8,7 @@
 
 ## Role
 
-Production module library for the 2026–27 room — **Algebra II and Algebra III on EdgeEx** ([[../wiki/decisions]] 2026-07-22; the six-course framing is historical). PTR / Bind-and-Justify / Assume-Fit-Reflect interaction families — eleven standalone modules plus two multi-module remediation suites (30 pedagogical units). Hosts the measurement spine (`LabEvent` telemetry). Not an ISTE surface.
+Production module library for the 2026–27 room — **Algebra II and Algebra III on EdgeEx** ([[../wiki/decisions]] D-2026-07-22b; the six-course framing is historical). PTR / Bind-and-Justify / Assume-Fit-Reflect interaction families — eleven standalone modules plus two multi-module remediation suites (30 pedagogical units). Hosts the measurement spine (`LabEvent` telemetry). Not an ISTE surface.
 
 ## Stack
 

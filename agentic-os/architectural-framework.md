@@ -66,7 +66,7 @@ The claud.md (or equivalent) file is the mandatory governance document for the a
 
 * Vault Structure Definition: Explicit mapping of the folder hierarchy.
 * Navigation Patterns: Mandatory instructions on utilizing Master and Sub-Indices.
-* Obsidian Best Practices: Requirements for using Wiki-links ([[Link]]) for symbiosis, tagging for categorization, and Markdown formatting for human-agent readability.
+* Obsidian Best Practices: Requirements for using Wiki-links (`[[Link]]`) for symbiosis, tagging for categorization, and Markdown formatting for human-agent readability.
 
 Execution Models and Cost Warnings
 

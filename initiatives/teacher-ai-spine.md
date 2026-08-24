@@ -1,6 +1,6 @@
 # Initiative — Teacher-AI Spine
 
-**Vision:** The absorbed Pelican inheritance ([[../wiki/decisions]] 2026-07-18) kept alive as working capital: the RAG/ingestion/agent architecture is the *canonical* way any future teacher-facing AI gets built here, and the Louisiana corpus (Student Standards + Educator Rubric, six namespaces) stays revivable rather than rotting in a dormant repo.
+**Vision:** The absorbed Pelican inheritance ([[../wiki/decisions]] D-2026-07-18a) kept alive as working capital: the RAG/ingestion/agent architecture is the *canonical* way any future teacher-facing AI gets built here, and the Louisiana corpus (Student Standards + Educator Rubric, six namespaces) stays revivable rather than rotting in a dormant repo.
 
 **Current state (2026-07-18):** aida paused at live-beta quality (2026-01-13); corpus and ingestion functions intact in the repo; architecture documented in [[../archaeology/aida]] and [[../wiki/patterns]] §2. Pelican-as-product is closed *for now* — this initiative is deliberately not a product roadmap.
 

@@ -3,7 +3,7 @@
 Instructions for AI agents when `steel` is in the workspace (Obsidian or Cursor multi-root).
 
 > Lives at the root so it loads in every session, not only ones that touch `ops/`.
-> Keep it here ([[wiki/decisions]] 2026-07-31).
+> Keep it here ([[wiki/decisions]] D-2026-07-31).
 
 ## Role
 
@@ -57,7 +57,7 @@ and portfolio still agree with it and each other. Pure logic lives in
 `ops/lib/HubContext.psm1` (Pester-tested in `ops/tests/`).
 
 **A drift PASS says nothing about course-lab.** Those three repos are dormant by ruling
-([[wiki/decisions]] 2026-07-22); the check is a regression tripwire on frozen code, not
+([[wiki/decisions]] D-2026-07-22a); the check is a regression tripwire on frozen code, not
 a status signal. Do not lead a session briefing with it.
 
 **Removed 2026-07-26:** the `.hub` bundle pipeline (`build-context.ps1`, the
@@ -120,4 +120,4 @@ executing agent followed the plan and hit a missing-binary error.
 Executed plan docs stay untouched as historical record; the rule applies
 to plans authored from here on.
 
-> **Audit note (2026-07-07):** the friction-rule audit (`docs/superpowers/specs/2026-07-07-friction-rules-design.md`) used transcripts that all predate course-lab — it hardened the old 4-spoke workflow; the course-lab migration still needs its own review.
+> **Audit note (2026-07-07):** the friction-rule audit ([[docs/superpowers/specs/2026-07-07-friction-rules-design]]) used transcripts that all predate course-lab — it hardened the old 4-spoke workflow; the course-lab migration still needs its own review.

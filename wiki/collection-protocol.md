@@ -6,7 +6,7 @@ class-period runbook — held while students are in the room, not read at a desk
 Different reader, different moment, different genre.
 
 **Written:** 2026-07-26, closing [[depth-criteria]] §OPEN.
-**Binds:** [[decisions]] 2026-07-24 (client-side stays) · course-lab PR #18 (storage health)
+**Binds:** [[decisions]] D-2026-07-24 (client-side stays) · course-lab PR #18 (storage health)
 
 ---
 
@@ -174,7 +174,7 @@ Say so in the sprint log rather than treating the run as failed.
 
 ## What this protocol deliberately does not do
 
-- **No backend.** [[decisions]] 2026-07-24 ruled client-side stays, with two named
+- **No backend.** [[decisions]] D-2026-07-24 ruled client-side stays, with two named
   reopen triggers. "Collection was annoying" is not one of them; *"collection fails in a
   real class period"* is. If Path A fails in the room, that ruling reopens — not before.
 - **No merge tooling.** Forty files with identical headers is a `cat`, not a project.

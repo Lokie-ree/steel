@@ -2,6 +2,8 @@
 
 Gap this doc fills: the wiki holds facts (names, URLs, coords) but no architecture patterns; the 2026-07-18 consolidation harvested these from the full 17-repo dig ([[../archaeology/index]]). Admission rule: a pattern appears in ≥2 repos, or has a named forward use in a current initiative. Harvest, not museum — if a pattern loses its forward use, delete it.
 
+**Scope: repos.** For surfaces with no repo behind them — documents, packets, context stacks — the sibling registry is [[../initiatives/reconciliation-layer]], which adapts this bar to ≥2 independent *instances*. Two registries on purpose, not an oversight: that doc's open question 2 chose placement there over widening the bar here, on the grounds of §1 below. **Check both before concluding a shape is unrecorded.**
+
 ## 1. Markdown-as-canonical pipeline
 
 Author in markdown under git; a sync step publishes to the serving layer; the DB/bundle is derived, never hand-edited. Emerged **three times independently** before being recognized: portfolio-markdown-site's `scripts/sync-posts.ts` (gray-matter → Convex → static `/raw/*.md`), project-studio-coach's `scripts/sync-knowledge.mjs` (docs/ → convex/knowledge → RAG), steel's `build-context` (wiki/module-facts.md → `.hub/` bundles). Cousin: ts-google-automation's markdown-template DSL (`src/parsers/survey-parser.ts:6-80`) parsing `**Type:**`/`**Options:**` markdown into typed Google Forms.
@@ -16,7 +18,7 @@ to build a sync step nobody reads.
 ## 2. Namespace-per-domain RAG with first-class ingestion
 
 aida's `convex/rag.ts`: corpus split into six semantic namespaces (instruction/planning/environment/professionalism/system/coaching), typed `contentType` filters, a query cookbook in the doc comment, and ingestion as repeatable Convex functions (`ingestStandards.ts`, `ingestRubric.ts`, `ragCleanup.ts`) rather than one-off seeds. studio-coach repeats the shape (docs-as-corpus → knowledge modules → RAG). sped-sync's hand-rolled `documentChunks` table is the "before" picture that shows why the component won.
-**Forward use:** canonical teacher-facing AI spine ([[decisions]] 2026-07-18); any future corpus (EdgeEx lesson bank) uses this shape.
+**Forward use:** canonical teacher-facing AI spine ([[decisions]] D-2026-07-18a); any future corpus (EdgeEx lesson bank) uses this shape.
 
 ## 3. Structural guardrails beat prompt guardrails
 

@@ -16,13 +16,17 @@ Orients every session from the shared hub state. Run before touching any spoke r
    - **Active sprint** (no closed banner, window end date in the future): extract the priority stack, per-repo status, blockers, and suggested focus — from the doc, verbatim.
    - **Between sprints** (the doc carries a "Window closed" banner, its window end date has passed, or the index lists none): do not resurrect the dead priority stack or countdown. The briefing must say the hub is between sprints and what the closed doc says comes next.
 
-2. **Check live repo state + drift**
+2. **Check live repo state, drift, and vault integrity**
    - Execute: `pwsh C:\Users\rplap\OneDrive\Desktop\steel\ops\drift-check.ps1` (runs the git preflight first, then the conformance scan)
    - From the preflight table, note each spoke's branch / ahead / behind / dirty — this is **live** state; trust it over any hand-typed sprint status
    - Note the dynamic pass/fail counts and the verdict line
    - **The preflight is the useful half.** The conformance scan covers only the three
      dormant geometry spokes; a green verdict is a regression tripwire on frozen code and
      says nothing about course-lab. Report it in one line and do not lead with it.
+   - Execute: `pwsh C:\Users\rplap\OneDrive\Desktop\steel\ops\vault-check.ps1` — link integrity,
+     ruling-ID citations, and plan/spec paths **inside the vault itself**. A separate verdict from
+     drift on purpose: drift-check covers the spokes, this covers the hub's own records. Neither
+     verdict says anything about the other.
 
 3. **Output briefing** — exactly one of these two formats, no more:
 
@@ -37,12 +41,13 @@ PRIORITY STACK
 
 GIT    <repo:branch ±ahead/behind dirty?> for any spoke needing attention, else "all clean & current"
 DRIFT  <pass> pass / <fail> fail  <"— all clear" if 0 fail and verdict is a pass; if UNVERIFIED, say so and name the behind/dirty spoke; else list each FAIL>
+VAULT  <links> links / <rulings> rulings  <"— clean", else list each problem; add any NOTICE (a citation of an amended ruling) as one line>
 
 FOCUS TODAY
   <copy the sprint doc's suggested-focus items verbatim, numbered>
 ```
 
-   **Between sprints** (same GIT/DRIFT lines, priorities replaced):
+   **Between sprints** (same GIT/DRIFT/VAULT lines, priorities replaced):
 
 ```
 SESSION BRIEF — <today's date>
@@ -50,6 +55,7 @@ No active sprint — <closed sprint name> ended <window end date>; next sprint d
 
 GIT    <as above>
 DRIFT  <as above>
+VAULT  <as above>
 
 FOCUS TODAY
   1. If this session is for planning: draft the next sprint doc in sprint/ and update sprint/index.md
@@ -61,5 +67,6 @@ FOCUS TODAY
 ## Notes
 
 - If the drift check has failures, flag them before the Focus section and do not proceed to spoke work until the user acknowledges
+- A vault-check failure is a broken record, not broken code — it is always a link, a citation, or a path. Fix it in the session that finds it
 - Do not summarize or paraphrase sprint content — copy status lines verbatim
 - All deadline math comes from the sprint doc's own window/deadline fields, never from dates baked into this file

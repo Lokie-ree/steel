@@ -32,7 +32,7 @@ pnpm run lint
 | System grid data | `SYSTEM_ROWS` in `App.tsx` |
 | R3F previews | `src/components/*Preview.tsx` |
 | Creative direction | `docs/CREATIVE_DIRECTION.md` |
-| Ecosystem spec | `docs/superpowers/specs/2026-04-12-creative-direction-extension-design.md` |
+| Ecosystem spec | `portfolio/docs/superpowers/specs/2026-04-12-creative-direction-extension-design.md` |
 
 ## Sync obligations
 

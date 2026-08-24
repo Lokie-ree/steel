@@ -22,7 +22,7 @@ First face of a planned **one engine, six faces** build — one transfer-functio
 
 Not district infrastructure. Classroom instrument, one room, two sections.
 
-**This is the Algebra II applied layer, not a separate build.** [[algebra2-course-plan]] anchors the course's applied content on the 4–20 mA loop, one hook per unit; the six faces are those hooks. It sits *inside* the 2026-08-03 build-surface ruling rather than beside it ([[../wiki/decisions]] 2026-08-23).
+**This is the Algebra II applied layer, not a separate build.** [[algebra2-course-plan]] anchors the course's applied content on the 4–20 mA loop, one hook per unit; the six faces are those hooks. It sits *inside* the 2026-08-03 build-surface ruling rather than beside it ([[../wiki/decisions]] D-2026-08-23).
 
 ## Stack
 
@@ -93,7 +93,7 @@ Slope `m = 16/(URV − LRV)`, intercept `b = 4 − m·LRV`. Readback is the inve
 
 ## Known drift seam
 
-**Each HTML file carries its own copy of the transfer function.** Change a range or a tolerance in one and the other is silently wrong. This is transcription where the ecosystem rule is derivation ([[../wiki/decisions]] 2026-08-03; [[../CLAUDE]] on git state), and it is the same failure class as the four-way count drift in the tech station.
+**Each HTML file carries its own copy of the transfer function.** Change a range or a tolerance in one and the other is silently wrong. This is transcription where the ecosystem rule is derivation ([[../wiki/decisions]] D-2026-08-03a; [[../CLAUDE]] on git state), and it is the same failure class as the four-way count drift in the tech station.
 
 It is tolerable at two files and will not survive six. **Before the second face is built, the engine, the range table, and the tolerance move to one source and both faces import it** — most likely a shared `loop-engine.js`, with `verify-loop-bench.py` reading the same range table rather than restating it. Recorded here so it is a scheduled fix and not a discovery.
 

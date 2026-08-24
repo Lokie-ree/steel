@@ -1,8 +1,8 @@
 # Initiative — course-lab Production
 
-**Vision:** The 2026–27 room — **Algebra II and Algebra III on EdgeEx** ([[../wiki/decisions]] 2026-07-22; the six-course framing is historical) — runs on course-lab from the first day of school: modules live, rosters real, data surviving school Chromebooks, families able to see what happens.
+**Vision:** The 2026–27 room — **Algebra II and Algebra III on EdgeEx** ([[../wiki/decisions]] D-2026-07-22b; the six-course framing is historical) — runs on course-lab from the first day of school: modules live, rosters real, data surviving school Chromebooks, families able to see what happens.
 
-**Current state (2026-07-25):** The pre-August plan set is **complete** — six single-concern PRs 2026-07-17 → 07-19 (sink-hardening #10, smoke-verify #11, real roster codes #12, deploy #13, registry guard #14, family coverage #15), plus the first EdgeEx build `transformations-ptr` (#16) on 07-24. Live at <https://course-lab-two.vercel.app>, auto-deploying from `main`, 31/31 green. Architecture ruled client-side, backend NOT-DOING ([[../wiki/decisions]] 2026-07-24).
+**Current state (2026-07-25):** The pre-August plan set is **complete** — six single-concern PRs 2026-07-17 → 07-19 (sink-hardening #10, smoke-verify #11, real roster codes #12, deploy #13, registry guard #14, family coverage #15), plus the first EdgeEx build `transformations-ptr` (#16) on 07-24. Live at <https://course-lab-two.vercel.app>, auto-deploying from `main`, 31/31 green. Architecture ruled client-side, backend NOT-DOING ([[../wiki/decisions]] D-2026-07-24).
 
 **What is left is not code.** Two operator-only items, both gate-blocking, both with a first-day-of-school deadline:
 
