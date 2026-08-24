@@ -1,4 +1,4 @@
-# civics-planning-tool — Iberville lesson planning (Civics pilot)
+# civics-planning-tool — Iberville lesson planning (social studies pilot)
 
 **Not a spoke.** No repo. Technology-facilitator work: a lesson-planning tool being built
 with one pilot teacher, tracked here so hub sessions know it exists. The context stack
@@ -9,13 +9,13 @@ itself lives outside the vault; this card is the pointer and the constraint list
 ## Role
 
 The tool assembles a district-template weekly lesson plan from a small intake block,
-coded against Louisiana Civics standards. First pilot: **the pilot Civics teacher**
+coded against Louisiana social studies standards. First pilot: **the pilot teacher**
 (unnamed here, deliberately — see Editorial constraints).
 
 ## Context stack
 
 Five layers — **Process, Standards, Curriculum, Reconciliation, Calibration.** Four are
-built. The Calibration layer now holds the **LDOE HS Civics Scoring Notes.**
+built. The Calibration layer now holds the **LDOE HS scoring notes** for the subject.
 
 ## The Scoring Notes are a Column 2 source
 
@@ -51,7 +51,9 @@ assessment of anyone's plans. This framing is the rule, not a softening of one.
 
 Hard rules for anything written about this project in this repo, which is public:
 
-- **The pilot teacher is unnamed.** Write "the pilot Civics teacher."
+- **The pilot teacher is unnamed, and so is the subject.** Write "the pilot teacher."
+  Subject + parish + year is re-identifying on its own ([[../initiatives/reconciliation-layer]]
+  §What this doc does not carry). The subject lives in the local working copy, not here.
 - **Do not record source filenames** — they contain her name.
 - **Validation findings are tool requirements, never assessments.** "The tool must code
   per day," not "the plan miscoded four days."
@@ -69,10 +71,10 @@ Hard rules for anything written about this project in this repo, which is public
 ## Open
 
 - Verify the per-lesson Lesson Plan resource is enabled in the district's Realize instance
-- Verify the pilot Civics teacher's Claude for Teachers account
+- Verify the pilot teacher's Claude for Teachers account
 - District position on uploading licensed publisher materials to an external tool
 - Dry run before handoff
-- Confirm LEAP Civics assessment requirements
+- Confirm LEAP assessment requirements for the subject
 - **PelicanEd is uncharacterized** — do not treat any AI-supplied description of it as
   reliable
 - **No crosswalk exists** between the LDOE unit/topic framework and the textbook's
