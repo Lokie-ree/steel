@@ -31,8 +31,8 @@ connecting it to anything else he was doing.
 
 ## Evidence
 
-Admission bar borrowed from [[../wiki/patterns]]: a pattern earns a card at **≥2
-independent instances**. This has four, in three roles, inside four weeks.
+Admission bar **adapted** from [[../wiki/patterns]] — whose own bar is ≥2 *repos* and stays that
+way — to **≥2 independent instances**, which is what a surface with no repo can offer. This has four, in three roles, inside four weeks.
 
 | Surface | Role | The two maps | What got built |
 |---|---|---|---|
