@@ -4,7 +4,7 @@ Active sprint docs. Update the current sprint file at the start and end of each 
 
 | Doc | Purpose |
 |-----|---------|
-| [[2026-first-contact]] | Current sprint — get built things in front of students (2026-08-23 → 2026-09-19) |
+| [[2026-first-contact]] | Current sprint — get built things in front of students, and the hackathon submitted (2026-08-23 → **2026-09-22**, ends on the submission deadline) |
 
 When the sprint closes, add a **Window closed** banner naming what carries forward, move the file to `../archive/`, and start a new sprint doc here.
 

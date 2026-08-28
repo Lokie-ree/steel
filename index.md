@@ -28,6 +28,8 @@ ISTE research is archived ([[archive/iste-narrative]], [[archive/iste-alignment-
 | Path | Role |
 |------|------|
 | [[CLAUDE]] | Agent contract — loaded automatically in every session here |
+| [[ai-collaboration-context]] | Operator context — role, students, constraints, goals, oath clauses. **Root-level by necessity:** cited inside D-2026-08-23's `Why` cell, which is append-only and cannot be repointed |
+| [[build-inventory]] | One row per artifact that exists, `[verified]` / `[unverified]`. The count behind "what has actually been built" |
 | [[projects/index]] | Project registry — six spoke cards (one per repo), plus non-spoke work with no repo behind it |
 | [[sync-registry]] | Cross-repo fields that must stay aligned |
 | [[sprint/index]] | Sprint docs — current window and session log |
