@@ -25,6 +25,38 @@ Ruled in [[../wiki/decisions]] **D-2026-08-26**: the hackathon is this initiativ
 | **2026-09-15** | Persona playtest run against the live URL, transcript committed ([[../wiki/patterns]] §7). | No transcript. |
 | **2026-09-20** | Final submission filed, two days of slack held deliberately. | Anything unsubmitted on 09-21. |
 
+**Row 1 missed — 2026-09-01.** Nothing was filed. The repo was public, `hackathon.md` was at
+the root and current, and the live `convex.site` URL was seeded and serving; the video and the
+form were not done. The deferral was deliberate and the reasoning was that the only available
+footage — two invented gists and a hash comparison run by hand — would be discarded at the
+first real rebuild.
+
+**This table's own terms make the reasoning irrelevant.** The failure condition on row 1 is
+"Nothing submitted. Not 'nothing good submitted,'" and the rule above it is that a missed date
+is the failure, with "not ready" explicitly not an acceptable output. Recording this as a miss
+rather than as a reasonable postponement is the only way the gate keeps meaning anything —
+this gate exists because a well-reasoned deferral has already been tested once and lost.
+
+What is and is not at risk: the hackathon allows multiple submissions, so the entry itself is
+not spent, and rows 2–4 are unchanged. Row 4 (2026-09-20) is the row that decides the outcome.
+The specific thing given up is the early proof that the submission pipeline works end to end,
+which is what row 1 was for; that proof now happens for the first time under deadline.
+
+**Row 1's URL confirmed 2026-08-31, and this row needed no change.** The deploy serves at
+`https://impressive-marten-163.convex.site` — `convex.site`, as this table always recorded it. A
+2026-08-30 correction in the working docs claimed `*.convex.app` and has been withdrawn there.
+
+**Row 2 got harder on 2026-09-02, and the date does not move.** The note above says rows 2–4 are
+unchanged. Row 2 is unchanged as a *date* and materially harder as a *task*: the product pivoted
+to the forwarded document, and the working schedule now puts the first end-to-end proof — a
+document in, a cited answer out — on **Mon Sep 7, 9 PM**, one day before the scope freeze. A
+feature list closed the day after the core loop first works is closed on one day of evidence.
+
+That is uncomfortable and it is still correct. Moving row 2 to buy evidence is the same move as
+deferring row 1 for better footage, which this table has now recorded as a miss. **The gate is
+the date; what goes on the list is the operator's problem.** If Sep 7 fails, the list gets
+frozen smaller — which is the gate working, not the gate breaking.
+
 **One rule for the whole window.** A worse app that is submitted beats a better app that is not, and this table exists because that sentence has already been tested once and lost.
 
 **Social proof is a scored criterion, not self-promotion** — posts on X or LinkedIn tagging the four sponsors count toward the judging. The announcement already made is the first one; treat the rest as a deliverable rather than a mood.
