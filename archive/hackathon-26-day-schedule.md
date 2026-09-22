@@ -1,5 +1,7 @@
 # 26 Days — Convex All Gas build schedule
 
+> **Closed 2026-09-22. Submitted 09-20, and results are due 09-25.** This doc is now record and is not maintained. Gate outcomes live in [[initiatives/public-identity]] §Outcome, and the project pointer is [[projects/still-true]]. If a future hackathon reuses this schedule's shape (weekend blocks, a cut list written before the build, a working deadline two days early), copy that shape into the new event's own schedule. Don't reopen this one.
+
 > **The product is defined in `still-true/hackathon.md`, not here** (ruled 2026-09-02). That
 > file is the build log, it is scored by the judges, and it is the single source for what the
 > thing does, what is built, and every decision including the reversed ones. **This doc owns
@@ -9,7 +11,7 @@
 >
 > The vault's second copy of the product definition was archived for exactly this reason:
 > [[archive/hackathon-vault-handoff]], superseded twice in three days while nobody was reading
-> it. Priority lives in [[sprint/2026-first-contact]]; the release gate in
+> it. Priority lives in [[archive/2026-first-contact]]; the release gate in
 > [[initiatives/public-identity]].
 
 **Hard deadline:** Tue Sep 22, 12:00 PM PT = **2:00 PM our time**.

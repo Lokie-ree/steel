@@ -24,6 +24,7 @@ aida's `convex/rag.ts`: corpus split into six semantic namespaces (instruction/p
 
 studio-coach withholds archetype plan fields **at the query layer** (explicit-pick projection + return validator — `archetypes:search` cannot return them; the only door is a logged reveal). Contrast: sanity-ai-portfolio's layered guardrail *prompts* (`prompts/guardrail_fail_agent.txt`, topic filter/moderator) — useful, but advisory. Two implementations, one lesson: when pedagogy or safety depends on the model *not* having something, enforce it in schema/projection, not instructions.
 **Forward use:** every agentic build; already the studio-coach standard.
+**Third instance, 2026-09-22 harvest: still-true, where the guardrail is on output, not input.** The model returns **line numbers, never prose quotes**. The server reads the quote out of the source by index after the model has finished. `convex/schema.ts` makes a finding a discriminated union, so an `answered` finding cannot exist without `quote` and `lineNo`, and a refusal carries `linesSearched` so it can be counted. **The sharpening it leaves:** state exactly which field the structure protects. On 2026-09-10 the README claimed the model never writes the answer, but the answer is the one field that is entirely model prose. Only the quote is guaranteed. A structural guarantee described one field too wide is a prompt guarantee again.
 
 ## 4. Metered-AI spine (auth → quota → generate → log → cache)
 
@@ -62,3 +63,14 @@ portfolio-markdown-site's `convex/stats.ts`: views as append-only event records 
 
 Agent role definitions anchored in real practitioner constraints, not job titles: pelican-ai-strategy's `agents.yaml` ("Would I use this during my planning period?"), preceded by edcoachai's `docs/agents/*.md`.
 **Forward use:** persona style for future agent/subagent definitions in any spoke.
+
+## 12. Claims as executable checks, one question per script
+
+What a repo says about itself is a claim. Claims get a script that exits non-zero when they're false, and each question gets its own script and its own verdict. This emerged **twice independently**:
+
+- **still-true:** `scripts/gate.mjs` asks whether the *system* still works. It makes eight read-only checks against production, and one carries a control so that a query returning nothing for everything cannot pass. `scripts/reconcile.sh` asks whether the *documents* still describe the system (CONFIRMED / DRIFTED / UNVERIFIABLE). Its header gives the reason for the split: the gate "is itself one of the claims the README makes."
+- **steel:** `ops/drift-check.ps1` asks whether the frozen spokes still agree. `ops/vault-check.ps1` asks whether the vault's own records still resolve. It's kept separate because "one green line covering two unrelated questions" is the failure `CLAUDE.md` already warns about.
+
+**The two rules both converged on:** checks are read-only and free, so there's no reason not to run them. Every check is written from a defect that actually happened, not a hypothetical. **The limit on record:** On 2026-09-15 still-true's reconciler flagged seven drifts, and two were real. A doc-checker is an instrument that needs reading, not an oracle.
+
+**Forward use:** every repo with a public README or a judge reading it. The next hackathon build gets a gate on day one, not in week two ([[../initiatives/public-identity]] §Next instances).

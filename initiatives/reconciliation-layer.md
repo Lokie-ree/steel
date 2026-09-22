@@ -105,7 +105,7 @@ pipeline with no consumer downstream, deleted 2026-07-26 — appearing on a new 
 of the source upstream.** The sharpening that entry left behind applies here without
 modification.
 
-**Promoted to a sprint 2026-08-23.** [[../sprint/2026-first-contact]] exists to close
+**Promoted to a sprint 2026-08-23.** [[../archive/2026-first-contact]] exists to close
 exactly this risk, and it opened on the finding that **five documents — including this one
 — independently recorded "nothing has met a student" without any of them linking to
 another.** The rediscovery this doc says the pattern suffers from was happening to the
@@ -141,7 +141,7 @@ observation about the pattern.
 4. **Capacity.** Three roles, three concurrent builds, four weeks, hard dates on all
    three. Not a question this doc can answer — but it belongs on the record before a
    sprint gets cut from it. **A sprint was cut from it on 2026-08-23**, with this question
-   on the record and visibly shaping the result: [[../sprint/2026-first-contact]] carries
+   on the record and visibly shaping the result: [[../archive/2026-first-contact]] carries
    **one next action per surface and no roadmap**, on the operator's own short-horizon
    constraint. The capacity question is not answered; it is now at least being planned
    against rather than around.
