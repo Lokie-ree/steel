@@ -31,7 +31,7 @@ what I haven't seen — which cuts both ways. This is the count.
 | STEM Club field tests | Multiple sessions, live students; drove the Rigid Motions redesign | `[unverified]` |
 | Portfolio site | Live deployment, OG image confirmed rendering | `[unverified]` |
 | DEMO01 | Shipped demo | `[unverified]` |
-| still-true | Hackathon entry: a forwarded document gets a line-cited reply ([[projects/still-true]]). Answered a stranger's forward unattended on 2026-09-21, in 23.7 s. That is the first use from a domain it was never tested from | `[unverified]`. The repo's own gate read 8/8 against production on 09-22; flip this when you've opened it yourself |
+| still-true | Hackathon entry: a forwarded document gets a line-cited reply ([[../projects/still-true]]). Answered a stranger's forward unattended on 2026-09-21, in 23.7 s. That is the first use from a domain it was never tested from | `[unverified]`. The repo's own gate read 8/8 against production on 09-22; flip this when you've opened it yourself |
 
 **This section is the answer to the undervaluation question.** Three production modules
 plus a demo plus live student contact is not "getting started."
