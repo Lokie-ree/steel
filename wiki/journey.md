@@ -32,6 +32,18 @@ The ISTE 26 arc answers it: [[../archaeology/creative-lab|creative-lab]] (intera
 
 Post-ISTE, the production era: [[../archaeology/course-lab|course-lab]], the first repo built for the operator's *own* six-course room, founded under ratified conventions with plan-set discipline and scripted-browser verification — the exact inverse of EdCoachAi's deleted E2E suite. And [[../archaeology/project-studio-coach|project-studio-coach]], where the aida lineage's deepest lesson — *coach the human's use of AI, don't replace the work* — returns aimed at students: the coach structurally cannot reveal the library's plans until the student's own plan exists. Enforcement moved from prompts to schema. That is two years of learning in one query projection.
 
+## After the room — widening again (September 2026 →)
+
+> **DRAFT, 2026-09-22, written by the first project-close harvest. The operator has not edited it.** Nothing in it is in the operator's voice yet. It's here so the beat isn't lost, not to set the telling.
+
+The narrowing ended where it was meant to, in the operator's own room. Then, a year after registering for a first hackathon and never submitting, the operator entered another: the Convex All Gas Hackathon. [[../projects/still-true|still-true]] was built in 26 days alongside a full teaching load. Forward it a lease and it answers with what the lease requires of you, every claim quoted from the source by line number, and it says plainly where the document is silent.
+
+It is not an education product, but it carries a teacher's stance: *cite your evidence, and say when the text doesn't say.* The build log recorded its own mistakes first. It retracted three of its own claims and kept a readiness score designed to fall whenever someone looked harder. It was submitted on its date. The day after the log closed, a stranger forwarded a document and got a cited answer in 23.7 seconds, and nobody was watching.
+
+**What changed was not the stack. It was ownership.** Building in public under a real name stopped being frightening. For the first time since Era I, the audience widened again. This time the reason wasn't a market. It was the confidence to take the stance beyond the classroom.
+
+*Open for the operator: is this a fourth era or a coda to the third? And does throughline 1 below need a second clause?*
+
 ## Throughlines (what the dig proved)
 
 1. **Audience narrowing is the plot.** Market → community → own room. Each pivot was toward students actually in the building.

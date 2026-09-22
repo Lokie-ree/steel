@@ -10,6 +10,7 @@ Distilled facts for agents. Full architecture lives in spoke repos — link, don
 | [[edge-ex-courses]] | EdgeEx Algebra II/III course facts (canonical) |
 | [[journey]] | 2024→now narrative from the 17-repo archaeology |
 | [[patterns]] | Harvested architecture patterns (≥2 uses or named forward use) |
+| [[lessons]] | Harvested working lessons (≥2 occurrences, each with its check). Graduates to rules and hooks |
 | [[depth-criteria]] | The student-data gate between EdgeEx build one and build two |
 | [[collection-protocol]] | Class-period runbook — how a period's data reaches a desk |
 | [[reconcile-calibration]] | 15 pre-sorted samples for depth-criteria Signal 2 |
