@@ -10,7 +10,7 @@
 >
 > **The single source is now [`still-true/hackathon.md`](https://github.com/Lokie-ree/still-true/blob/main/hackathon.md)**,
 > the build log in the repo, which is scored by the judges and better maintained than any vault
-> copy was. The vault keeps the calendar and the gates in [[../hackathon-26-day-schedule]] and
+> copy was. The vault keeps the calendar and the gates in [[hackathon-26-day-schedule]] and
 > the priority in [[../sprint/2026-first-contact]]; it no longer keeps a second copy of the
 > product definition.
 >

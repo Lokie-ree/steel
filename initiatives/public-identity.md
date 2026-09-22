@@ -60,3 +60,66 @@ frozen smaller — which is the gate working, not the gate breaking.
 **One rule for the whole window.** A worse app that is submitted beats a better app that is not, and this table exists because that sentence has already been tested once and lost.
 
 **Social proof is a scored criterion, not self-promotion** — posts on X or LinkedIn tagging the four sponsors count toward the judging. The announcement already made is the first one; treat the rest as a deliverable rather than a mood.
+
+### Outcome — recorded 2026-09-22, when the window closed
+
+| Row | Date | Result |
+|---|---|---|
+| 1 | 09-01 | **Missed.** Filed 09-05, four days late. The miss is recorded above and still stands. |
+| 2 | 09-08 | **One day late.** The scope freeze started 09-09. |
+| 3 | 09-15 | **Met a week early.** Transcript committed 09-08 (`still-true/docs/transcript-sbc.md`). |
+| 4 | 09-20 | **Met.** Final submission filed 09-20, with the two days of slack held. |
+
+**The gate's default was release, and it released.** One row missed, one row late, two rows met. The row that decides the outcome was met on its date. Results are due 2026-09-25. Record them here as a dated line, and don't edit the table.
+
+**What the build log says cost the most, from `still-true/hackathon.md` 09-22:** building was never the expensive part. **Shipping finished artifacts was.** The two sponsor issues sat draft-ready for eleven days. The log recorded that pattern three times and calls it "the finding rather than the anecdote." It's the first input to the section below.
+
+## Next instances — brainstorm (opened 2026-09-22)
+
+The release gate's subtitle said the hackathon was this initiative's *first instance*. The operator will enter more of them. Nothing is decided here. This section only captures the brainstorm so it doesn't live in chat.
+
+**Frame, as the operator stated it on 2026-09-22.** Future hackathons serve **all four** of these, and none is ranked above the others yet:
+
+1. **Public identity:** proof of work for a builder audience.
+2. **Forcing function:** an external date that makes finished things ship. That is the answer to the finding above.
+3. **Winning:** judges and sponsor stacks are a real objective, not an afterthought.
+4. **Learning stacks:** the sponsor stack is a paid tour of tools.
+
+**Carried constraints.** These are inherited, and none of them was re-decided here:
+
+- No student data in anything with a public URL. This is the vault's hard line, and it's the reason still-true went adult-facing.
+- Only code started inside the event window qualifies. Patterns, skills, and house style transfer from one event to the next. Repos don't.
+- A full-time teaching job sets the budget. The All Gas schedule assumed about 65 hours across 26 days.
+
+**Evidence from the first instance.** Brainstorm against these, not against impressions:
+
+- The pre-written cut list and weekend blocks worked. The risky extractor landed about two days early.
+- The idea pivoted three times before it settled on 09-02. The sponsor stack was the idea constraint.
+- Corrections kept landing on the artifact being edited and not on the artifacts that quote it. The log records six instances.
+- The dry-submission row, the one meant to prove the pipeline early, was the one that was missed.
+
+Ideas, assumptions, and the questions still open get appended below as dated entries as the brainstorm runs.
+
+**2026-09-22: the four reasons, ranked by the operator.**
+
+- **Learning comes first.** The forcing function exists to keep the operator learning and to lean into a creativity that is new to them.
+- **Public ownership is no longer a goal. It's done.** The hackathon made owning the work in public stop being frightening. Identity is now a by-product, not something to optimize for.
+- **The domain is open.** The operator's credibility is strongest in education, but education is not a fence.
+- **Opened here, bigger than this initiative: the vault has to evolve.** It did its job preparing for ISTE LIVE 26. Next, it has to support moving from project to project. This reopens the "reframing the vault" exclusion in [[../sprint/2026-results-bridge]], as exploration and not yet as a build.
+
+**2026-09-22: teaching and building always run together (operator's answer), so the vault is a switchboard, not a ledger.**
+
+- **The day-to-day is ahead of the structure.** The sprint stack has been keyed on role-surfaces since D-2026-08-23. The structure (`index.md`, `projects/index`, drift-check) is still keyed on repos.
+- **Candidate shape:**
+  - Roles are the stable axis. Projects open and close under them.
+  - The hub's primary job is budgeting attention across surfaces (the 26-day schedule's weeknight/weekend model), not keeping repos in sync.
+  - Each project close harvests lessons in both directions, classroom ↔ build.
+- **Riskiest assumption:** that lessons from one project get read in the next. **Cheapest test:** harvest still-true into [[../wiki/patterns]] as the first close under the new model, before designing anything.
+- **Named risk:** a redesign is the shiny-build sidecar, so every structural change needs a reader who would miss it.
+
+**2026-09-22: the harvest ran. The operator wants all three kinds kept (pieces, lessons, story).** Record: [[../projects/still-true]] §Harvest.
+
+- **Pieces.** The existing bar worked, and the harvest found something reading alone hadn't. Comparing still-true's scripts against steel's surfaced [[../wiki/patterns]] §12, the same split arrived at independently. Forcing a comparison is the value.
+- **Lessons.** A new home was needed, which confirms the gap. **Four of the five lessons draw evidence from both the hackathon and the vault.** Lessons cross projects, and that supports the switchboard model.
+- **Story.** It can't be automated. A harvest can draft it and flag the beat, but the voice is the operator's.
+- **Not tested yet:** whether the next project *reads* any of it. This harvest tested filing. The reading test happens when the next project opens. That points to a missing **open** step to pair with the close: read [[../wiki/lessons]] and [[../wiki/patterns]] before the first commit.

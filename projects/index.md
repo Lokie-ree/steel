@@ -31,3 +31,9 @@ for `drift-check`.
 | [[algebra2-course-plan]] | Algebra II Sem A, Fall 2026 — Edmentum, two sections, 4–20 mA anchor | `Fall 2026 Course Plan.md`, in the Claude project |
 | [[civics-planning-tool]] | Lesson-planning tool built with one pilot teacher | The context stack, outside the vault |
 | [[loop-bench]] | 4–20 mA current-loop bench — the Algebra II applied layer, one face of six | **This card.** Files staged in `~/Downloads`, no repo yet |
+
+**One pointer card has a repo but is not a spoke.** It gets no drift enrollment, no Local-paths row, and it does not count toward "six spokes":
+
+| Card | What | Canonical doc |
+|------|------|---------------|
+| [[still-true]] | Convex All Gas Hackathon entry: a forwarded document gets a line-cited reply. Submitted 2026-09-20, results 2026-09-25 | `still-true/hackathon.md` |
