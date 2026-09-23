@@ -6,7 +6,7 @@ Gap this doc fills: the sprint's P3 item — the 2024→now archaeology narrativ
 
 ## The shape of the whole thing
 
-Two years, seventeen repos, three eras. Read in order, they are not a pile of abandoned projects — they are one long narrowing of audience: **build for a market → build for a community → build for your own room.** Every "failure" shipped its architecture forward. The stack stabilized early (Convex appears March 2025 and never leaves); what kept changing was *who it was for*, until that question landed on the students in front of Mr. L.
+Two years, seventeen repos, three eras. Read in order, they are not a pile of abandoned projects — they are one long narrowing of audience: **build for a market → build for a community → build for your own room.** Every "failure" shipped its architecture forward. The stack stabilized early (Convex appears March 2025 and never leaves); what kept changing was *who it was for*, until that question landed on the students in front of Mr. L. *(The dig counted three eras on 2026-07-18. A fourth opened in September 2026; see Era IV.)*
 
 ## Foundations (June 2024 – early 2025)
 
@@ -32,21 +32,20 @@ The ISTE 26 arc answers it: [[../archaeology/creative-lab|creative-lab]] (intera
 
 Post-ISTE, the production era: [[../archaeology/course-lab|course-lab]], the first repo built for the operator's *own* six-course room, founded under ratified conventions with plan-set discipline and scripted-browser verification — the exact inverse of EdCoachAi's deleted E2E suite. And [[../archaeology/project-studio-coach|project-studio-coach]], where the aida lineage's deepest lesson — *coach the human's use of AI, don't replace the work* — returns aimed at students: the coach structurally cannot reveal the library's plans until the student's own plan exists. Enforcement moved from prompts to schema. That is two years of learning in one query projection.
 
-## After the room — widening again (September 2026 →)
+## Era IV — Widening again (September 2026 →)
 
-> **DRAFT, 2026-09-22, written by the first project-close harvest. The operator has not edited it.** Nothing in it is in the operator's voice yet. It's here so the beat isn't lost, not to set the telling.
+> **Accepted as the fourth era by the operator on 2026-09-22.** The voice here is deliberately neutral, because the operator tunes it to the audience when retelling. What has to stay fixed is the accuracy: every claim below traces to `still-true/hackathon.md` or the vault.
 
-The narrowing ended where it was meant to, in the operator's own room. Then, a year after registering for a first hackathon and never submitting, the operator entered another: the Convex All Gas Hackathon. [[../projects/still-true|still-true]] was built in 26 days alongside a full teaching load. Forward it a lease and it answers with what the lease requires of you, every claim quoted from the source by line number, and it says plainly where the document is silent.
+The narrowing ended where it was meant to, in the operator's own room. Then, a year after registering for a first hackathon and never submitting, the operator entered another: the Convex All Gas Hackathon. [[../projects/still-true|still-true]] was built inside its 26-day window, alongside a full teaching load. Forward it a lease and it answers with what the lease requires of you, every claim quoted from the source by line number, and it says plainly where the document is silent.
 
-It is not an education product, but it carries a teacher's stance: *cite your evidence, and say when the text doesn't say.* The build log recorded its own mistakes first. It retracted three of its own claims and kept a readiness score designed to fall whenever someone looked harder. It was submitted on its date. The day after the log closed, a stranger forwarded a document and got a cited answer in 23.7 seconds, and nobody was watching.
+It is not an education product, but it carries a teacher's stance: *cite your evidence, and say when the text doesn't say.* The build log recorded its own mistakes first. It retracted three of its own claims and kept a readiness score designed to fall whenever someone looked harder. It was submitted on its date. The day before the log closed, someone other than the operator forwarded a document from an address it had never been tested from. They got a cited answer in 23.7 seconds, and nobody was watching.
 
 **What changed was not the stack. It was ownership.** Building in public under a real name stopped being frightening. For the first time since Era I, the audience widened again. This time the reason wasn't a market. It was the confidence to take the stance beyond the classroom.
 
-*Open for the operator: is this a fourth era or a coda to the third? And does throughline 1 below need a second clause?*
 
 ## Throughlines (what the dig proved)
 
-1. **Audience narrowing is the plot.** Market → community → own room. Each pivot was toward students actually in the building.
+1. **Audience narrowing is the plot, and then it reversed.** Market → community → own room. Each pivot was toward students actually in the building. *Extended 2026-09-22:* once the room was reached, the audience widened again (Era IV). The stance carried outward, not the market.
 2. **Convex is the constant.** Every substantial build since March 2025; the component ecosystem (RAG, Agent, Workflow, ProsemirrorSync, Aggregate) was adopted piecewise across four projects and is now fluent vocabulary.
 3. **Markdown-as-canonical emerged three times independently** — portfolio-markdown-site's sync, studio-coach's `sync-knowledge`, steel's `build-context` — before being recognized as *the* pattern. See [[patterns]].
 4. **Process matured from pain:** deleted E2E (EdCoachAi) → docs-first (sped-sync) → dated design/implementation plans (aida) → steel's spec/plan/verdict workflow with drift-check.
