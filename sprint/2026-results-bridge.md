@@ -12,7 +12,7 @@ Update this file at the **start and end** of each work session. As before: one n
 
 | P | Surface | Role | The one next action |
 |---|---|---|---|
-| 0 | **Record P1 and P2** | Teaching | **Write down what was already done.** Put what the student did at *Find the rule*, and whether the predicted failure point held, on [[../projects/loop-bench]]. Put the network name in the 9b result row ([[../wiki/collection-protocol]] §Which network). Neither is recorded yet. An observation that lives only in memory is the staleness class this vault exists to prevent. |
+| 0 | **Record P2** | Teaching | **P1 recorded 2026-09-22** on [[../projects/loop-bench]], as requirements on the tool and never as observations of people (the card's Exclusions were amended to say this). **Still owed:** the 8b network name in the 9b result row ([[../wiki/collection-protocol]] §Which network). **Next on loop-bench:** the five-minute fresh-student probe, then fix R1 (co-visibility), before any v2. |
 | 1 | **course-lab → 9b** | Teaching | `DEMO01` dry run: seven checks, on a school device, **on the network named in 8b.** Now unblocked. |
 | 2 | **Hackathon results** | Public identity | **Read them 09-25 and record them as one dated line** under [[../initiatives/public-identity]] §Outcome. No reaction work before the line exists. |
 | 3 | **Brainstorm: next hackathon + what the vault becomes** | Public identity | **Explore, don't decide.** Captured in [[../initiatives/public-identity]] §Next instances. This sprint does not pick an event, an idea, or a stack, and it does not restructure the vault. |
@@ -33,3 +33,4 @@ Update this file at the **start and end** of each work session. As before: one n
 |------|---------|---------------|
 | 2026-09-22 | steel | Sprint opened on the close of [[../archive/2026-first-contact]]. still-true logged as a pointer card. Brainstorm section opened in [[../initiatives/public-identity]] |
 | 2026-09-22 | steel | **First project-close harvest (still-true).** Patterns §3 extended and §12 added. [[../wiki/lessons]] opened with five lessons. A draft story section added to [[../wiki/journey]] for the operator to edit. `vault-check`: 423 links resolve |
+| 2026-09-22 | loop-bench | **The card was four weeks stale, and the classroom findings are recorded.** `Lokie-ree.github.io` has been public and serving `/loop/` since 08-24, while the card said "not deployed." The hosting ruling and the file mapping are now recorded. Findings are recorded as R1–R4 tool requirements. The Exclusions were amended (aggregate only, describe the bench and never a person). New ruling: intervention rescope, probe before v2, explainers after probes. [[../wiki/lessons]] gains #6 and new evidence for #3. [[../wiki/journey]] Era IV accepted |

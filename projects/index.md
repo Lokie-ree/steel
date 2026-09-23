@@ -21,19 +21,17 @@ Six repos. One ecosystem. Each spoke card is the agent entry point when that rep
 
 Course-authoring, classroom-build, and facilitator-role work with **no repo to switch
 into.** Cards exist so hub sessions know the work exists. For the first two the canonical
-document lives outside the vault and the card is a pointer, never a log. **loop-bench is
-the exception** — its files carry no docs of their own, so its card *is* the canonical
-record of the rulings. None of the three introduces `sync-registry.md` fields or anything
-for `drift-check`.
+document lives outside the vault and the card is a pointer, never a log. Neither
+introduces `sync-registry.md` fields or anything for `drift-check`.
 
 | Card | What | Canonical doc |
 |------|------|---------------|
 | [[algebra2-course-plan]] | Algebra II Sem A, Fall 2026 — Edmentum, two sections, 4–20 mA anchor | `Fall 2026 Course Plan.md`, in the Claude project |
 | [[civics-planning-tool]] | Lesson-planning tool built with one pilot teacher | The context stack, outside the vault |
-| [[loop-bench]] | 4–20 mA current-loop bench — the Algebra II applied layer, one face of six | **This card.** Files staged in `~/Downloads`, no repo yet |
 
-**One pointer card has a repo but is not a spoke.** It gets no drift enrollment, no Local-paths row, and it does not count toward "six spokes":
+**Two pointer cards have a repo but are not spokes.** They get no drift enrollment, no Local-paths row, and they do not count toward "six spokes":
 
 | Card | What | Canonical doc |
 |------|------|---------------|
 | [[still-true]] | Convex All Gas Hackathon entry: a forwarded document gets a line-cited reply. Submitted 2026-09-20, results 2026-09-25 | `still-true/hackathon.md` |
+| [[loop-bench]] | 4–20 mA current-loop bench — the Algebra II applied layer, one face of six. Repo `Lokie-ree.github.io`, live at `/loop/` | **The card**, for rulings — the files carry no docs of their own. The repo holds the build |

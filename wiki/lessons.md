@@ -34,6 +34,7 @@ Gap this doc fills: [[patterns]] holds what gets *built* again. Nothing held wha
 - still-true 09-20: "172 was never measured," concluded by grepping notes, while `og.jpg` itself showed 172.
 - still-true 09-21: a sponsor issue went live with a mangled title, and the command's exit code said success.
 - The same class drove the vault's git-state rule: state is output of `ops/repo-state.ps1`, never prose.
+- The vault, 2026-09-22: [[../projects/loop-bench]] said "not a repo… not deployed" for four weeks while `Lokie-ree.github.io` served the bench live. The card was trusted and the repo was never opened.
 
 **The check:** open the thing a stranger would open: the live URL, the filed issue, the rendered card. An exit code, a note, or a grep of your own prose is not a receipt.
 
@@ -54,6 +55,15 @@ Gap this doc fills: [[patterns]] holds what gets *built* again. Nothing held wha
 - Earlier, sped-sync's hand-rolled `documentChunks` table is the "before" picture in [[patterns]] §2.
 
 **The check:** before designing on a stack, read that stack's own skills and component catalog. That's local Claude memory for now, which is why it's repeated here.
+
+### 6. Verify on the device the user actually has
+
+**Evidence:**
+- course-lab: school Chromebooks block storage in ways dev machines never do, which is why a hardened sink became necessary ([[patterns]] §6).
+- loop-bench R1 (2026-09-22): the headless probes passed at 880 px and 390 px, but the students' 1366×660 viewport never shows the scene and the task together. It was caught in class, not in verification.
+- The same reasoning is why the `DEMO01` dry run specifies a school device on the school network.
+
+**The check:** the verification run names the target device's viewport, browser, and network. A probe at a convenient size is a different test.
 
 ---
 
