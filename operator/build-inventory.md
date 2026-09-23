@@ -33,6 +33,8 @@ what I haven't seen — which cuts both ways. This is the count.
 | DEMO01 | Shipped demo | `[unverified]` |
 | still-true | Hackathon entry: a forwarded document gets a line-cited reply ([[../projects/still-true]]). On 2026-09-21 it answered a forward from someone other than the operator, unattended, in 23.7 s. That is the first use from a domain it was never tested from | `[unverified]`. The repo's own gate read 8/8 against production on 09-22; flip this when you've opened it yourself |
 | loop-bench, face one (`loop/index.html`) | Canonical 4–20 mA bench, three modes ([[../projects/loop-bench]]). Live at <https://lokie-ree.github.io/loop/> since 2026-08-24 and in front of students this sprint. Moved here from §B on 2026-09-22, because its §B blocker (hosting) was settled on 08-24 | `[unverified]` |
+| IPSB New Teacher Tech Station | One data file builds a Google Sites hub, a printed packet, and a supervisor review doc, and a check refuses output that doesn't match the data ([[../initiatives/issue-ledger]]). Delivered 2026-07-29. Peer facilitators use it year-round. Runs on the Claude for Teachers account. Added 2026-09-22 from that session's own summary | `[unverified]`. Its counts live in `make status`, never here |
+| Algebra II Sem A materials | Pacing engine with a coverage check, CAS-verified unit packets, and lesson plans ([[../projects/algebra2-course-plan]]). In class since 2026-08-11. The session's summary calls the unit work "still unreviewed." Added 2026-09-22 | `[unverified]`. Reviewing them is the operator's job, not the summary's |
 
 **This section is the answer to the undervaluation question.** Three production modules
 plus a demo plus live student contact is not "getting started."
@@ -44,6 +46,8 @@ plus a demo plus live student contact is not "getting started."
 | `loop-bench.html` | Technician register; kept, not maintained | — (deliberately parked) |
 | `verify_loop.py` | 59 assertions, exact rationals | — |
 | Faces 2–6 | Designed, unbuilt | Gated: drift-seam fix **and** face one watched by a student |
+| Lesson-planning tool ([[../projects/civics-planning-tool]]) | Three-layer context stack plus a setup checklist for one pilot teacher | Four answers from the pilot teacher (schedule, spine, starting point, days) |
+| `new-teacher-tech` skeleton | The Tech Station generalized into a starter kit: one source, generated outputs, loud checks, handoff file, `new-project.sh`. Exists at `personal/new-teacher-tech`, untracked | No second project has used it yet |
 
 ## C. Repositories
 
