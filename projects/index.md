@@ -31,9 +31,10 @@ fields or anything for `drift-check`.
 | [[civics-planning-tool]] | Lesson-planning tool built with one pilot teacher | The context stack, outside the vault |
 | [[../initiatives/issue-ledger]] | IPSB New Teacher Tech Station — district-facing, year-round, runs on the Claude for Teachers account. No card: the ledger is its steel pointer | `project-handoff.md`, on the other account |
 
-**Two pointer cards have a repo but are not spokes.** They get no drift enrollment, no Local-paths row, and they do not count toward "six spokes":
+**Three pointer cards have a repo but are not spokes.** They get no drift enrollment, no Local-paths row, and they do not count toward "six spokes":
 
 | Card | What | Canonical doc |
 |------|------|---------------|
 | [[still-true]] | Convex All Gas Hackathon entry: a forwarded document gets a line-cited reply. Submitted 2026-09-20, results 2026-09-25 | `still-true/hackathon.md` |
 | [[loop-bench]] | 4–20 mA current-loop bench — the Algebra II applied layer, one face of six. Repo `Lokie-ree.github.io`, live at `/loop/` | **The card**, for rulings — the files carry no docs of their own. The repo holds the build |
+| [[desmos-idea]] | Exemplar Studio: printable function-art problem sets for Algebra II, built on the Desmos API. Private repo, registered 2026-09-23 | `desmos-idea/README.md` |

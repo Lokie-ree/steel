@@ -47,14 +47,15 @@ plus a demo plus live student contact is not "getting started."
 | `verify_loop.py` | 59 assertions, exact rationals | — |
 | Faces 2–6 | Designed, unbuilt | Gated: drift-seam fix **and** face one watched by a student |
 | Lesson-planning tool ([[../projects/civics-planning-tool]]) | Three-layer context stack plus a setup checklist for one pilot teacher | Four answers from the pilot teacher (schedule, spine, starting point, days) |
+| Exemplar Studio ([[../projects/desmos-idea]]) | Single-page Desmos generator of printable function-art problem sets with an answer key, plus `check.js`. Built 2026-09-15, repo 2026-09-23 | Classroom Desmos API key; a run on a school laptop on the district network |
 | `new-teacher-tech` skeleton | The Tech Station generalized into a starter kit: one source, generated outputs, loud checks, handoff file, `new-project.sh`. Exists at `personal/new-teacher-tech`, untracked | No second project has used it yet |
 
 ## C. Repositories
 
 `creative-lab-demos` · `creative-lab` · `portfolio` · `iste-26` · `steel` · `aida` ·
-`sped-sync` · `still-true` · `Lokie-ree.github.io`
+`sped-sync` · `still-true` · `Lokie-ree.github.io` · `desmos-idea`
 
-Nine repos, built from zero GitHub knowledge in about eighteen months.
+Ten repos, built from zero GitHub knowledge in about eighteen months.
 `loop-bench` lives in `Lokie-ree.github.io`, and has since 2026-08-24. Until 2026-09-22 this line said it was "not yet among them."
 
 **Per repo, when I verify it:** does it run today, does it have a card, does it have a
