@@ -31,7 +31,8 @@ what I haven't seen — which cuts both ways. This is the count.
 | STEM Club field tests | Multiple sessions, live students; drove the Rigid Motions redesign | `[unverified]` |
 | Portfolio site | Live deployment, OG image confirmed rendering | `[unverified]` |
 | DEMO01 | Shipped demo | `[unverified]` |
-| still-true | Hackathon entry: a forwarded document gets a line-cited reply ([[../projects/still-true]]). Answered a stranger's forward unattended on 2026-09-21, in 23.7 s. That is the first use from a domain it was never tested from | `[unverified]`. The repo's own gate read 8/8 against production on 09-22; flip this when you've opened it yourself |
+| still-true | Hackathon entry: a forwarded document gets a line-cited reply ([[../projects/still-true]]). On 2026-09-21 it answered a forward from someone other than the operator, unattended, in 23.7 s. That is the first use from a domain it was never tested from | `[unverified]`. The repo's own gate read 8/8 against production on 09-22; flip this when you've opened it yourself |
+| loop-bench, face one (`loop/index.html`) | Canonical 4–20 mA bench, three modes ([[../projects/loop-bench]]). Live at <https://lokie-ree.github.io/loop/> since 2026-08-24 and in front of students this sprint. Moved here from §B on 2026-09-22, because its §B blocker (hosting) was settled on 08-24 | `[unverified]` |
 
 **This section is the answer to the undervaluation question.** Three production modules
 plus a demo plus live student contact is not "getting started."
@@ -40,7 +41,6 @@ plus a demo plus live student contact is not "getting started."
 
 | Artifact | What it is | Blocker |
 |---|---|---|
-| `loop-bench-student.html` | Canonical 4–20 mA bench, three modes | Hosting |
 | `loop-bench.html` | Technician register; kept, not maintained | — (deliberately parked) |
 | `verify_loop.py` | 59 assertions, exact rationals | — |
 | Faces 2–6 | Designed, unbuilt | Gated: drift-seam fix **and** face one watched by a student |
@@ -48,10 +48,10 @@ plus a demo plus live student contact is not "getting started."
 ## C. Repositories
 
 `creative-lab-demos` · `creative-lab` · `portfolio` · `iste-26` · `steel` · `aida` ·
-`sped-sync` · `still-true`
+`sped-sync` · `still-true` · `Lokie-ree.github.io`
 
-Eight repos, built from zero GitHub knowledge in about eighteen months.
-`loop-bench` is not yet among them — two loose files and a script.
+Nine repos, built from zero GitHub knowledge in about eighteen months.
+`loop-bench` lives in `Lokie-ree.github.io`, and has since 2026-08-24. Until 2026-09-22 this line said it was "not yet among them."
 
 **Per repo, when I verify it:** does it run today, does it have a card, does it have a
 `CLAUDE.md`, is it public, does anything in it reference a student.
