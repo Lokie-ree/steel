@@ -21,13 +21,15 @@ Six repos. One ecosystem. Each spoke card is the agent entry point when that rep
 
 Course-authoring, classroom-build, and facilitator-role work with **no repo to switch
 into.** Cards exist so hub sessions know the work exists. For the first two the canonical
-document lives outside the vault and the card is a pointer, never a log. Neither
-introduces `sync-registry.md` fields or anything for `drift-check`.
+document lives outside the vault and the card is a pointer, never a log. The Tech Station
+row points at an initiative, not a card. None of the three introduces `sync-registry.md`
+fields or anything for `drift-check`.
 
 | Card | What | Canonical doc |
 |------|------|---------------|
 | [[algebra2-course-plan]] | Algebra II Sem A, Fall 2026 — Edmentum, two sections, 4–20 mA anchor | `Fall 2026 Course Plan.md`, in the Claude project |
 | [[civics-planning-tool]] | Lesson-planning tool built with one pilot teacher | The context stack, outside the vault |
+| [[../initiatives/issue-ledger]] | IPSB New Teacher Tech Station — district-facing, year-round, runs on the Claude for Teachers account. No card: the ledger is its steel pointer | `project-handoff.md`, on the other account |
 
 **Two pointer cards have a repo but are not spokes.** They get no drift enrollment, no Local-paths row, and they do not count toward "six spokes":
 
