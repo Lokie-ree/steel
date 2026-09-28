@@ -109,3 +109,56 @@ say.
   whether a student passed. No score exists anywhere in course-lab.
 - **It does not generalize past this round.** These samples are specific to `f(x + 2)`
   moving left. A second build gets its own set, written the same way — before its data.
+
+---
+
+## quadratics-ptr — the second set (2026-09-27)
+
+**Why a second set before build two:** the fall's first course-lab contact runs an
+*existing* module, `quadratics-ptr` (A-REI.B.4), because it lands on Unit 3's Week 7
+guiding question (*"If a parabola never touches the x-axis, where did its solutions
+go?"*) the day of Mastery Test 3.2. transformations-ptr's content was Unit 1, so its read
+would be contaminated. This set is written before any student data exists, the same way
+as the first.
+
+**The bet:** how many times does y = x² − 4x + 5 cross the x-axis? The vertex sits at
+(2, 1), one unit above. Most students say it crosses. It never does.
+
+**The frame, v1.1.0** (course-lab PR #20): *"I thought ___, but the graph showed ___
+because ___"* (prediction wrong), or *"Why does this parabola never reach the axis?"*
+(prediction right). **Only read v1.1.0 rows.** v1.0.0's frame named the discriminant, which
+supplied the restating answer. It was reworded before any student saw it.
+
+### The bins for this round
+
+- **Names the mechanism:** ties the vertex being the *lowest* point, and sitting above the
+  axis, to the graph never reaching y = 0. **Or** links "no x-intercepts" to "the solutions
+  aren't real," which is this week's guiding question.
+- **Restates the outcome:** "it didn't cross, I thought it would."
+- **Filler:** same as the first set.
+
+**Threshold: at least a third name the mechanism**, carried over unchanged.
+
+### R4: the discriminant alone is restating (operator ruling, 2026-09-27)
+
+*"The discriminant was negative, so no solutions"* goes in **Restates**. It's R1 applied
+to this round: a recited rule that predicts the outcome without saying why the parabola
+stays up. The module's reveal and producer round teach the discriminant on purpose. The
+reconcile is where the student has to go past it.
+
+### Worked samples (agent-drafted; sort them blind before Monday and amend here)
+
+| # | Response | Bin | Why |
+|---|---|---|---|
+| Q1 | "i thought it would cross twice but it didnt because the discriminant is negative" | Restates | **R4.** Expect this to be the most common response. |
+| Q2 | "I thought it crossed, but the lowest the graph ever gets is 1, so it can't hit 0" | **Mechanism** | The lowest point is above zero, so it never reaches zero. That's the target. |
+| Q3 | "the vertex is at (2,1)" | Restates | A precise observation with no reason attached. Same family as #10 in the first set. |
+| Q4 | "i thought it would go through but the bottom of the U is above the line and it opens up so it never comes back down" | **Mechanism** | **R2.** The vocabulary is off, but the reasoning is complete. |
+| Q5 | "it doesnt touch the x axis so the answers are imaginary not real" | **Mechanism** | The link between no crossing and non-real solutions. Admitted by the approved bins, and the week's own question. |
+| Q6 | "negative means no" | Filler | Gestures at a rule without stating it. Same shape as #14 in the first set. |
+| Q7 | "I thought 2 because parabolas always cross, but it stayed above" | Restates | Names the reflex it fell into, but gives no reason. The near-miss to watch. |
+| Q8 | "idk it just didnt" | Filler | **R3.** |
+
+**Distribution: 3 mechanism · 3 restates · 2 filler → 37.5%.** Close to the threshold on
+purpose, as with the first set. Every bin call above except R4 is the agent's draft. The
+operator's blind sort overrides it.
