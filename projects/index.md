@@ -35,6 +35,6 @@ fields or anything for `drift-check`.
 
 | Card | What | Canonical doc |
 |------|------|---------------|
-| [[still-true]] | Convex All Gas Hackathon entry: a forwarded document gets a line-cited reply. Submitted 2026-09-20, results 2026-09-25 | `still-true/hackathon.md` |
+| [[still-true]] | Convex All Gas Hackathon entry: a forwarded document gets a line-cited reply. Submitted 2026-09-20; did not place (2026-10-02). Parked | `still-true/hackathon.md` |
 | [[loop-bench]] | 4–20 mA current-loop bench — the Algebra II applied layer, one face of six. Repo `Lokie-ree.github.io`, live at `/loop/` | **The card**, for rulings — the files carry no docs of their own. The repo holds the build |
 | [[desmos-idea]] | Exemplar Studio: printable function-art problem sets for Algebra II, built on the Desmos API. Private repo, registered 2026-09-23 | `desmos-idea/README.md` |

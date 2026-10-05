@@ -72,6 +72,8 @@ frozen smaller — which is the gate working, not the gate breaking.
 
 **The gate's default was release, and it released.** One row missed, one row late, two rows met. The row that decides the outcome was met on its date. Results are due 2026-09-25. Record them here as a dated line, and don't edit the table.
 
+**2026-10-02: results announced (recorded 2026-10-04). still-true did not place.** The top 3 were OurSpaces, PlusOne, and Parallel (`vibeapps.dev/s/ourspaces`, `/plusone`, `/parallel`). All three were built on the same sponsor stack. No judge feedback or scoring has been seen, and still-true's rank in the field is unknown. The announcement came a week after the expected 09-25.
+
 **What the build log says cost the most, from `still-true/hackathon.md` 09-22:** building was never the expensive part. **Shipping finished artifacts was.** The two sponsor issues sat draft-ready for eleven days. The log recorded that pattern three times and calls it "the finding rather than the anecdote." It's the first input to the section below.
 
 ## Next instances — brainstorm (opened 2026-09-22)
@@ -141,3 +143,21 @@ Ideas, assumptions, and the questions still open get appended below as dated ent
 4. **steel → the ledger of who is using what.** This answers "what the vault becomes" with evidence, not a restructure. Each project gets a reader once it reaches someone.
 
 **Found in passing:** [[../operator/build-inventory]] §C doesn't list `course-lab` or `project-studio-coach`, the two repos named for students. That's operator-authored, so it's flagged here and not edited.
+
+**2026-10-04: results in, analysis parked.** The result is recorded in §Outcome above. The operator brought a handoff from a chat session (dated 10-03). It informs this entry, but it is a report, not the record: it gave the submission date as 09-14, when §Outcome, [[../projects/still-true]], and `hackathon.md` all say **09-20**. 09-14 is when the video went public.
+
+- **The operator's read:** the project was a little too generic, lacked the operator's true creativity, and fell short of their capability. The receipts and reps carry forward, and the operator is entering another.
+- **The chat session's read. All of it is inference from three one-line announcement pitches, nothing else:**
+  - Not generic in the build. The schema that can't represent a fabricated quote, first-class refusals, and a watch that stayed silent when only wording changed are decisions most entries won't have.
+  - Generic in the domain. Nothing in still-true needed 15 years of teaching math.
+  - Each winning pitch is one sentence about a person in a moment: a group trip, a wedding, a team at a conference. still-true's sentence described a guarantee, so a judge had to already care about the failure mode.
+  - Named drift: hardening over story. The back half of the build went to flags, the gate, and the readiness score, while the open question was whether a stranger would get it in thirty seconds.
+- **Not known:** judge feedback, the winners' videos and repos (only the announcement posts were read), and the size of the field.
+- **Questions for the analysis session.** It needs a browser, which is why it's a separate session:
+  1. Open each winner's listing, video, and repo. Does the person-in-a-moment pattern hold, or did they win on polish, depth of sponsor integration, or the live demo?
+  2. How did each winner use AgentMail and Firecrawl, compared with still-true? Were the sponsor tools central to the story or just plumbing?
+  3. Watch the still-true video (2:43) cold. At what second does a stranger understand what it does and why it matters?
+  4. Where did the build hours go, by phase? How many went to work a judge could see in the video?
+  5. Which pieces are reusable as-is? Check against the 09-22 harvest ([[../projects/still-true]] §Harvest) before re-deriving.
+- **Open, not decided:** what would you build if the brief were "make something only Randall would make"?
+- **Candidate ruling, held and not confirmed.** *Next hackathon entry starts from one sentence about a person in a moment, in a domain only I would pick. Guarantees and hardening sit underneath the story, not in front of it.* It goes to [[../wiki/decisions]] only if the analysis supports it.
