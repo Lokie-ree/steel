@@ -17,7 +17,9 @@ Two things, and together they shrink the problem a lot.
 1. **The school-network check passed** (2026-07-26, district Chromebook, district wifi).
    No custom domain, no DNS. The URL is the URL. **⚠ Scoped 2026-08-04 — see
    §Which network, below. That result is correct for the network it ran on, and the room
-   has since moved into the community college.**
+   has since moved into the community college.** **⚠ Voided for students 2026-09-28:**
+   that check used a *staff* login. The same network with a *student* login blocked the site
+   at step 1. Filter policy follows the account, so a staff pass says nothing about students.
 2. **The silent failure is no longer silent** (course-lab PR #18). The sink now probes
    whether it can actually round-trip a write, and the picker and start gate say so:
    quiet "Saving your work ✓" when healthy, a red `role="alert"` when not. §OPEN's hardest
@@ -105,9 +107,9 @@ confirmed readable. The two-step confirm exists for exactly this.
 These are the only remaining unknowns, and each has a named fallback so none of them
 blocks the gate:
 
-- [ ] **Which network the room actually runs on** — district or community college. Answer
-      this first; it re-scopes the three below and the 2026-07-26 check. *No fallback: this
-      one is a question to a person, not a test.*
+- [x] **Which network the room actually runs on** — **district** (2026-09-28 dry run, student
+      Chromebook). The blocker it found was the student filter extension, not the network: the
+      site is categorized as "Games." An allowlist ticket is open.
 - [ ] **Google Form reachable and submittable** from a student Chromebook on whichever
       network the room runs on. *Fallback: Google Classroom assignment with a text
       response, or paste into a shared Doc.*
@@ -157,7 +159,8 @@ Run it end to end and confirm each of these is true at the end:
 0. **Name the network before starting** — district wifi, the college's, or a guest SSID —
    and write it into the sprint-log row with the result. A check that does not say which
    network it ran on cannot be reused, and this is the step whose absence is being
-   corrected here.
+   corrected here. **Name the login too — it must be a student account.** Filters are set
+   per account group, so a staff login sees a looser policy (learned 2026-09-28).
 1. Site loads; the storage line renders (either state — note which).
 2. `DEMO01` passes the gate.
 3. Module completes through the recap.
