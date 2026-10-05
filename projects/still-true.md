@@ -31,6 +31,12 @@ its source line, and it states plainly where the document is silent.
 up and the daily cron keeps running. That is deliberate: the watch is the product, and a judge may
 still open it.
 
+- (2026-10-04) **Results in (announced 10-02): did not place. Parked.** Submitted 09-20 with all
+  requirements met. H6 and M8 are still open, and M2, L3–L5 are carried, all as of submission.
+  `READINESS.md` is canonical for flags. Production and the cron stay up. Parked means no new
+  work, not taken down. Result: [[../initiatives/public-identity]] §Outcome. The parked analysis
+  and the held candidate ruling: §Next instances, 2026-10-04.
+
 ## Harvest (2026-09-22): the first project close under the three-slot model
 
 | Slot | Went to | What |
