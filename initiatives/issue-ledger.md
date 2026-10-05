@@ -124,6 +124,55 @@ Three things from the Tech Station debrief that were absent from both `project-h
 
 ---
 
+## Pre-meeting hypotheses — facilitator meeting, 2026-09-24
+
+*Written 2026-09-23, the day before, so the answers get checked against a prediction instead of absorbed into one. Origin: the operator's "My Path is Calling" entry (stop building for workflows not yet needed; put what exists in front of humans; iterate on their feedback). The room: every school's tech facilitator (one per school) plus the supervisor, who already champions the Tech Station and the Claude workflow shown at the last meeting.*
+
+**Goal of the meeting:** learn *teachers'* pain points through the facilitators. Listen and take notes. Pitch nothing. If asked what's been built, show the Claude workflow, not repos.
+
+**Scope line:** the operator supports colleagues on request but is **not paid to spearhead** the Early College Option transition. Program lead is out of scope. Anything below that turns into one-on-one custom building for colleagues across the district breaks this line too.
+
+### Baseline — the one colleague adaptation on record
+
+The civics planning tool ([[../projects/civics-planning-tool]]): **~4–5 hours of tweaking plus a 1-hour walkthrough.** The teacher reported it saved a lot of time and put quality resources in front of students. It ended when the teacher's assignment changed. **Lesson:** it was tied to a person, so it left with the person. The next adaptation should be tied to a course or a role, so it survives a handoff.
+
+### Hypotheses
+
+| # | Hypothesis | What would weaken it |
+|---|---|---|
+| H1 | **The dominant pain is systems sprawl:** too many outdated, incompatible systems, driving attrition. If so, anything handed to colleagues must not be *one more system*. The offer is the pattern (the Claude workflow, plus the Station as a leave-behind), not the builds. | Answers cluster on specific, repeated, answerable questions instead of on sprawl. |
+| H2 | **Facilitators will carry a ~10-minute segment into their own buildings** (staff meeting, PLC). This is train-the-trainer: the operator's strongest channel, in front of a group, reaching rooms he is never in. | Nobody says yes, or nobody can name a topic they'd want. |
+| H3 | **Knowing the Tech Station exists is not the same as using it.** The supervisor nearly led with it last month, and a few teachers are known to use it, but no feedback has come back. A URL with no live introduction doesn't get opened. | Facilitators report teachers mentioning or using it unprompted. |
+| H4 | **Civics-style adaptation doesn't scale one-on-one** at ~5–6 hours each. It waits until H2 or H3 surfaces one specific teacher with one specific need. | A facilitator could do the adapting themselves. |
+
+### Questions to bring
+
+Ask about specific recent events, not general opinions. Workarounds and repeated questions are where the real pain shows up.
+
+1. What teacher question did you answer more than once in the last two weeks?
+2. When a teacher gave up on a system, what did they do instead?
+3. What do you get asked that you can't fix?
+4. If one hour a week came back to your teachers, where would it come from?
+5. *(H2)* If I gave you a 10-minute piece for a staff meeting, would you run it? About what?
+6. *(H3)* Has any teacher mentioned the Tech Station to you?
+
+**This week, independent of the meeting (H3):** five-minute conversations with 2–3 of the teachers known to use the Station. What did they open, what did they need, and what wasn't there. No form.
+
+### Results — fill after the meeting
+
+Record needs, never people. No names, no school identifiers, and no statement that reads as an evaluation of a colleague (this vault is public). Counts follow the rule above: none from memory.
+
+| # | Held / weakened / unclear | What was heard (as a need) |
+|---|---|---|
+| H1 | | |
+| H2 | | |
+| H3 | | |
+| H4 | | |
+
+**Set aside until results exist:** new builds, Studio Coach, and the ECO transition. None of them has a human waiting in the facilitator or Tech Station roles.
+
+---
+
 ## Open
 
 - **Retire the minified hub build and `verify-min.py`?** *(carried in 2026-08-03, unresolved)* Both were built against a Google Sites embed character limit that **has never been documented or observed** — ~58,000 characters pasted successfully, and the 52k fallback plus a second tool to prove the fallback content-identical answer a ceiling nobody has confirmed exists. This is the same shape as the `.hub` pipeline deleted on 2026-07-26: infrastructure with no demonstrated reader. Make it trigger-based rather than anticipated, then log the ruling to [[../wiki/decisions]] **either way** — a documented "keep it, here's why" closes the question as well as a deletion does.
