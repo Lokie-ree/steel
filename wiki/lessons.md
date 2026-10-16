@@ -27,17 +27,6 @@ Gap this doc fills: [[patterns]] holds what gets *built* again. Nothing held wha
 
 **The check:** **grep the value across the whole repo, not just the file you came to fix** (still-true 09-20). Structurally, reference a value, don't paste it (`CLAUDE.md` §Tooling paths). **Partially graduated:** the vault's "derived, never transcribed" rule covers git state and tool paths, but not numbers quoted in prose.
 
-### 3. Read the artifact, not the note about the artifact
-
-**Evidence:**
-- still-true 09-03: production was nine commits behind while dev and the docs looked correct.
-- still-true 09-20: "172 was never measured," concluded by grepping notes, while `og.jpg` itself showed 172.
-- still-true 09-21: a sponsor issue went live with a mangled title, and the command's exit code said success.
-- The same class drove the vault's git-state rule: state is output of `ops/repo-state.ps1`, never prose.
-- The vault, 2026-09-22: [[../projects/loop-bench]] said "not a repo… not deployed" for four weeks while `Lokie-ree.github.io` served the bench live. The card was trusted and the repo was never opened.
-
-**The check:** open the thing a stranger would open: the live URL, the filed issue, the rendered card. An exit code, a note, or a grep of your own prose is not a receipt.
-
 ### 4. Predeclare the threshold before the data, and record a no-fire as a no-fire
 
 **Evidence:**
@@ -70,6 +59,7 @@ Gap this doc fills: [[patterns]] holds what gets *built* again. Nothing held wha
 ## Graduated
 
 - **A stacked PR merges into its base branch and lands nothing on `main`.** Portfolio, 2026-07; still-true, 2026-09-07, when four PRs read MERGED and one reached `main`. **Enforced** by a `PreToolUse` hook that blocks a non-default base.
+- **Read the artifact, not the note about the artifact** (was #3). still-true 09-03, 09-20 ("172 was never measured," while `og.jpg` showed 172) and 09-21; loop-bench's card, 2026-09-22. The check: open what a stranger would open (the live URL, the filed issue, the rendered card) and name it. An exit code, a note, or a grep of your own prose is not a receipt. **Ruled** 2026-10-16 in the global `~/.claude/CLAUDE.md`, which loads in every repo.
 
 ## Candidates: one occurrence, waiting for a second
 
